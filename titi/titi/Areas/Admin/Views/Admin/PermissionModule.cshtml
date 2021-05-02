@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "PermissionModule";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@{
+    var listModule = ViewBag.listModules;
+}
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Danh sách module</div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-3 control-label">Chọn group:</div>
+                        <div class="col-md-3">
+                            <select id="GroupId" class="form-control m-b">
+                                <option value="">----- chọn group ------</option>
+                                @if (ViewBag.listGroup != null)
+                                {
+                                    foreach (var it in ViewBag.listGroup)
+                                    {
+                                        <option value="@it.GroupID">@it.GroupName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="row">
+                        <h3>Cây phân quyền module</h3>
+                        <div id="onflycheckboxes" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:10px">
+                        <input id="btnUpdate" class="btn btn-info" type="button" value="Lưu thay đổi" onclick="UpdateGroupUI();" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/jquery.jstree.js"></script>
+    <script type="text/javascript">
+        var data = [];
+        $(function () {
+        });
+        $('#GroupId').change(function () {
+            if ($('#GroupId').val() != '') {
+                GetMouduleByGroup();
+            }
+        })
+        function GetMouduleByGroup() {
+            $.ajax({
+                url: '@Url.Action("GetMouduleByGroup", "Admin",new {area="Admin"})',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    groupID: $('#GroupId').val()
+                },
+                success: function (response) {
+                    FillJSTree(response.Data);
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+        }
+
+        function FillJSTree(jsondata) {
+            $("#onflycheckboxes").jstree({
+                json_data: {
+                    "data": JSON.parse(jsondata),
+
+                },
+                checkbox: {
+                    real_checkboxes: true,
+                    checked_parent_open: true
+                },
+                plugins: ["themes", "json_data", "ui", "checkbox"]
+            }).bind("loaded.jstree", function (event, data) {
+                $('#onflycheckboxes').jstree('check_node', 'li[selected=selected]');
+            });
+
+        }
+
+        var divId = [];
+        //var divText = [];
+        function UpdateGroupUI() {
+            divId = [];
+            //divText = [];
+            $("#onflycheckboxes").jstree("get_checked", null, true).each
+                (function () {
+                    divId.push(this.id);
+                    //divText.push($(this).children('a').text());
+                });
+            if (divId.length > 0) {
+                $.ajax({
+                url: '@Url.Action("UpdateGroupUI", "Admin",new {area="Admin"})',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    listUIid: divId,
+                    groupId: $('#GroupId').val()
+                },
+                    success: function (response) {
+                        if (response.Success) {
+                            swal("", "Cập nhật thành công", "success");
+                            GetMouduleByGroup();
+                        }
+                        else {
+                            swal("Lỗi!", "Cập nhật thất bại", "error");
+                        }
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+            }
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")

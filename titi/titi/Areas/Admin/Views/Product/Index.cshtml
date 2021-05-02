@@ -1,0 +1,243 @@
+﻿
+@{
+    ViewBag.Title = "Danh sach san pham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Tìm kiếm sản phẩm</div>
+                <div class="ibox-content">
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4"><b>Loại sản phẩm</b></div>
+                            <div class="col-md-8"><input name="categoryCode" id="categoryCode" value="" style="width:100%" class="form-control m-b" placeholder="Thể loại" /></div>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4"><b>Mã sản phẩm</b></div>
+                            <div class="col-md-8"><input name="productCode" id="productCode" value="" style="width:100%" class="form-control m-b" placeholder="Mã sản phẩm" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4"><b>Tên sản phẩm</b></div>
+                            <div class="col-md-8"><input name="productName" id="productName" value="" style="width:100%" class="form-control m-b" placeholder="Tên sản phẩm" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4"><b>Từ ngày</b></div>
+                            <div class="col-md-8 datepicker">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input id="formDate" name="formDate" type="text" class="form-control" value="@DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy")">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4"><b>Đến ngày</b></div>
+                            <div class="col-md-8 datepicker">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input id="toDate" name="toDate" type="text" class="form-control" value="@DateTime.Now.ToString("dd/MM/yyyy")">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="margin-top:5px">
+                            <button type="button" class="btn btn-primary" onclick="GetPageData(1)"><i class="fa fa-search"></i> Search</button>
+                            @if (ViewBag.isInsert)
+                            {<a class="btn btn-info" href="@Url.Action("InsertProduct","Product",new {area="Admin" })">Thêm sản phẩm mới</a>}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px">
+                        @Html.Partial("List")
+                    </div>
+                </div>
+
+                @*<div class="modal inmodal fade" id="addNewModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div id="Reponse_modalWindow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="~/Areas/Admin/Scripts/plugins/bootstrap-datepicker.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script type="text/javascript">
+                $(document).ready(function () {
+                    InitDatepicker();
+                })
+            function InitDatepicker() {
+                    $('.datepicker .input-group.date').datepicker({
+                        todayBtn: "linked",
+                        keyboardNavigation: false,
+                        forceParse: false,
+                        calendarWeeks: false,
+                        autoclose: true,
+                        format: 'dd/mm/yyyy'
+                    });
+                }
+
+            function GetPageData(pageNum) {
+                var pageSize = 0;
+                pageSize = typeof $("#selectedId").val() == 'undefined' ? 20 : $("#selectedId").val();
+                //pageSize = 5;
+                $.ajax({
+                    url: "/Product/SearchProduct",
+                method: 'GET',
+                    data: {
+                        'CategoryId': $('#categoryCode').val(),
+                        'UserId': 2,
+                        'ProductCode': $('#productCode').val(),
+                        'ProductName': $('#productName').val(),
+                        'PageIndex': pageNum - 1,
+                        'FromDate': null,
+                        'RowNumber': pageSize,
+                        'ToDate': null,
+                        'IsDesc': false,
+                        'SortName': ''
+            }
+                }).done(function (data) {
+                    var rowData = "";
+                    for (var i = 0; i < data.Data.length; i++) {
+                        var urlEdit = '@Url.Action("EditProduct", "Product", new { area = "Admin", productId = "jsPid"})'.replace('jsPid', data.Data[i].Pid);
+                        var urlDelete = '@Url.Action("InsertProduct", "Product", new { area = "Admin",Pid = "jsPid"})'.replace('jsPid', data.Data[i].Pid);
+                        rowData += '<tr><td>' +
+                            data.Data[i].Pid + '</td><td>' +
+                            data.Data[i].ProductName + '</td><td>' +
+                            //data.Data[i].Description + '</td><td>' +
+                            data.Data[i].FCost + '</td><td>' +
+                            data.Data[i].Size + '</td><td>' +
+                            data.Data[i].FPromotion + '</td><td>' +
+                            data.Data[i].FPrice + '</td><td>' +
+                            data.Data[i].Quantity + '</td><td>'+
+                            '<a href="' + urlEdit + '" title="Cập nhật sản phẩm" style="font-size:20px" class="btn btn-primary"><i class="fa fa-edit"></i></a> | <a href="#" onclick="DeleteProduct(' + data.Data[i].Pid+')" title="Xóa sản phẩm" style="font-size:20px;color:#fff" class="btn btn-danger"><i class="fa fa-trash-o"></i></a></td></tr>';
+                    }
+                    $("#tblData").empty();
+                    $("#paged").empty();
+                $("#tblData").append(rowData);
+                var tem = data.TotalRows % pageSize;
+                if (tem > 0)
+                    tem = Math.floor(data.TotalRows / pageSize) + 1;
+                else
+                    tem = Math.floor(data.TotalRows / pageSize);
+                    PaggingTemplate(tem, 1, pageSize);
+            });
+        }
+            //function PaggingTemplate(totalPage, currentPage) {
+            //    var template = "";
+            //    var TotalPages = totalPage;
+            //    var CurrentPage = currentPage;
+            //    var PageNumberArray = Array();
+
+
+            //    var countIncr = 1;
+            //    for (var i = currentPage; i <= totalPage; i++) {
+            //        PageNumberArray[0] = currentPage;
+            //    if (totalPage != currentPage && PageNumberArray[countIncr - 1] != totalPage) {
+            //        PageNumberArray[countIncr] = i + 1;
+            //    }
+            //    countIncr++;
+            //};
+            //PageNumberArray = PageNumberArray.slice(0, 5);
+            //var FirstPage = 1;
+            //var LastPage = totalPage;
+            //    if (totalPage != currentPage) {
+            //        var ForwardOne = currentPage + 1;
+            //}
+            //var BackwardOne = 1;
+            //    if (currentPage > 1) {
+            //        BackwardOne = currentPage - 1;
+            //    }
+
+            //    template = "<p>" + CurrentPage + " of " + TotalPages + " pages</p>"
+            //    template = template + '<ul class="pager">' +
+            //        '<li class="previous"><a href="#" onclick="GetPageData(' + FirstPage + ')"><i class="fa fa-fast-backward"></i>&nbsp;First</a></li>' +
+            //        '<li class="float-left"><select ng-model="pageSize" id="selectedId" style="height:29px;border-radius: 8px"><option value="20" selected>20</option><option value="50">50</option><option value="100">100</option><option value="150">150</option></select> </li>' +
+            //        '<li class="float-left"><a href="#" onclick="GetPageData(' + BackwardOne + ')"><i class="glyphicon glyphicon-backward"></i></a>';
+
+            //    var numberingLoop = "";
+            //    for (var i = 0; i < PageNumberArray.length; i++) {
+            //                numberingLoop = numberingLoop + '<a class="page-number active" onclick="GetPageData(' + PageNumberArray[i] + ')" href="#">' + PageNumberArray[i] + ' &nbsp;&nbsp;</a>'
+            //            }
+            //            template = template + numberingLoop + '<a href="#" onclick="GetPageData(' + ForwardOne + ')" ><i class="glyphicon glyphicon-forward"></i></a></li>' +
+            //        '<li class="next float-left"><a href="#" onclick="GetPageData(' + LastPage + ')">Last&nbsp;<i class="fa fa-fast-forward"></i></a></li></ul>';
+            //$("#paged").append(template);
+            //    $('#selectedId').change(function () {
+            //        GetPageData(1, $(this).val());
+            //    });
+            //    }
+
+                function OpenViewCreate() {
+                    $('#loading-bar').show();
+                    $.ajax({
+                        url: "/Product/AddNewProduct",
+                        method: 'GET'
+                    }).done(function (data) {
+                        if (data.indexOf('_loginModal') > -1) {
+                            $('#login_modalWindow').empty();
+                            $('#login_modalWindow').html(data);
+                            $('#loginModal').modal('show');
+                            $('#loading-bar').hide();
+                        }
+                        else {
+                            $('#Reponse_modalWindow').empty();
+                            $('#Reponse_modalWindow').html(data);
+                            $('#addNewModal').modal('show');
+                            $('#loading-bar').hide();
+                        }
+                    });
+        }
+        function DeleteProduct(productPid) {
+            swal({
+                title: "Xóa sản phẩm",
+                text: "Bạn muốn xóa sản phẩm này?",
+                type: "warning",
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Xóa",
+                showCancelButton: true,
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        $.ajax({
+                            url: "/Product/DeleteProduct",
+                            method: 'POST',
+                            data: { productPid: productPid, __RequestVerificationToken: $("input[name='__RequestVerificationToken']").val()},
+                        }).done(function (data) {
+                            if (data.Success) {
+                                swal("Deleted!", "Xóa sản phẩm thành công", "success");
+                                GetPageData(1);
+                            } else {
+                                swal("Thông báo!", data.ErrMsg, "error");
+                            }
+
+                        });
+                    } else {
+                        swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    }
+                });
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")
+<style>
+    #paged {
+        width: 40%
+    }
+
+</style>

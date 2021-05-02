@@ -1,0 +1,636 @@
+﻿@using titi.Areas.Admin.Models
+@using titi.Helper
+@using System.Linq
+@{
+    ViewBag.Title = "InsertProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    UserModel userLogin = SharedContext.Current.AdminLogdedProfile.UserProfile;
+    List<CategoryModel> listCate = ViewBag.listCategory;
+    List<CategoryModel> listCatePar = listCate.Where(w => w.ParentPid == 0).ToList();
+}
+<link href="~/Areas/Admin/Content/plugins/summernote/summernote-bs3.css" rel="stylesheet" />
+<link href="~/Areas/Admin/Content/plugins/summernote/summernote.css" rel="stylesheet" />
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Thêm mới sản phẩm</div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Tên sản phẩm: </div>
+                            <div class="col-md-8"><input type="text" name="ProductName" id="ProductName" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Mã sản phẩm: </div>
+                            <div class="col-md-8">
+                                <input type="text" id="ProductCode" class="form-control m-b" value="@ViewBag.productCode" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Seo title: </div>
+                            <div class="col-md-8"><input type="text" name="SeoTitle" id="SeoTitle" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">MetaTitle: </div>
+                            <div class="col-md-8"><input name="MetaTitle" id="MetaTitle" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">MetaKeywords: </div>
+                            <div class="col-md-8"><input type="text" name="MetaKeywords" id="MetaKeywords" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">MetaDescription: </div>
+                            <div class="col-md-8"><input name="MetaDescription" id="MetaDescription" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Sản phẩm mới: </div>
+                            <div class="col-md-8"><input type="checkbox" name="IsNew" id="IsNew" class="icheckbox_square-green" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Loại sản phẩm: </div>
+                            <div class="col-md-8">
+                                <select id="CategoryId" name="CategoryId" class="form-control m-b">
+                                    <option>--- chọn loại sản phẩm ---</option>
+                                    @foreach (var it in listCatePar)
+                                    {
+                                        <optgroup value="@it.Pid" label="@it.CategoryName">
+                                            @{ var temp = listCate.Where(w => w.ParentPid == it.Pid).ToList();}
+                                            @foreach (var item in temp)
+                                            {
+                                                <option value="@item.Pid">@item.CategoryName</option>
+                                            }
+                                        </optgroup>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Giá gốc: </div>
+                            <div class="col-md-8"><input type="text" name="Cost" id="Cost" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Size: </div>
+                            <div class="col-md-8"><input name="Size" id="Size" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">TypeCode: </div>
+                            <div class="col-md-8"><input type="text" name="TypeCode" id="TypeCode" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">khuyến mãi: </div>
+                            <div class="col-md-8"><input name="Prommotion" id="Prommotion" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Giá bán: </div>
+                            <div class="col-md-8"><input type="text" name="Price" id="Price" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Nhà phân phối: </div>
+                            <div class="col-md-8">
+                                <select id="DistributorId" class="form-control m-b">
+                                    <option>--- chọn nhà phân phối --- </option>
+                                    @foreach (var it in ViewBag.listDistri)
+                                    {
+                                        <option value="@it.Pid">@it.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Số lượng: </div>
+                            <div class="col-md-8"><input type="text" name="Quantity" id="Quantity" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Nhà sản xuất: </div>
+                            <div class="col-md-8">
+                                <select id="Producer" name="Producer" class="form-control m-b">
+                                    <option>--- chọn nhà sản xuất ---</option>
+                                    @foreach (var it in ViewBag.listProducer)
+                                    {
+                                        <option value="@it.Pid">@it.ProducerName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Ngày sản xuất: </div>
+                            <div class="col-md-8 datepicker">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input id="ProductionDate" name="ProductionDate" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Video:</div>
+                            <div class="col-md-8">
+                                <input type="file" id="flVideo" name="VideoUpload" multiple class="form-control" />
+                                <input type="button" class="btn btn-success" value="Upload Video" id="btnUploadVideo" onclick="uploadVideo()" />
+                                <input type="hidden" id="Video" name="Video" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Hình ảnh: (255 x 237)</div>
+                            <div class="col-md-8"><input type="file" id="flImage" name="ImageUpload" multiple class="form-control" /></div>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="imgPreview" style="margin-bottom:5px"></div>
+                    </div>
+                    <div class="ibox-content no-padding">
+                        <div class="summernote" id="Description">
+                        </div>
+                    </div>
+                    <div class="row" id="productDetails" style="display:none">
+                        <fieldset>
+                            <legend>Thông tin chi tiết sản phẩm</legend>
+                            <div class="row col-md-12" id="detail">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="center-block">
+                                @Html.AntiForgeryToken()
+                                <button id="btnSubmit" type="button" class="btn btn-info" onclick="Insert()">Thêm mới</button>&nbsp;
+                                <button type="button" class="btn btn-info" onclick="cancel()">Quay lại</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="~/Areas/Admin/Scripts/plugins/bootstrap-datepicker.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/summernote/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/summernote/summernote.min.js"></script>
+    <script type="text/javascript">
+        var module = {};
+        var postData = {};
+        var productDetailt = [];
+        var __RequestVerificationToken = false;
+        var $Q_Xanh_La = 0;
+        var $Q_Xanh_DaTroi = 0;
+        var $Q_Do = 0;
+        var $Q_Vang = 0;
+        var $Q_Cam = 0;
+        var $Q_Den = 0;
+        var $Q_Xam = 0;
+        var $Q_Tim = 0;
+        var $Q_Trang = 0;
+        var $sumDataColor = 0;
+        $(document).ready(function () {
+            module.ProductName = $('#ProductName');
+            module.ProductCode = $('#ProductCode');
+            module.SeoTitle = $('#SeoTitle');
+            module.MetaTitle = $('#MetaTitle');
+            module.MetaKeywords = $('#MetaKeywords');
+            module.MetaDescription = $('#MetaDescription');
+            module.Description = $('#Description');
+            module.CategoryId = $('#CategoryId');
+            module.Cost = $('#Cost');
+            module.Size = $('#Size');
+            module.TypeCode = $('#TypeCode');
+            module.Prommotion = $('#Prommotion');
+            module.Price = $('#Price');
+            module.DistributorId = $('#DistributorId');
+            module.Quantity = $('#Quantity');
+            module.Producer = $('#Producer');
+            module.ProductionDate = $('#ProductionDate');
+            module.Video = $('#Video');
+            InitDatepicker();
+            $('.summernote').summernote();
+            $('#CategoryId').change(function () {
+                $.ajax({
+                    url: '/Product/GetProperty',
+                    type: 'POST',
+                    //data: { frm: formData, __RequestVerificationToken: __RequestVerificationToken},
+                    data: { categoryId: this.value },
+                    success: function (response) {
+                        debugger;
+                        if (response.Success) {
+                            $('#productDetails').show();
+                            $('#detail').html(response.Data);
+                        } else {
+                            $('#productDetails').hide();
+                        }
+                    },
+                    error: function () {
+                        swal("Thông báo!", "Whoops something went wrong!", "error");
+                    }
+                });
+            })
+            $("#detail").on('click', '.tr_clone_add', function () {
+                debugger;
+                var $tr = $(this).closest('.tr_clone');
+                var $clone = $tr.clone();
+                $clone.find(':text').val('');
+                $tr.after($clone);
+            });
+            $("#detail").on('click', '.btnDeleteRow', function () {
+                $(this).closest('tr').remove();
+            });
+        });
+        var edit = function () {
+            $('.click2edit').summernote({ focus: true });
+        };
+        var save = function () {
+            var aHTML = $('.click2edit').code();
+            $('.click2edit').destroy();
+        };
+        function InitDatepicker() {
+            $('.datepicker .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: false,
+                autoclose: true,
+                format: 'dd/mm/yyyy'
+            });
+        }
+        function readURL(input) {
+            $("#imgPreview").empty();
+            if (input.files && input.files[0]) {
+                for (var i = 0; i < input.files.length; i++) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var image = '<img src="' + e.target.result + '" alt="image" style="width:100px">&nbsp';
+                        $("#imgPreview").append(image);
+                    }
+                    reader.readAsDataURL(input.files[i]);
+                }
+            }
+        }
+
+        $("#flImage").change(function () {
+            readURL(this);
+        });
+
+        function changeDataColor(e) {
+            switch (e.id) {
+                case 'Q_Xanh_La':
+                    $Q_Xanh_La = Number(e.value);
+                    break;
+                case 'Q_Xanh_DaTroi':
+                    $Q_Xanh_DaTroi = Number(e.value);
+                    break;
+                case 'Q_Do':
+                    $Q_Do = Number(e.value);
+                    break;
+                case 'Q_Vang':
+                    $Q_Vang = Number(e.value);
+                    break;
+                case 'Q_Cam':
+                    $Q_Cam = Number(e.value);
+                    break;
+                case 'Q_Den':
+                    $Q_Den = Number(e.value);
+                    break;
+                case 'Q_Xam':
+                    $Q_Xam = Number(e.value);
+                    break;
+                case 'Q_Tim':
+                    $Q_Tim = Number(e.value);
+                    break;
+                case 'Q_Trang':
+                    $Q_Trang = Number(e.value);
+                    break;
+            }
+            _sumDataColor();
+        }
+
+        function _sumDataColor() {
+            $sumDataColor = Number($Q_Xanh_La + $Q_Xanh_DaTroi + $Q_Do + $Q_Vang + $Q_Cam + $Q_Den + $Q_Xam + $Q_Tim + $Q_Trang);
+            $('#sumDataColor').val(isNaN($sumDataColor) ? 0 : $sumDataColor);
+        }
+        function selectColor(e) {
+            var id = e.id;
+            if (e.checked) {
+                $("#Q_" + id).removeAttr("disabled");
+            } else {
+                switch (e.id) {
+                    case 'Xanh_La':
+                        $Q_Xanh_La = 0;
+                        break;
+                    case 'Xanh_DaTroi':
+                        $Q_Xanh_DaTroi = 0;
+                        break;
+                    case 'Do':
+                        $Q_Do = 0;
+                        break;
+                    case 'Vang':
+                        $Q_Vang = 0;
+                        break;
+                    case 'Cam':
+                        $Q_Cam = 0;
+                        break;
+                    case 'Den':
+                        $Q_Den = 0;
+                        break;
+                    case 'Xam':
+                        $Q_Xam = 0;
+                        break;
+                    case 'Tim':
+                        $Q_Tim = 0;
+                        break;
+                    case 'Trang':
+                        $Q_Trang = 0;
+                        break;
+                }
+                $("#Q_" + id).val("");
+                $("#Q_" + id).attr("disabled", "disabled");
+                _sumDataColor();
+            }
+        }
+        function validateInput() {
+            var msg = "";
+            postData.IsNew = $('#IsNew').checked;
+            postData.ProductName = module.ProductName.val();
+            if (postData.ProductName == "") {
+                swal("Thông báo!", "Vui lòng nhập tên sản phẩm!", "error");
+                return false;
+                //msg += "Vui lòng nhập tên sản phẩm!<br/>";
+            }
+            postData.ProductCode = module.ProductCode.val();
+            if (postData.ProductCode == "") {
+                swal("Thông báo!", "Vui lòng nhập mã sản phẩm!", "error");
+                return false
+                //msg += "Vui lòng nhập mã sản phẩm!<br/>";
+            }
+            postData.URL = $('#CategoryId option:selected').text();
+            //postData.URL = module.URL.val().trim();
+            //if (postData.URL == "") {
+            //    msg += "Vui lòng nhập đường dẫn sản phẩm!<br/>";
+            //}
+
+            postData.MetaTitle = module.MetaTitle.val();
+            if (postData.MetaTitle == "") {
+                swal("Thông báo!", "Vui lòng nhập metaTitle!", "error");
+                return false;
+                //msg += "Vui lòng metaTitle!<br/>";
+            }
+
+            postData.MetaKeywords = module.MetaKeywords.val();
+            if (postData.MetaKeywords == "") {
+                swal("Thông báo!", "Vui lòng nhập MetaKeywords!", "error");
+                return false;
+                //msg += "Vui lòng MetaKeywords!<br/>";
+            }
+            postData.MetaDescription = module.MetaDescription.val();
+            if (postData.MetaDescription == "") {
+                swal("Thông báo!", "Vui lòng nhập MetaDescription!", "error");
+                return false;
+                //msg += "Vui lòng MetaDescription!<br/>";
+            }
+            postData.SeoTitle = $('#SeoTitle').val();
+            //postData.Description = module.Description.val();
+            postData.Description = $('.note-editable').html();
+            if (postData.Description == "") {
+                swal("Thông báo!", "Vui lòng nhập Description!", "error");
+                return false;
+                //msg += "Vui lòng Description!<br/>";
+            }
+            postData.CategoryId = module.CategoryId.val();
+            if (postData.CategoryId == "") {
+                swal("Thông báo!", "Vui lòng chọn loại sản phẩm!", "error");
+                return false;
+                //msg += "Vui lòng chọn loại sản phẩm!<br/>";
+            }
+            postData.Cost = module.Cost.val().trim();
+            if (postData.Cost == "") {
+                swal("Thông báo!", "Vui lòng nhập giá gốc!", "error");
+                return false;
+                //msg += "Vui lòng nhập giá gốc!<br/>";
+            }
+            postData.Size = module.Size.val().trim();
+            //if (postData.Size == "") {
+            //    msg += "Vui lòng nhập size sản phẩm!<br/>";
+            //}
+            module.TypeCode = $('#TypeCode');
+            postData.Prommotion = module.Prommotion.val();
+            //if (postData.Prommotion == "") {
+            //    msg += "Vui lòng nhập size sản phẩm!<br/>";
+            //}
+            postData.Price = module.Price.val();
+            if (postData.Price == "") {
+                swal("Thông báo!", "Vui lòng nhập giá bán!", "error");
+                return false;
+                //msg += "Vui lòng nhập giá bán!<br/>";
+            }
+            postData.DistributorId = module.DistributorId.val();
+            postData.Quantity = module.Quantity.val();
+            if (postData.Quantity == "") {
+                swal("Thông báo!", "Vui lòng nhập số lượng!", "error");
+                return false;
+                //msg += "Vui lòng nhập số lượng!<br/>";
+            }
+            postData.Producer = module.Producer.val();
+            postData.ProductionDate = module.ProductionDate.val();
+            var dateParts = postData.ProductionDate.split("/");
+            if (module.ProductionDate.val() == "") {
+                swal("Thông báo!", "Vui lòng nhập ngày sản xuất!", "error");
+                return false;
+                //msg += "Vui lòng nhập ngày sản xuất";
+            } else {
+                postData.ProductionDate = new Date(+dateParts[2], dateParts[1], +dateParts[0]);
+            }
+            postData.Video = module.Video.val();
+            productDetailt = [];
+            var sum = 0;
+            $('#tbProductDetail tbody tr').each(function () {
+                debugger;
+                //alert($(this).find("td:eq(4)input").val());
+                //alert($(this).closest("tr").find('td:eq(3) input').val());
+                var obj = {};
+                var name1 = $(this).closest("tr").find('td:eq(0)')[0].children[0].name.split('_')[1];
+                var value1 = $(this).closest("tr").find('td:eq(0)')[0].children[0].value;
+                var name2 = $(this).closest("tr").find('td:eq(1)')[0].children[0].name.split('_')[1];
+                var value2 = $(this).closest("tr").find('td:eq(1)')[0].children[0].value;
+                var name3 = $(this).closest("tr").find('td:eq(2)')[0].children[0].name.split('_')[1];
+                var value3 = $(this).closest("tr").find('td:eq(2)')[0].children[0].value;
+                var name4 = $(this).closest("tr").find('td:eq(3)')[0].children[0].name.split('_')[1];
+                var value4 = $(this).closest("tr").find('td:eq(3)')[0].children[0].value;
+                obj[name1] = value1;
+                obj[name2] = value2;
+                obj[name3] = value3;
+                obj[name4] = value4;
+                //var newArray = productDetailt.filter(function (el) {
+                //    return el[0].name == 1000 &&
+                //        el.sqft >= 500 &&
+                //        el.num_of_beds >= 2 &&
+                //        el.num_of_baths >= 2.5;
+                //});
+                productDetailt.push(obj);
+                //alert($(this).closest("tr").find('td:eq(0) select').val());
+            });
+            productDetailt.forEach(function (item) {
+                sum += parseInt(item.Quantity);
+            });
+            if (productDetailt.length > 0 && $('#Quantity').val() != sum) {
+                swal("Thông báo!", "Số lượng chi tiết và số lượng tổng ko khớp", "error");
+                return false;
+            }
+            //return msg;
+            return true;
+        }
+
+        function Insert() {
+            //var errorMsg = validateInput();
+            //if (errorMsg != "") {
+            //    swal("Thông báo!", errorMsg, "error");
+            //    return;
+            //}
+            
+            if (!validateInput()) {
+                return false;
+            }
+            
+
+            var formData = new FormData();
+            formData.append("Product", JSON.stringify(postData));
+            formData.append("ProductDetail", JSON.stringify(productDetailt));
+
+            for (var i = 0; i < $('#flImage')[0].files.length; i++) {
+                formData.append("files[" + i + "]", $('#flImage')[0].files[i]);
+            }
+            $('#btnSubmit').prop('disabled', true);
+            $("#btnSubmit").html('<i class="fa fa-spinner fa-spin loading"></i> Loading');
+            __RequestVerificationToken = $("input[name='__RequestVerificationToken']").val();
+            formData.append("__RequestVerificationToken", __RequestVerificationToken);
+            $.ajax({
+                url: '/Product/InsertProduct',
+                type: 'POST',
+                //data: { frm: formData, __RequestVerificationToken: __RequestVerificationToken},
+                data: formData,
+                success: function (response) {
+                    $("#btnSubmit").html('Submit');
+                    if (response.Success) {
+                        swal("", "Thêm mới sản phẩm thành công", "success");
+                        //resetInputData();
+                        $("#btnSubmit").html('Thêm mới');
+                        location.reload();
+                    }
+                    else {
+                        swal("Lỗi!", "Thêm mới thất thất bại, " + response.Msg, "error");
+                    }
+                    $('#btnSubmit').prop('disabled', false);
+                    $("#btnSubmit").html('Thêm mới');
+                },
+                processData: false,
+                contentType: false,
+                error: function () {
+                    swal("Thông báo!", "Whoops something went wrong!", "error");
+                    $("#btnSubmit").html('Thêm mới');
+                    $('#btnSubmit').prop('disabled', false);
+                }
+            });
+        }
+
+        function resetInputData() {
+            module.ProductName.val("");
+            module.ProductCode.val("");
+            module.URL.val("");
+            module.MetaTitle.val("");
+            module.MetaKeywords.val("");
+            module.MetaDescription.val("");
+            module.Description.val("");
+            module.CategoryId.val("");
+            module.Cost.val("");
+            module.Size.val("");
+            module.TypeCode.val("");
+            module.Prommotion.val("");
+            module.Price.val("");
+            module.DistributorId.val("");
+            module.Quantity.val("");
+            module.Producer.val("");
+            module.ProductionDate.val("");
+        }
+
+        $('#selectAll').click(function (e) {
+            var table = $(e.target).closest('#tbListColor');
+            $('td input:checkbox', table).prop('checked', this.checked);
+        });
+        function cancel() {
+            window.location.href = "@Url.Action("Index","Product")"; 
+        }
+
+        function uploadVideo() {
+            var des = module.ProductName.val();
+            if (des == "") {
+                swal("Thông báo!", "Vui lòng nhập tên sản phẩm", "error");
+                return false;
+            }
+            var fileUpload = $("#flVideo").get(0);
+            var files = fileUpload.files;
+
+            // Create FormData object  
+            var fileData = new FormData();
+
+            // Looping over all files and add it to FormData object  
+            for (var i = 0; i < files.length; i++) {
+                fileData.append(files[i].name, files[i]);
+            }
+            fileData.append("ProductName", des);
+            debugger;
+            
+            var URL = '@Url.Action("UploadVideo", "YouTube", new { area="Admin"})';
+            $.ajax({
+                url: '/YouTube/YouTubeUpload',
+                type: "POST",
+                data: fileData,
+                beforeSend: function () {
+                    $("#btnUploadVideo").html('<i class="fa fa-spinner fa-spin loading"></i> Đang upload');
+                    $('#btnUploadVideo').prop('disabled', true);
+                },
+                success: function (result) {
+                    $("#btnUploadVideo").html('Upload Video');
+                    if (result.Success) {
+                        $('#Video').val(result.Data);
+                        swal("", result.Message, "success");
+                    } else {
+                        $('#btnUploadVideo').removeAttr('disabled');
+                        swal("Thông báo!", result.Message, "error");
+                    }
+                    $('#Video').prop('disabled', true);
+                },
+                contentType: false, // Not to set any content header  
+                processData: false, // Not to process data  
+                error: function (err) {
+                    swal("Thông báo!", err.statusText, "error");
+                }
+            });
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")
+<style>
+    .loading {
+        margin-left: -12px;
+        margin-right: 8px;
+    }
+</style>

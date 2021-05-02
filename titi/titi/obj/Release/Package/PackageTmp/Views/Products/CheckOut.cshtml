@@ -1,0 +1,414 @@
+﻿
+@{
+    ViewBag.Title = "Thông tin giao hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row row-style-1">
+    <div class="col-lg-2 visible-lg-block">
+    </div>
+    <div class="col-lg-12">
+        <div class="row bs-wizard">
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step active">
+                <div class="text-center bs-wizard-stepnum">
+                    <span>Đăng Nhập</span>
+                </div>
+                <div class="progress"><div class="progress-bar"></div></div>
+                <span class="bs-wizard-dot">1</span>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step disabled">
+                <div class="text-center bs-wizard-stepnum">
+                    @*<span class="hidden-xs">Địa Chỉ Giao Hàng</span>*@
+                    <span class="">Địa Chỉ Giao Hàng</span>
+                    <span class="visible-xs-inline-block">Địa Chỉ</span>
+                </div>
+                <div class="progress"><div class="progress-bar"></div></div>
+                <span class="bs-wizard-dot">2</span>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step disabled">
+                <div class="text-center bs-wizard-stepnum">
+                    @*<span class="hidden-xs">Thanh Toán &amp; Đặt Mua</span>*@
+                    <span class="">Thanh Toán &amp; Đặt Mua</span>
+                    <span class="visible-xs-inline-block">Thanh Toán</span>
+                </div>
+                <div class="progress"><div class="progress-bar"></div></div>
+                <span class="bs-wizard-dot">3</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div id="lg_content_right" style="width:60%;float:left;">
+        <div class="category-tab shop-details-tab">
+            <!--category-tab-->
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tabLogin" data-toggle="tab">Đăng nhập</a></li>
+                    <li><a href="#tabCreateAccount" data-toggle="tab">Tạo tài khoản</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tabLogin">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-3">Email/SĐT </div>
+                            <div class="col-lg-9"><input type="text" id="u_userName" class="form-control form-group" placeholder="Nhập email hoặc số điện thoại" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-3">Mật khẩu </div>
+                            <div class="col-lg-9"><input type="password" id="u_password" class="form-control form-group" placeholder="Nhập mật khẩu" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><span><i>Quên mật khẩu? Nhấn vào đây</i></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-9"><button id="btnULogin" class="btn btn-primary pull-left" style="width: 100%;border-radius: 5px;margin-bottom:10px" onclick="userLogin()">Đăng nhập</button></div>
+                        </div>
+                    </div>
+                    @*<div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-9 form-group">
+                                <a href="#" class="btn btn-w-m btn-success pull-left" onclick="_facebookLogin()" style="width: 100%;border-radius: 5px;background-color:#1c84c6;border-color:#1c84c6;">Đăng nhập bằng Facebook</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-9 form-group">
+                                <a href="#" class="btn btn-w-m btn-danger pull-left" onclick="login()" style="width: 100%;border-radius: 5px;">Đăng nhập bằng Google</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-9 form-group">
+                                <a href="#" class="btn btn-info pull-left" style="width: 100%;border-radius: 5px;">Đăng nhập bằng Zalo</a>
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+
+                <div class="tab-pane fade" id="tabCreateAccount">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Họ tên</div>
+                                <div class="col-lg-9 form-group">
+                                    <input type="text" class="form-control" placeholder="Nhập họ tên" id="rg_fullName" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Số ĐT</div>
+                                <div class="col-lg-9 form-group">
+                                    <input type="text" class="form-control" placeholder="Nhập số điện thoại" id="rg_phoneNumber" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Mã xác thực</div>
+                                <div class="col-lg-9 form-group">
+                                    <input type="text" class="form-control" placeholder="Nhập mã xác thực gởi tới số điện thoại trên" id="otp" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Email</div>
+                                <div class="col-lg-9 form-group"><input type="text" class="form-control" placeholder="Nhập email" id="rg_email" /></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Mật khẩu</div>
+                                <div class="col-lg-9 form-group">
+                                    <input type="password" class="form-control" placeholder="Nhập mật khẩu từ 6 đến 24 ký tự" id="rg_password" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Giới tính</div>
+                                <div class="col-lg-9 form-group">
+                                    <div class="col-lg-6">
+                                        <input type="radio" name="gender" value="male" checked />
+                                        <label for="male">Nam</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="radio" name="gender" value="female" />
+                                        <label for="female">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3">Ngày sinh</div>
+                                <div class="col-lg-9 form-group"><input type="text" class="form-control" placeholder="dd/MM/yyyy" id="rd_birthDay" /></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-9 form-group">
+                                    <button id="btnRegister" class="btn btn-primary pull-left" style="width: 100%; border-radius: 5px;margin-bottom:10px" onclick="register()">Tạo tài khoản</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+<script type="text/javascript">
+    function register() {
+        var url = "@Url.Action("ResgisterUserAccount", "UAccount")";
+        var postData = {};
+        postData.FirstName = $('#rg_fullName').val();
+        postData.Phone = $('#rg_phoneNumber').val();
+        postData.Email = $('#rg_email').val();
+        postData.P = $('#rg_password').val();
+        postData.BirthDate = $('#rd_birthDay').val();
+        postData.Sex = $("input[name='gender']:checked").val() == "male" ? 0 : 1;
+        if (postData.FirstName == "") {
+            alert("Vui lòng nhập họ tên");
+            return;
+        }
+        if (postData.Phone == "") {
+            alert("Vui lòng nhập số điện thoại");
+            return;
+        }
+        if (postData.Email == "") {
+            alert("Vui lòng nhập email");
+            return;
+        }
+        if (postData.P == "") {
+            alert("Vui lòng nhập password");
+            return;
+        }
+        if (postData.BirthDate == "") {
+            alert("Vui lòng nhập ngày sinh");
+            return;
+        }
+        
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: postData ,
+            dataType: 'json',
+            beforeSend: function () {
+                $("#btnRegister").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đăng ký');
+                $('#btnRegister').prop('disabled', true);
+                
+            },
+            success: function (respon) {
+                $("#btnRegister").html('Đăng ký');
+                $('#btnRegister').removeAttr('disabled');
+                if (respon.Success) {
+                    alert(respon.Message);
+                }
+            },
+            error: function () {
+
+            }
+        });
+    }
+
+    function userLogin() {
+        if ($('#u_userName').val() == '') {
+            alert('Vui lòng nhập email hoặc số ĐT');
+            return false;
+        }
+        if ($('#u_password').val() == '') {
+            alert('Vui lòng nhập mật khẩu');
+            return false;
+        }
+        var _url = "@Url.Action("UserLogin", "UAccount")";
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: {
+                userName: $('#u_userName').val(),
+                password: $('#u_password').val()
+            },
+            dataType: 'json',
+            beforeSend: function () {
+                $("#btnULogin").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đăng nhập');
+                $('#btnULogin').prop('disabled', true);
+            },
+            success: function (respon) {
+                $("#btnULogin").html('Đăng nhập');
+                $('#btnULogin').removeAttr('disabled');
+                if (respon.Success) {
+                    var _urlRedir = "@Url.Action("CheckOut", "Products")";
+                    window.location.href = _urlRedir;
+                } else {
+                    alert("Email/SĐT hoặc mật khẩu không đúng");
+                    return false;
+                }
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+    }
+</script>
+    }
+    
+    <style>
+        .visible-lg-block {
+            display: block !important;
+        }
+
+        .bs-wizard-step {
+            padding: 0;
+            position: relative;
+        }
+
+        .bs-wizard > .bs-wizard-step {
+            padding: 0;
+            position: relative
+        }
+
+            .bs-wizard > .bs-wizard-step.bs-wizard-stepnum {
+                color: #595959;
+                font-size: 14px
+            }
+
+            .bs-wizard > .bs-wizard-step.bs-wizard-info {
+                color: #999;
+                font-size: 14px
+            }
+
+            .bs-wizard > .bs-wizard-step:first-child > .progress {
+                left: 50%;
+                width: 50%;
+            }
+
+            .bs-wizard > .bs-wizard-step > .progress {
+                position: relative;
+                border-radius: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+        .progress {
+            overflow: hidden;
+        }
+
+        .bs-wizard > .bs-wizard-step > .progress {
+            height: 6px;
+            margin: 20px 0;
+            background: #ebebeb;
+        }
+
+        .bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+            width: 0;
+        }
+
+        .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+            width: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #00b6f0;
+            -webkit-transition: none;
+            transition: none;
+        }
+
+        .progress-bar {
+            float: left;
+            width: 0%;
+            height: 100%;
+            line-height: 20px;
+            color: #fff;
+            background-color: #337ab7;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+            -webkit-transition: width .6s ease;
+            transition: width .6s ease;
+        }
+
+        .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            display: block;
+            top: 41px;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+            background: #5ec56f;
+            font-size: 15px;
+            color: #fff;
+            border: none;
+            line-height: 26px;
+            -webkit-box-shadow: #666 0 0 2px;
+            box-shadow: #666 0 0 2px
+        }
+
+        .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-stepnum {
+            color: #a3a3a3;
+            max-height: 20px;
+        }
+
+        .visible-xs-inline-block {
+            display: none !important;
+        }
+
+        .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .nav-tabs li.active a {
+            color: #0F0E0E;
+            border-bottom: thick solid #229133;
+            background-color: #fff;
+        }
+
+        .shop-details-tab {
+            border: none;
+        }
+
+        .category-tab ul {
+            background: none;
+        }
+        .nav-tabs li.active a:hover {
+            background: #5ec56f;
+            border-bottom: thick solid #229133;
+        }
+
+        .nav-tabs li.active a:focus {
+            /*background:none;*/
+            color: #0F0E0E;
+            border-bottom: thick solid #229133;
+            background-color: #fff;
+        }
+
+        .category-tab ul li a:hover {
+            border-bottom: thick solid #229133;
+        }
+        .bs-wizard-step:last-child > .progress {
+            width: 50%;
+        }
+    </style>

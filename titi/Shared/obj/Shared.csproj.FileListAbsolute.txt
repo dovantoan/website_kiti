@@ -1,0 +1,464 @@
+D:\Project\MainBOM\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\MainBOM\Shared\obj\Debug\Shared.csproj.ResolveComReference.cache
+D:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.View_Report.resources
+D:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.MainUserControl.resources
+D:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ValueChangedEventArgs.resources
+D:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.UserControls.UC_CustomerQuota.resources
+D:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.UserControls.uc_DateTimePicker.resources
+D:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.UserControls.UC_ListViewExt.resources
+D:\Project\MainBOM\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\Project\MainBOM\Shared\bin\Debug\Utility\Messages.txt
+D:\Project\MainBOM\Shared\bin\Debug\Shared.pdb
+D:\Project\MainBOM\Shared\bin\Debug\Application.dll
+D:\Project\MainBOM\Shared\bin\Debug\Application.pdb
+D:\Project\MainBOM\Shared\obj\Debug\Shared.dll
+D:\Project\MainBOM\Shared\obj\Debug\Shared.pdb
+D:\Project\MainBOM\Shared\bin\Debug\Shared.dll
+F:\Project\MainBOM\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.View_Report.resources
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.MainUserControl.resources
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ValueChangedEventArgs.resources
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.UserControls.UC_CustomerQuota.resources
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.UserControls.uc_DateTimePicker.resources
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.UserControls.UC_ListViewExt.resources
+F:\Project\MainBOM\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\Project\MainBOM\Shared\obj\Debug\Shared.pdb
+F:\Project\MainBOM\Shared\bin\Debug\Utility\Messages.txt
+F:\Project\MainBOM\Shared\bin\Debug\Shared.dll
+F:\Project\MainBOM\Shared\bin\Debug\Shared.pdb
+F:\Project\MainBOM\Shared\bin\Debug\Application.dll
+F:\Project\MainBOM\Shared\bin\Debug\Application.pdb
+F:\Project\MainBOM\Shared\obj\Debug\Shared.dll
+F:\Project\MainBOM\Shared\bin\Debug\DaiCoDBObjects.dll
+F:\Project\MainBOM\Shared\bin\Debug\DaiCoDBObjects.pdb
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\Foundry\FOUMetalSchedule.xls
+F:\Project\MainBOM\Shared\bin\Debug\ReportTemplate\Foundry\cptFOUMetalSchedule.rpt
+F:\Project\MainBOM\Shared\bin\Debug\ReportTemplate\Foundry\cptFOUMetalSchedule.cs
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.Foundry.cptFOUMetalSchedule.rpt
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\Technical\ReportHardware.xls
+F:\Project\MainBOM\Shared\bin\Debug\DataSetSource\Planning\dsLoadListDataSO.cs
+F:\Project\MainBOM\Shared\bin\Debug\DataSetSource\Planning\dsLoadListDataSO.Designer.cs
+F:\Project\MainBOM\Shared\bin\Debug\DataSetSource\Planning\dsLoadListDataSO.xsc
+F:\Project\MainBOM\Shared\bin\Debug\DataSetSource\Planning\dsLoadListDataSO.xsd
+F:\Project\MainBOM\Shared\bin\Debug\DataSetSource\Planning\dsLoadListDataSO.xss
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.Techical.cptBOMFittingIntructionSheet.rpt
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.Techical.cptBOMInstructionMaterial.rpt
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.Techical.cptBOMInstructionProcess.rpt
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\CustomerService\CSDEnquiryDetailTemplate.xls
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\CustomerService\CSDSaleOrderCancelDetailTemplate.xls
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\CustomerService\CSDSaleOrderDetailTemplate.xls
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\Technical\InformationWorkOrderForSchedule.xls
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\CustomerService\CSDGetPictureReport.xls
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.CustomerService.cptCUSGetPicture.rpt
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.Planning.cptPLNCreateHangTag.rpt
+F:\Project\MainBOM\Shared\bin\Debug\ExcelTemplate\Technical\ReportTechnicalDepartmentSchedule.xls
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.CustomerService.cptCUSItemsShippedInMonth.rpt
+F:\Project\MainBOM\Shared\obj\Debug\DaiCo.Shared.ReportTemplate.CustomerService.cptCUSUKOutstandingOrderLeftAfterUK96InMonth.rpt
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\ProjectDemo\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.dll
+D:\ProjectDemo\PrjectDemo\Shared\obj\Debug\Shared.pdb
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Shared.dll
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Shared.pdb
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Application.dll
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\Application.pdb
+D:\ProjectDemo\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+C:\New Folder\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+C:\New Folder\PrjectDemo\Shared\bin\Debug\Shared.dll
+C:\New Folder\PrjectDemo\Shared\bin\Debug\Shared.pdb
+C:\New Folder\PrjectDemo\Shared\bin\Debug\Application.dll
+C:\New Folder\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+C:\New Folder\PrjectDemo\Shared\bin\Debug\Application.pdb
+C:\New Folder\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+C:\New Folder\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.dll
+C:\New Folder\PrjectDemo\Shared\obj\Debug\Shared.pdb
+E:\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+E:\PrjectDemo\Shared\bin\Debug\Shared.dll
+E:\PrjectDemo\Shared\bin\Debug\Shared.pdb
+E:\PrjectDemo\Shared\bin\Debug\Application.dll
+E:\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+E:\PrjectDemo\Shared\bin\Debug\Application.pdb
+E:\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+E:\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+E:\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+E:\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+E:\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+E:\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+E:\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+E:\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+E:\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+E:\PrjectDemo\Shared\obj\Debug\Shared.dll
+E:\PrjectDemo\Shared\obj\Debug\Shared.pdb
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\Shared.dll
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\Shared.pdb
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\Application.dll
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\Application.pdb
+C:\New Folder\Debug\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.dll
+C:\New Folder\Debug\PrjectDemo\Shared\obj\Debug\Shared.pdb
+D:\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+D:\PrjectDemo\Shared\bin\Debug\Shared.dll
+D:\PrjectDemo\Shared\bin\Debug\Shared.pdb
+D:\PrjectDemo\Shared\bin\Debug\Application.dll
+D:\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+D:\PrjectDemo\Shared\bin\Debug\Application.pdb
+D:\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+D:\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+D:\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+D:\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+D:\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+D:\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+D:\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+D:\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\PrjectDemo\Shared\obj\Debug\Shared.dll
+D:\PrjectDemo\Shared\obj\Debug\Shared.pdb
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\Application.dll
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+C:\Ha Anh\0305\Attachments_2012_05_3\PrjectDemo03-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\Application.dll
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+D:\PrjectDemo08-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+D:\PrjectDemo08-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\Application.dll
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+D:\PrjectDemo09-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+D:\PrjectDemo09-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo14-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo14-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo15-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo15-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo16-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo16-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo21-05\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo21-05\PrjectDemo\Shared\obj\Debug\Shared.pdb
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.dll
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.pdb
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.dll
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.pdb
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.dll
+C:\Ha Anh\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.pdb
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.dll
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.pdb
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.dll
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.pdb
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.dll
+E:\soft\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.pdb
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.dll
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.pdb
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.dll
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.pdb
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.dll
+D:\soft\Demo ERP\09-06\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.pdb
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.dll
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Shared.pdb
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.dll
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\Application.pdb
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.dll
+E:\soft\05-08\PrjectDemo09-06\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo02_09\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo02_09\PrjectDemo\Shared\obj\Debug\Shared.pdb
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.dll
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.pdb
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.dll
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.pdb
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.dll
+E:\soft\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.pdb
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.dll
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.pdb
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.dll
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.pdb
+G:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.dll
+G:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.pdb
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.dll
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.pdb
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.dll
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.pdb
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.dll
+D:\ietls\Chi\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.pdb
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.dll
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.pdb
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.dll
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.pdb
+E:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.dll
+E:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo05_09\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo05_09\PrjectDemo\Shared\obj\Debug\Shared.pdb
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\Utility\Messages.txt
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\Shared.dll
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\Shared.pdb
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\Application.dll
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\DBObjects.dll
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\Application.pdb
+F:\PrjectDemo\PrjectDemo\Shared\bin\Debug\DBObjects.pdb
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\ResolveAssemblyReference.cache
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.View_Report.resources
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_CustomerQuota.resources
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.uc_DateTimePicker.resources
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.UserControls.UC_ListViewExt.resources
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.dll
+F:\PrjectDemo\PrjectDemo\Shared\obj\Debug\Shared.pdb

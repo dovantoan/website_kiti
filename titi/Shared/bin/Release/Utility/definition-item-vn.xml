@@ -1,0 +1,19 @@
+﻿<definition-item>
+  <username name="Tên Người Dùng" align="center" require="true" width="150" modify="true"/>
+  <password name="Mật Khẩu" align="left" width="250"/>
+  <name name="Tên Đầy Dủ" align="left" width="250"/>
+  <updateby name="Người Cập Nhật" align="center" width="150"/>
+  <updatedate name="Ngày Cập Nhật" align="center" format="dd/MM/yyyy" width="100"/>
+
+  <delete name="Xóa" align="center" width="50" style="checkbox" modify="true"/>
+  <groupcode name="Mã Nhóm" align="right" width="100"/>
+  <groupname name="Tên Nhóm" align="left" require="true" width="250" modify="true" length="128"/>
+
+  <code name="Mã" align="right" require="true" width="100" modify="true"/>
+  <value name="Giá Trị" align="left" require="true" width="250" modify="true"/>
+  
+  <description name="Mô Tả" align="left" width="250" modify="true" length="1024"/>
+  <role name="Quyền" align="center" width="100" require="true" modify="true"/>
+  <image name="Hình Ảnh" align="left" width="200" style="image"/>
+  <active name="Kích Hoạt" align="center" width="100" style="checkbox"/>
+</definition-item>

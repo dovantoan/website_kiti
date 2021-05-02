@@ -1,0 +1,242 @@
+﻿@using titi.Areas.Admin.Models
+@using titi.Helper
+@using System.Linq
+@{
+    ViewBag.Title = "Danh sách loại sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    List<CategoryModel> list = ViewBag.ListCate;
+    List<CategoryModel> listParent = list.Where(w => w.ParentPid == 0).ToList();
+    List<CategoryModel> listChild = list.Where(w => !String.IsNullOrEmpty(w.ParentPid.ToString())).ToList();
+}
+<link href="~/Areas/Admin/Content/plugins/footable/footable.core.css" rel="stylesheet" />
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Tìm kiếm sản phẩm</div>
+                <div class="ibox-content">
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="50">
+                            <thead>
+                                <tr>
+                                    <th data-toggle="true">Loại sản phẩm</th>
+                                    <th>Mô tả</th>
+                                    <th>URL</th>
+                                    <th data-hide="all"></th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in listParent)
+                                {
+                                    <tr>
+                                        <td>@item.CategoryName</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.URL</td>
+                                        <td>
+                                            <table class="table table-striped table-bordered table-hover dataTables-example dataTable" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Loại sản phẩm</th>
+                                                        <th>Mô tả</th>
+                                                        <th>URL</th>
+                                                        <th>MetaDescription</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @{
+                                                        List<CategoryModel> childs = listChild.Where(w => w.ParentPid == item.Pid).ToList();
+                                                    }
+                                                    @if (childs != null)
+                                                    {
+                                                        foreach (var it in childs)
+                                                        {
+                                                            <tr>
+                                                                <td>@it.CategoryName</td>
+                                                                <td>@it.Description</td>
+                                                                <td>@it.URL</td>
+                                                                <td>@it.MetaDescription</td>
+                                                                <td><a href="#" onclick="ViewDetail(@it.Pid)" class="btn btn-primary"><i class="fa fa-edit"></i></a> | <a href="#" onclick="Delete(@it.Pid)" class="btn btn-danger"><i class="fa fa-trash-o"></i></a></td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <input type="button" class="btn btn-primary" value="Thêm mới" onclick="AddNew()" />
+                    </div>
+                </div>
+
+                <div class="modal inmodal fade" id="addNewModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+                    <div class="modal-dialog" style="width:800px">
+                        <div class="modal-content" style="width:800px">
+                            <div id="Reponse_modalWindow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="~/Areas/Admin/Scripts/plugins/bootstrap-datepicker.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/footable/footable.all.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.footable').footable();
+        })
+        function ViewDetail(pid) {
+            $.ajax({
+                url: "/Category/CategoryDetail",
+                method: 'GET',
+                data: { categoryId: pid },
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                success: function (response) {
+                    $('#Reponse_modalWindow').empty();
+                    $('#Reponse_modalWindow').html(response);
+                    $('#addNewModal').modal('show');
+                    $('#loading-bar').hide();
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+        function AddNew() {
+            $.ajax({
+                url: "/Category/AddNewCategory",
+                method: 'GET',
+                contentType: "application/json; charset=utf-8",
+                dataType: "html",
+                success: function (response) {
+                    $('#Reponse_modalWindow').empty();
+                    $('#Reponse_modalWindow').html(response);
+                    $('#addNewModal').modal('show');
+                    $('#loading-bar').hide();
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+
+        function Update() {
+            $.ajax({
+                url: '@Url.Action("UpdateCategory","Category")',
+                method: 'POST',
+                data: $('#frmUpdateCategory').serialize(),
+                dataType: "json",
+                beforeSend: function () {
+
+                },
+                success: function (response) {
+                    if (response.Success) {
+                        swal("Updated!", response.Message, "success");
+                        //$('#Reponse_modalWindow').empty();
+                        //$('#Reponse_modalWindow').html(response);
+                        $('#addNewModal').modal('hide');
+                        $('#loading-bar').show();
+                    }
+                    else {
+                        swal("Thông báo!", response.Message, "error");
+                    }
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+
+        function Delete(id) {
+            swal({
+                title: "Xóa loại sản phẩm",
+                text: "Bạn muốn xóa loại sản phẩm này?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Xóa",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        $.ajax({
+                            url: '@Url.Action("DeleteCategory", "Category")',
+                            method: 'POST',
+                            data: { id: id , __RequestVerificationToken: $("input[name='__RequestVerificationToken']").val() },
+                        }).done(function (data) {
+                            if (data.Success) {
+                                swal("Deleted!", "Xóa loại sản phẩm thành công", "success");
+                                GetPageData(1);
+                            } else {
+                                swal("Thông báo!", data.ErrMsg, "error");
+                            }
+
+                        });
+                    } else {
+                        swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    }
+                });
+        }
+
+        function _doAddNew() {
+            $.ajax({
+                url: '@Url.Action("InsertCategory", "Category")',
+                method: 'POST',
+                data: $('#frmAddNewCategory').serialize(),
+                dataType: "json",
+                beforeSend: function () {
+
+                },
+                success: function (response) {
+                    if (response.Success) {
+                        swal("Updated!", response.Message, "success");
+                        //$('#Reponse_modalWindow').empty();
+                        //$('#Reponse_modalWindow').html(response);
+                        $('#addNewModal').modal('hide');
+                        $('#loading-bar').show();
+                    }
+                    else {
+                        swal("Thông báo!", response.Message, "error");
+                    }
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")
+<link href="~/Areas/Admin/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<style>
+    .footable-row-detail-value {
+        width: 100%
+    }
+</style>

@@ -1,0 +1,106 @@
+﻿@using System
+@using System.Web.Mvc
+@using titi.Areas.Admin.Models
+@using System.Linq
+@using titi.Helper;
+@using System.Collections.Generic
+@{
+    List<DefineUIModel> listDefineUI = new List<DefineUIModel>();
+    //listDefineUI = Session["DefineUI"] as List<DefineUIModel>;
+    listDefineUI = SharedContext.Current.AdminLogdedProfile.DefineUI;
+    //UserModel userLogin = (UserModel)Session["UserInfo"];
+    UserModel userLogin = SharedContext.Current.AdminLogdedProfile.UserProfile;
+}
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <span>
+                        <img alt="image" class="img-circle" src="~/Areas/Admin/image/profile_small.jpg" />
+                    </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">@userLogin.FirstName @userLogin.LastName</strong>
+                            </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="mailbox.html">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/Account/LogOff" mothod="POST">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            @if (listDefineUI != null)
+            {
+                List<DefineUIModel> listParent = listDefineUI.Where(w => w.ParentPid == 0).ToList();
+                if (listParent != null)
+                {
+                    int next = 0;
+                    foreach (DefineUIModel df in listParent)
+                    {
+                        if (next == 0)
+                        {
+                            <li class="active">
+                                <a href="/@df.URL" title="@df.Description"><i class="@df.Icon"></i> <span class="nav-label">@df.Name</span> <span class="fa arrow"></span></a>
+                                @{ List<DefineUIModel> listChildren = listDefineUI.Where(w => w.ParentPid == df.Pid).ToList();
+                                    if (listChildren != null)
+                                    {
+                                        <ul class="nav nav-second-level collapse">
+                                            @{int nx = 0;}
+                                            @foreach (DefineUIModel it in listChildren)
+                                            {
+                                                if (nx == 0)
+                                                {
+                                                    <li class="active"><a href="@Url.Action(""+@it.URL.Split('/')[1]+"", ""+@it.URL.Split('/')[0]+"",new {area="Admin" })" title="@it.Description">@it.Name</a></li>
+                                                }
+                                                else
+                                                {
+                                                    <li><a href="@Url.Action(""+@it.URL.Split('/')[1]+"", ""+@it.URL.Split('/')[0]+"",new {area="Admin" })" title="@it.Description">@it.Name</a></li>
+                                                }
+                                                nx++;
+                                            }
+                                        </ul>
+                                    }
+                                }
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a href="/@df.URL" title="@df.Description"><i class="@df.Icon"></i> <span class="nav-label">@df.Name</span> <span class="fa arrow"></span></a>
+                                @{ List<DefineUIModel> listChildren = listDefineUI.Where(w => w.ParentPid == df.Pid).ToList();
+                                    if (listChildren != null)
+                                    {
+                                        <ul class="nav nav-second-level collapse">
+                                            @{int nx = 0;}
+                                            @foreach (DefineUIModel it in listChildren)
+                                            {
+                                                if (nx == 0)
+                                                {
+                                                    <li class="active"><a href="@Url.Action(""+@it.URL.Split('/')[1]+"", ""+@it.URL.Split('/')[0]+"",new {area="Admin" })" title="@it.Description">@it.Name</a></li>}
+                                                else
+                                                {
+                                                    <li><a href="@Url.Action(""+@it.URL.Split('/')[1]+"", ""+@it.URL.Split('/')[0]+"",new {area="Admin" })" title="@it.Description">@it.Name</a></li>}
+                                                nx++;
+                                            }
+                                        </ul>
+                                    }
+                                }
+                            </li>
+                        }
+                        next++;
+                    }
+                }
+            }
+        </ul>
+
+    </div>
+</nav>

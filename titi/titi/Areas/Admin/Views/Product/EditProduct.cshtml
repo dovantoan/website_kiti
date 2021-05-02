@@ -1,0 +1,605 @@
+﻿@using titi.Areas.Admin.Models
+@using titi.Helper
+@using System.Linq
+@{
+    ViewBag.Title = "InsertProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    UserModel userLogin = SharedContext.Current.AdminLogdedProfile.UserProfile;
+    List<CategoryModel> listCate = ViewBag.listCategory;
+    List<CategoryModel> listCatePar = listCate.Where(w => w.ParentPid == 0).ToList();
+}
+@model ProductModel
+<link href="~/Areas/Admin/Content/plugins/summernote/summernote-bs3.css" rel="stylesheet" />
+<link href="~/Areas/Admin/Content/plugins/summernote/summernote.css" rel="stylesheet" />
+@using (Html.BeginForm("EditProduct", "Home", FormMethod.Post, new { area = "Admin", id = "frmEditProduct" }))
+{
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox">
+                    <div class="ibox-title">Cập nhật sản phẩm</div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Tên sản phẩm: </div>
+                                <div class="col-md-8">
+                                    @Html.TextBoxFor(e => e.ProductName, new { @class = "form-control m-b" })
+                                    @Html.HiddenFor(e=>e.Pid)
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">Mã sản phẩm: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.ProductCode, new { @class = "form-control m-b" })</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Seo title: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.SeoTitle, new { @class = "form-control m-b" })</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">MetaTitle: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.MetaTitle, new { @class = "form-control m-b" })</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">MetaKeywords: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.MetaKeywords, new { @class = "form-control m-b" })</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">MetaDescription: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.MetaDescription, new { @class = "form-control m-b" })</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Sản phẩm mới: </div>
+                                <div class="col-md-8"><input type="checkbox" name="IsNew" id="IsNew" class="icheckbox_square-green" checked="@Model.IsNew" /></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">Loại sản phẩm: </div>
+                                <div class="col-md-8">
+                                    <select id="CategoryId" name="CategoryId" class="form-control m-b">
+                                        <option>--- chọn loại sản phẩm ---</option>
+                                        @foreach (var it in listCatePar)
+                                        {
+                                            <optgroup value="@it.Pid" label="@it.CategoryName">
+                                                @{ var temp = listCate.Where(w => w.ParentPid == it.Pid).ToList();}
+                                                @foreach (var item in temp)
+                                                {
+                                                    if (item.Pid == Model.CategoryId)
+                                                    {
+                                                        <option value="@item.Pid" selected="selected">@item.CategoryName</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@item.Pid">@item.CategoryName</option>
+                                                    }
+                                                }
+                                            </optgroup>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Giá gốc: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.Cost, new { @class = "form-control m-b" })</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">Size: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.Size, new { @class = "form-control m-b" })</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">TypeCode: </div>
+                                <div class="col-md-8"><input type="text" name="TypeCode" id="TypeCode" class="form-control m-b" /></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">khuyến mãi: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.Promotion, new { @class = "form-control m-b" })</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Giá bán: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.Price, new { @class = "form-control m-b" })</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">Nhà phân phối: </div>
+                                <div class="col-md-8">
+                                    <select id="DistributorId" class="form-control m-b">
+                                        <option>--- chọn nhà phân phối ---</option>
+                                        @foreach (var it in ViewBag.listDistri)
+                                        {
+                                            if (it.Pid == Model.DistributorId)
+                                            {
+                                                <option value="@it.Pid" selected="selected">@it.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@it.Pid">@it.Name</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Số lượng: </div>
+                                <div class="col-md-8">@Html.TextBoxFor(e => e.Quantity, new { @class = "form-control m-b" })</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">Nhà sản xuất: </div>
+                                <div class="col-md-8">
+                                    <select id="Producer" name="Producer" class="form-control m-b">
+                                        <option>--- chọn nhà sản xuất ---</option>
+                                        @foreach (var it in ViewBag.listProducer)
+                                        {
+                                            if (it.Pid == Model.Producer)
+                                            {
+                                                <option value="@it.Pid" selected="selected">@it.ProducerName</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@it.Pid">@it.ProducerName</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Ngày sản xuất: </div>
+                                <div class="col-md-8 datepicker">
+                                    <div class="input-group date">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        @Html.TextBoxFor(e => e.ProductionDate, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">Hình ảnh: (255 x 237)</div>
+                                <div class="col-md-8"><input type="file" id="flImage" name="ImageUpload" multiple class="form-control" /></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="imgPreview" style="margin-bottom:5px"></div>
+                        </div>
+                        <div class="ibox-content no-padding">
+                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control"})
+                        </div>
+                        <div class="row" id="productDetails">
+                            <fieldset>
+                                <legend>Thông tin chi tiết sản phẩm</legend>
+                                <div class="row">
+                                    <div class="panel-body">
+                                        <div class="panel-group" id="accordion">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h5 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Chi tiết về màu sắc</a>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseOne" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-12">
+                                                            <div class="col-md-6">
+                                                                <table class="table table-striped" id="tbListColor">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th><input type="checkbox" id="selectAll" class="i-checks" /></th>
+                                                                            <th>Màu sắc</th>
+                                                                            <th>Số lượng</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Xanh_La" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">Xanh lá</span><div style="width:20px;height:20px;background-color:#148223;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Xanh_La" class="form-control" onchange="changeDataColor(this)" disabled /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Xanh_DaTroi" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">Xanh da trời</span><div style="width:20px;height:20px;background-color:#1c84c6;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Xanh_DaTroi" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Do" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">Đỏ</span><div style="width:20px;height:20px;background-color:red;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Do" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Vang" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">Vàng</span><div style="width:20px;height:20px;background-color:#fffe00;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Vang" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Cam" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">Cam</span><div style="width:20px;height:20px;background-color:darkorange;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Cam" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Den" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">Đen</span><div style="width:20px;height:20px;background-color:black;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Den" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Xam" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">màu xám</span><div style="width:20px;height:20px;background-color:#999;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Xam" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Tim" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">màu tím</span><div style="width:20px;height:20px;background-color:#9842a5;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Tim" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="50px"><input id="Trang" type="checkbox" class="i-checks" onclick="selectColor(this)" /></td>
+                                                                            <td width="40%"><div style="width:100%;margin:auto"><span style="margin-right:5px;float:left">màu trắng</span><div style="width:20px;height:20px;background-color:white;float:left"></div></div></td>
+                                                                            <td><input type="text" id="Q_Trang" class="form-control" disabled onchange="changeDataColor(this)" /></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="col-lg-4">Tổng số lượng sản phẩm:</div>
+                                                                <div class="col-lg-8"><input type="text" class="form-control" id="sumDataColor" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Chi tiết về size</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseTwo" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-12">
+                                                            <div class="col-md-6">
+                                                                <div class="row">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>Size:</td>
+                                                                            <td><input type="text" id="size_1" class="form-control m-b" /></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="center-block">
+                                    @Html.AntiForgeryToken()
+                                    <button id="btnSubmit" type="button" class="btn btn-info" onclick="update()">Cập nhật</button>&nbsp;
+                                    <button type="button" class="btn btn-info" onclick="cancel()">Quay lại</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="~/Areas/Admin/Scripts/plugins/bootstrap-datepicker.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/summernote/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/plugins/summernote/summernote.min.js"></script>
+    <script type="text/javascript">
+        var module = {};
+        var postData = {};
+        var __RequestVerificationToken = false;
+        var $Q_Xanh_La = 0;
+        var $Q_Xanh_DaTroi = 0;
+        var $Q_Do = 0;
+        var $Q_Vang = 0;
+        var $Q_Cam = 0;
+        var $Q_Den = 0;
+        var $Q_Xam = 0;
+        var $Q_Tim = 0;
+        var $Q_Trang = 0;
+        var $sumDataColor = 0;
+        $(document).ready(function () {
+            module.Pid = $('#Pid');
+            module.ProductName = $('#ProductName');
+            module.ProductCode = $('#ProductCode');
+            module.SeoTitle = $('#SeoTitle');
+            module.MetaTitle = $('#MetaTitle');
+            module.MetaKeywords = $('#MetaKeywords');
+            module.MetaDescription = $('#MetaDescription');
+            module.Description = $('#Description');
+            module.CategoryId = $('#CategoryId');
+            module.Cost = $('#Cost');
+            module.Size = $('#Size');
+            module.TypeCode = $('#TypeCode');
+            module.Prommotion = $('#Prommotion');
+            module.Price = $('#Price');
+            module.DistributorId = $('#DistributorId');
+            module.Quantity = $('#Quantity');
+            module.Producer = $('#Producer');
+            module.ProductionDate = $('#ProductionDate');
+            InitDatepicker();
+            $('#Description').summernote();
+        });
+        var edit = function () {
+            $('.click2edit').summernote({ focus: true });
+        };
+        var save = function () {
+            var aHTML = $('.click2edit').code();
+            $('.click2edit').destroy();
+        };
+        function InitDatepicker() {
+            $('.datepicker .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: false,
+                autoclose: true,
+                format: 'dd/mm/yyyy'
+            });
+        }
+        function readURL(input) {
+            $("#imgPreview").empty();
+            if (input.files && input.files[0]) {
+                for (var i = 0; i < input.files.length; i++) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var image = '<img src="' + e.target.result + '" alt="image" style="width:100px">&nbsp';
+                        $("#imgPreview").append(image);
+                    }
+                    reader.readAsDataURL(input.files[i]);
+                }
+            }
+        }
+
+        $("#flImage").change(function () {
+            readURL(this);
+        });
+
+        function changeDataColor(e) {
+            switch (e.id) {
+                case 'Q_Xanh_La':
+                    $Q_Xanh_La = Number(e.value);
+                    break;
+                case 'Q_Xanh_DaTroi':
+                    $Q_Xanh_DaTroi = Number(e.value);
+                    break;
+                case 'Q_Do':
+                    $Q_Do = Number(e.value);
+                    break;
+                case 'Q_Vang':
+                    $Q_Vang = Number(e.value);
+                    break;
+                case 'Q_Cam':
+                    $Q_Cam = Number(e.value);
+                    break;
+                case 'Q_Den':
+                    $Q_Den = Number(e.value);
+                    break;
+                case 'Q_Xam':
+                    $Q_Xam = Number(e.value);
+                    break;
+                case 'Q_Tim':
+                    $Q_Tim = Number(e.value);
+                    break;
+                case 'Q_Trang':
+                    $Q_Trang = Number(e.value);
+                    break;
+            }
+            _sumDataColor();
+        }
+
+        function _sumDataColor() {
+            $sumDataColor = Number($Q_Xanh_La + $Q_Xanh_DaTroi + $Q_Do + $Q_Vang + $Q_Cam + $Q_Den + $Q_Xam + $Q_Tim + $Q_Trang);
+            $('#sumDataColor').val(isNaN($sumDataColor) ? 0 : $sumDataColor);
+        }
+        function selectColor(e) {
+            var id = e.id;
+            if (e.checked) {
+                $("#Q_" + id).removeAttr("disabled");
+            } else {
+                switch (e.id) {
+                    case 'Xanh_La':
+                        $Q_Xanh_La = 0;
+                        break;
+                    case 'Xanh_DaTroi':
+                        $Q_Xanh_DaTroi = 0;
+                        break;
+                    case 'Do':
+                        $Q_Do = 0;
+                        break;
+                    case 'Vang':
+                        $Q_Vang = 0;
+                        break;
+                    case 'Cam':
+                        $Q_Cam = 0;
+                        break;
+                    case 'Den':
+                        $Q_Den = 0;
+                        break;
+                    case 'Xam':
+                        $Q_Xam = 0;
+                        break;
+                    case 'Tim':
+                        $Q_Tim = 0;
+                        break;
+                    case 'Trang':
+                        $Q_Trang = 0;
+                        break;
+                }
+                $("#Q_" + id).val("");
+                $("#Q_" + id).attr("disabled", "disabled");
+                _sumDataColor();
+            }
+        }
+        function validateInput() {
+            var msg = "";
+            postData.Pid = module.Pid.val();
+            postData.IsNew = $('#IsNew').checked;
+            postData.ProductName = module.ProductName.val();
+            if (postData.ProductName == "") {
+                msg += "Vui lòng nhập tên sản phẩm!<br/>";
+            }
+            postData.ProductCode = module.ProductCode.val();
+            if (postData.ProductCode == "") {
+                msg += "Vui lòng nhập mã sản phẩm!<br/>";
+            }
+            postData.URL = $('#CategoryId option:selected').text();
+            //postData.URL = module.URL.val().trim();
+            //if (postData.URL == "") {
+            //    msg += "Vui lòng nhập đường dẫn sản phẩm!<br/>";
+            //}
+
+            postData.MetaTitle = module.MetaTitle.val();
+            if (postData.MetaTitle == "") {
+                msg += "Vui lòng metaTitle!<br/>";
+            }
+
+            postData.MetaKeywords = module.MetaKeywords.val();
+            if (postData.MetaKeywords == "") {
+                msg += "Vui lòng MetaKeywords!<br/>";
+            }
+            postData.MetaDescription = module.MetaDescription.val();
+            if (postData.MetaDescription == "") {
+                msg += "Vui lòng MetaDescription!<br/>";
+            }
+            postData.SeoTitle = $('#SeoTitle').val();
+            //postData.Description = module.Description.val();
+            postData.Description = $('.note-editable').html();
+            if (postData.Description == "") {
+                msg += "Vui lòng Description!<br/>";
+            }
+            postData.CategoryId = module.CategoryId.val();
+            if (postData.CategoryId == "") {
+                msg += "Vui lòng chọn loại sản phẩm!<br/>";
+            }
+            postData.Cost = module.Cost.val().trim();
+            if (postData.Cost == "") {
+                msg += "Vui lòng chọn loại sản phẩm!<br/>";
+            }
+            postData.Size = module.Size.val().trim();
+            if (postData.Size == "") {
+                msg += "Vui lòng nhập size sản phẩm!<br/>";
+            }
+            module.TypeCode = $('#TypeCode');
+            postData.Prommotion = module.Prommotion.val();
+            //if (postData.Prommotion == "") {
+            //    msg += "Vui lòng nhập size sản phẩm!<br/>";
+            //}
+            postData.Price = module.Price.val();
+            if (postData.Price == "") {
+                msg += "Vui lòng nhập giá bán!<br/>";
+            }
+            postData.DistributorId = module.DistributorId.val();
+            postData.Quantity = module.Quantity.val();
+            if (postData.Quantity == "") {
+                msg += "Vui lòng nhập số lượng!<br/>";
+            }
+            postData.Producer = module.Producer.val();
+            postData.ProductionDate = module.ProductionDate.val();
+            var dateParts = postData.ProductionDate.split("/");
+            if (module.ProductionDate.val() == "") {
+                msg += "Vui lòng nhập ngày sản xuất";
+            } else {
+                postData.ProductionDate = new Date(+dateParts[2], dateParts[1], +dateParts[0]);
+            }
+            return msg;
+        }
+
+        function update() {
+            var errorMsg = validateInput();
+            if (errorMsg != "") {
+                swal("Thông báo!", errorMsg, "error");
+                return;
+            }
+            var formData = new FormData();
+            formData.append("Product", JSON.stringify(postData));
+            for (var i = 0; i < $('#flImage')[0].files.length; i++) {
+                formData.append("files[" + i + "]", $('#flImage')[0].files[i]);
+            }
+            $('#btnSubmit').prop('disabled', true);
+            $("#btnSubmit").html('<i class="fa fa-spinner fa-spin loading"></i> Loading');
+            __RequestVerificationToken = $("input[name='__RequestVerificationToken']").val();
+            formData.append("__RequestVerificationToken", __RequestVerificationToken);
+            $.ajax({
+                url: '/Product/UpdateProduct',
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    $("#btnSubmit").html('Submit');
+                    if (response.Success) {
+                        swal("", "cập nhật sản phẩm thành công", "success");
+                        resetInputData();
+                        $("#btnSubmit").html('Cập nhật');
+                    }
+                    else {
+                        swal("Lỗi!", "Thêm mới thất thất bại, " + response.Msg, "error");
+                    }
+                    $('#btnSubmit').prop('disabled', false);
+                    $("#btnSubmit").html('Cập nhật');
+                },
+                processData: false,
+                contentType: false,
+                error: function () {
+                    swal("Thông báo!", "Whoops something went wrong!", "error");
+                    $("#btnSubmit").html('Cập nhật');
+                    $('#btnSubmit').prop('disabled', false);
+                }
+            });
+        }
+
+        function resetInputData() {
+            module.ProductName.val("");
+            module.ProductCode.val("");
+            module.MetaTitle.val("");
+            module.MetaKeywords.val("");
+            module.MetaDescription.val("");
+            module.Description.val("");
+            module.CategoryId.val("");
+            module.Cost.val("");
+            module.Size.val("");
+            module.TypeCode.val("");
+            module.Prommotion.val("");
+            module.Price.val("");
+            module.DistributorId.val("");
+            module.Quantity.val("");
+            module.Producer.val("");
+            module.ProductionDate.val("");
+        }
+
+        $('#selectAll').click(function (e) {
+            var table = $(e.target).closest('#tbListColor');
+            $('td input:checkbox', table).prop('checked', this.checked);
+        });
+
+        function cancel() {
+            window.location.href = "@Url.Action("Index","Product")"; 
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")
+<style>
+    .loading {
+        margin-left: -12px;
+        margin-right: 8px;
+    }
+</style>

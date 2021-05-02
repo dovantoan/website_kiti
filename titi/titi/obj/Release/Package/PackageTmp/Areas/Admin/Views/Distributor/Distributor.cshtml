@@ -1,0 +1,184 @@
+﻿
+@{
+    ViewBag.Title = "Nhà phân phối";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Styles.Render("~/Content/cssjqgrid")
+<link href="~/Areas/Admin/Content/style.css" rel="stylesheet" />
+<link href="~/Areas/Admin/Content/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Danh sách nhà phân phối</div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_2"></table>
+                            <div id="pager_list_2"></div>
+                        </div>
+                        @Html.AntiForgeryToken()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqGrid")
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        var mydata = [];
+        $(document).ready(function () {
+            getAllDis();
+        });
+
+        function getAllDis() {
+            $.ajax({
+                url: '@Url.Action("GetAllDistributor", "Distributor", new {area="Admin"})',
+                type: 'GET',
+                success: function (response) {
+                    if (response.Success) {
+                        mydata=response.Data;
+                        $("#table_list_2").jqGrid({
+                            data: mydata,
+                            datatype: "local",
+                            height: 450,
+                            autowidth: true,
+                            shrinkToFit: true,
+                            rowNum: 20,
+                            rowList: [10, 20, 30],
+                            colNames: ['Pid', 'DistributorCode', 'Name', 'BusinessLicense', 'Address', 'PhoneNumber','Status'],
+                            colModel: [
+                                { name: 'Pid', index: 'id', editable: true, key: true, width: 50, sorttype: "int", search: true },
+                                { name: 'DistributorCode', index: 'DistributorCode', editable: true, width: 90 },
+                                { name: 'Name', index: 'Name', editable: true, width: 100 },
+                                { name: 'BusinessLicense', index: 'BusinessLicense', editable: true, width: 180, align: "left" },
+                                { name: 'Address', index: 'Address', editable: true, width: 180, align: "left" },
+                                { name: 'PhoneNumber', index: 'PhoneNumber', editable: true, width: 180, align: "left" },
+                                { name: 'Status', index: 'Status', editable: true, width: 180, align: "left" }
+                            ],
+                            pager: "#pager_list_2",
+                            viewrecords: true,
+                            caption: "Danh sách nhà phân phối",
+                            add: true,
+                            edit: true,
+                            addtext: 'Add',
+                            edittext: 'Edit',
+                            hidegrid: false
+                        }).navGrid('#pager_list_2',
+                            {
+                                edit: true,
+                                add: true,
+                                del: true,
+                                search: true,
+                                refresh: true,
+                                closeAfterSearch: true
+                            },
+                            {
+                                // update
+                                zIndex: 9999,
+                                url: '@Url.Action("UpdateDis", "Distributor", new {area="Admin"})',
+                                editData: {
+                                    __RequestVerificationToken: function () {
+                                        return $("input[name=__RequestVerificationToken]").val();
+                                    }
+                                },
+                                closeOnEscape: true,
+                                closeAfterEdit: true,
+                                recreateForm: true,
+                                afterComplete: function (response) {
+                                    if (response.responseJSON.Success) {
+                                        swal("", response.responseJSON.Msg, "success");
+                                    } else {
+                                        swal("Lỗi!", response.responseJSON.Msg, "error");
+                                    }
+                                }
+                            },
+                            {
+                                // add option
+                                zIndex: 9999,
+                                url: '@Url.Action("InsertDis", "Distributor", new { area = "Admin" })',
+                                editData: {
+                                    __RequestVerificationToken: function () {
+                                        return $("input[name=__RequestVerificationToken]").val();
+                                    }
+                                },
+                                closeOnEscape: true,
+                                closeAfterAdd: true,
+                                afterComplete: function (response) {
+                                    if (response.responseJSON.Success) {
+                                        swal("", response.responseJSON.Msg, "success");
+                                    } else {
+                                        swal("Lỗi!", response.responseJSON.Msg, "error");
+                                    }
+                                }
+                            },
+                            {
+                                // delete option
+                                zIndex: 9999,
+                                url: '@Url.Action("DeleteDis", "Distributor", new { area = "Admin" })',
+                                editData: {
+                                    __RequestVerificationToken: function () {
+                                        return $("input[name=__RequestVerificationToken]").val();
+                                    }
+                                },
+                                closeOnEscape: true,
+                                closeAfterDelete: true,
+                                recreateForm: true,
+                                msg: "Bạn muốn xóa nhà phân phối này?",
+                                afterComplete: function (response) {
+                                    if (response.responseJSON.Success) {
+                                        swal("", response.responseJSON.Msg, "success");
+                                    } else {
+                                        swal("Lỗi!", response.responseJSON.Msg, "error");
+                                    }
+                                }
+                            });
+
+                        // Add selection
+                        $("#table_list_2").setSelection(4, true);
+
+
+                        // Setup buttons
+                        $("#table_list_2").jqGrid('navGrid', '#pager_list_2',
+                            { edit: true, add: true, del: true, search: true, refresh: true },
+                            { height: 200, reloadAfterSubmit: true }
+                        );
+
+                        // Add responsive to jqGrid
+                        $(window).bind('resize', function () {
+                            var width = $('.jqGrid_wrapper').width();
+                            $('#table_list_2').setGridWidth(width);
+                        });
+                    }
+                    else {
+                        alert("Lấy danh sách nhà phân phối thất bại");
+                    }
+                },
+                error: function () {
+                    alert("Whoops something went wrong!");
+                }
+            });
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")
+<style>
+    #gbox_table_list_2 {
+        width: 100% !important;
+    }
+
+    #pager_list_2 {
+        width: 100% !important;
+    }
+
+    #gview_table_list_2 {
+        width: 100% !important;
+    }
+
+    .ui-state-default.ui-jqgrid-hdiv {
+        width: 100% !important;
+    }
+</style>

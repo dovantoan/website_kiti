@@ -1,0 +1,1782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0563D0C-CECC-46D3-99D2-D5DAD498E1AB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>titi</RootNamespace>
+    <AssemblyName>titi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <IISExpressSSLPort>44397</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityLibrary">
+      <HintPath>..\EntityLibrary\bin\Debug\EntityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ExifLib.Standard, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExifLib.Standard.1.7.0\lib\netstandard2.0\ExifLib.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.45.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.45.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.45.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.YouTube.v3, Version=1.45.0.1929, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.YouTube.v3.1.45.0.1929\lib\net45\Google.Apis.YouTube.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=2.2.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Client.2.2.0.0\lib\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.Extensions.2.2.0.0\lib\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.YouTube, Version=2.2.0.0, Culture=neutral, PublicKeyToken=af04a32718ae8833, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.GData.YouTube.2.2.0.0\lib\Google.GData.YouTube.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Shared">
+      <HintPath>..\Shared\bin\Debug\Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Util">
+      <HintPath>..\Util\bin\Debug\Util.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthorizeCustom.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomizeActionFilter.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Category\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DistributorController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProducerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Product\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\YouTubeController.cs" />
+    <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
+    <Compile Include="Areas\Admin\Models\BaseModels\BaseModel.cs" />
+    <Compile Include="Areas\Admin\Models\CategoryModel.cs" />
+    <Compile Include="Areas\Admin\Models\DefineUIModel.cs" />
+    <Compile Include="Areas\Admin\Models\DistributorModels.cs" />
+    <Compile Include="Areas\Admin\Models\GroupModule.cs" />
+    <Compile Include="Areas\Admin\Models\JsonResultModel.cs" />
+    <Compile Include="Areas\Admin\Models\ProductModel.cs" />
+    <Compile Include="Areas\Admin\Models\PhanQuyenViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\RoleViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Security\AdminLoginProfile.cs" />
+    <Compile Include="Areas\Admin\Models\RoleModel.cs" />
+    <Compile Include="Areas\Admin\Models\TokenModel.cs" />
+    <Compile Include="Areas\Admin\Models\TreeViewModule.cs" />
+    <Compile Include="Areas\Admin\Models\UserModel.cs" />
+    <Compile Include="Areas\Admin\SearchCriteria\BaseSearchCriteria.cs" />
+    <Compile Include="Areas\Admin\SearchCriteria\JsonSearchResultCriteria.cs" />
+    <Compile Include="Areas\Admin\SearchCriteria\ProductSearchCriteria.cs" />
+    <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Order\UOrderController.cs" />
+    <Compile Include="Controllers\Producer\ProducerController.cs" />
+    <Compile Include="Controllers\Products\ProductsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Caching.cs" />
+    <Compile Include="Helper\SharedContext.cs" />
+    <Compile Include="Helper\ToandvSessionManager.cs" />
+    <Compile Include="Infrastructure\AutomapperWebProfile.cs" />
+    <Compile Include="Language\language.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language\language.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>language.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language\language.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>language.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language\language.vi-VN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>language.vi-VN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account\UserLoginProfile.cs" />
+    <Compile Include="Models\BaseModels\BaseModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\JsonResultModel.cs" />
+    <Compile Include="Areas\Admin\Models\ProducerModel.cs" />
+    <Compile Include="Models\MasterModels\ProvinceModels.cs" />
+    <Compile Include="Models\ProductDetailModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\SearchCriteria\BaseSearchCriteria.cs" />
+    <Compile Include="Models\SearchCriteria\JsonSearchResultCriteria.cs" />
+    <Compile Include="Models\SearchCriteria\ProductSearchCriteria.cs" />
+    <Compile Include="Models\Security\UserLoginProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Content\animate.css" />
+    <Content Include="Areas\Admin\Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Areas\Admin\Content\bootstrap-theme.css" />
+    <Content Include="Areas\Admin\Content\bootstrap-theme.min.css" />
+    <Content Include="Areas\Admin\Content\bootstrap.css" />
+    <Content Include="Areas\Admin\Content\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\common.css" />
+    <Content Include="Areas\Admin\Content\dataTables.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\jquery.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\PagedList.css" />
+    <Content Include="Areas\Admin\Content\patterns\1.png" />
+    <Content Include="Areas\Admin\Content\patterns\2.png" />
+    <Content Include="Areas\Admin\Content\patterns\3.png" />
+    <Content Include="Areas\Admin\Content\patterns\4.png" />
+    <Content Include="Areas\Admin\Content\patterns\5.png" />
+    <Content Include="Areas\Admin\Content\patterns\6.png" />
+    <Content Include="Areas\Admin\Content\patterns\7.png" />
+    <Content Include="Areas\Admin\Content\patterns\congruent_pentagon.png" />
+    <Content Include="Areas\Admin\Content\patterns\header-profile-skin-1.png" />
+    <Content Include="Areas\Admin\Content\patterns\header-profile-skin-2.png" />
+    <Content Include="Areas\Admin\Content\patterns\header-profile-skin-3.png" />
+    <Content Include="Areas\Admin\Content\patterns\header-profile.png" />
+    <Content Include="Areas\Admin\Content\patterns\otis_redding.png" />
+    <Content Include="Areas\Admin\Content\patterns\shattered.png" />
+    <Content Include="Areas\Admin\Content\patterns\triangular.png" />
+    <Content Include="Areas\Admin\Content\plugins\awesome-bootstrap-checkbox\awesome-bootstrap-checkbox.css" />
+    <Content Include="Areas\Admin\Content\plugins\chartist\chartist.min.css" />
+    <Content Include="Areas\Admin\Content\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="Areas\Admin\Content\plugins\chosen\chosen-sprite.png" />
+    <Content Include="Areas\Admin\Content\plugins\chosen\chosen.css" />
+    <Content Include="Areas\Admin\Content\plugins\clockpicker\clockpicker.css" />
+    <Content Include="Areas\Admin\Content\plugins\footable\fonts\footable.svg" />
+    <Content Include="Areas\Admin\Content\plugins\footable\footable.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\plugins\footable\footable.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\plugins\footable\footable.core.css" />
+    <Content Include="Areas\Admin\Content\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Areas\Admin\Content\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Areas\Admin\Content\plugins\jqGrid\ui.jqgrid.css" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\animated-overlay.gif" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\Admin\Content\plugins\jQueryUI\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Areas\Admin\Content\plugins\jsTree\32px.png" />
+    <Content Include="Areas\Admin\Content\plugins\jsTree\40px.png" />
+    <Content Include="Areas\Admin\Content\plugins\jsTree\style.css" />
+    <Content Include="Areas\Admin\Content\plugins\jsTree\style.min.css" />
+    <Content Include="Areas\Admin\Content\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Areas\Admin\Content\plugins\summernote\summernote.css" />
+    <Content Include="Areas\Admin\image\icon\green%402x.png" />
+    <Content Include="Areas\Admin\image\icon\green.png" />
+    <Content Include="Areas\Admin\Scripts\jquery.jstree.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\footable\footable.all.min.js" />
+    <Content Include="Areas\Admin\Scripts\themes\default\d.gif" />
+    <Content Include="Areas\Admin\Scripts\themes\default\d.png" />
+    <Content Include="Areas\Admin\Scripts\themes\default\style.css" />
+    <Content Include="Areas\Admin\Scripts\themes\default\throbber.gif" />
+    <Content Include="Areas\Admin\Content\plugins\jsTree\throbber.gif" />
+    <Content Include="Areas\Admin\Content\plugins\Notification\toastr.min.css" />
+    <Content Include="Areas\Admin\Content\plugins\select2\select2.min.css" />
+    <Content Include="Areas\Admin\Content\Site.css" />
+    <Content Include="Areas\Admin\Content\style.css" />
+    <Content Include="Areas\Admin\Content\sweetalert.css" />
+    <Content Include="Areas\Admin\font-awesome\css\font-awesome.css" />
+    <Content Include="Areas\Admin\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\image\a1.jpg" />
+    <Content Include="Areas\Admin\image\a2.jpg" />
+    <Content Include="Areas\Admin\image\a3.jpg" />
+    <Content Include="Areas\Admin\image\a4.jpg" />
+    <Content Include="Areas\Admin\image\a5.jpg" />
+    <Content Include="Areas\Admin\image\a6.jpg" />
+    <Content Include="Areas\Admin\image\a7.jpg" />
+    <Content Include="Areas\Admin\image\a8.jpg" />
+    <Content Include="Areas\Admin\image\angular_logo.png" />
+    <Content Include="Areas\Admin\image\bg.jpg" />
+    <Content Include="Areas\Admin\image\dashbard4_1.jpg" />
+    <Content Include="Areas\Admin\image\dashbard4_2.jpg" />
+    <Content Include="Areas\Admin\image\email_1.jpg" />
+    <Content Include="Areas\Admin\image\email_2.jpg" />
+    <Content Include="Areas\Admin\image\email_3.jpg" />
+    <Content Include="Areas\Admin\image\full_height.jpg" />
+    <Content Include="Areas\Admin\image\gallery\1.jpg" />
+    <Content Include="Areas\Admin\image\gallery\10.jpg" />
+    <Content Include="Areas\Admin\image\gallery\10s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\11.jpg" />
+    <Content Include="Areas\Admin\image\gallery\11s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\12.jpg" />
+    <Content Include="Areas\Admin\image\gallery\12s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\1s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\2.jpg" />
+    <Content Include="Areas\Admin\image\gallery\2s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\3.jpg" />
+    <Content Include="Areas\Admin\image\gallery\3s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\4.jpg" />
+    <Content Include="Areas\Admin\image\gallery\4s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\5.jpg" />
+    <Content Include="Areas\Admin\image\gallery\5s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\6.jpg" />
+    <Content Include="Areas\Admin\image\gallery\6s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\7.jpg" />
+    <Content Include="Areas\Admin\image\gallery\7s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\8.jpg" />
+    <Content Include="Areas\Admin\image\gallery\8s.jpg" />
+    <Content Include="Areas\Admin\image\gallery\9.jpg" />
+    <Content Include="Areas\Admin\image\gallery\9s.jpg" />
+    <Content Include="Areas\Admin\image\headphones.jpg" />
+    <Content Include="Areas\Admin\image\html_logo.png" />
+    <Content Include="Areas\Admin\image\landing\avatar1.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar2.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar3.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar4.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar5.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar6.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar7.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar8.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar9.jpg" />
+    <Content Include="Areas\Admin\image\landing\avatar_all.png" />
+    <Content Include="Areas\Admin\image\landing\dashboard.png" />
+    <Content Include="Areas\Admin\image\landing\header_one.jpg" />
+    <Content Include="Areas\Admin\image\landing\header_two.jpg" />
+    <Content Include="Areas\Admin\image\landing\iphone.jpg" />
+    <Content Include="Areas\Admin\image\landing\laptop.png" />
+    <Content Include="Areas\Admin\image\landing\perspective.png" />
+    <Content Include="Areas\Admin\image\landing\shattered.png" />
+    <Content Include="Areas\Admin\image\landing\word_map.png" />
+    <Content Include="Areas\Admin\image\logo.png" />
+    <Content Include="Areas\Admin\image\meteor_logo.png" />
+    <Content Include="Areas\Admin\image\mvc_logo.png" />
+    <Content Include="Areas\Admin\image\off_canvas.jpg" />
+    <Content Include="Areas\Admin\image\p1.jpg" />
+    <Content Include="Areas\Admin\image\p2.jpg" />
+    <Content Include="Areas\Admin\image\p3.jpg" />
+    <Content Include="Areas\Admin\image\p4.jpg" />
+    <Content Include="Areas\Admin\image\p5.jpg" />
+    <Content Include="Areas\Admin\image\p6.jpg" />
+    <Content Include="Areas\Admin\image\p7.jpg" />
+    <Content Include="Areas\Admin\image\p8.jpg" />
+    <Content Include="Areas\Admin\image\profile.jpg" />
+    <Content Include="Areas\Admin\image\profile_big.jpg" />
+    <Content Include="Areas\Admin\image\profile_small.jpg" />
+    <Content Include="Areas\Admin\image\p_big1.jpg" />
+    <Content Include="Areas\Admin\image\p_big2.jpg" />
+    <Content Include="Areas\Admin\image\p_big3.jpg" />
+    <Content Include="Areas\Admin\image\rails_logo.png" />
+    <Content Include="Areas\Admin\image\zender_logo.png" />
+    <Content Include="Areas\Admin\Scripts\angular-animate.js" />
+    <Content Include="Areas\Admin\Scripts\angular-animate.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-aria.js" />
+    <Content Include="Areas\Admin\Scripts\angular-aria.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-cookies.js" />
+    <Content Include="Areas\Admin\Scripts\angular-cookies.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-csp.css" />
+    <Content Include="Areas\Admin\Scripts\angular-loader.js" />
+    <Content Include="Areas\Admin\Scripts\angular-loader.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-message-format.js" />
+    <Content Include="Areas\Admin\Scripts\angular-message-format.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-messages.js" />
+    <Content Include="Areas\Admin\Scripts\angular-messages.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-mocks.js" />
+    <Content Include="Areas\Admin\Scripts\angular-parse-ext.js" />
+    <Content Include="Areas\Admin\Scripts\angular-parse-ext.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-resource.js" />
+    <Content Include="Areas\Admin\Scripts\angular-resource.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-route.js" />
+    <Content Include="Areas\Admin\Scripts\angular-route.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-sanitize.js" />
+    <Content Include="Areas\Admin\Scripts\angular-sanitize.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular-touch.js" />
+    <Content Include="Areas\Admin\Scripts\angular-touch.min.js" />
+    <Content Include="Areas\Admin\Scripts\angular.js" />
+    <Content Include="Areas\Admin\Scripts\angular.min.js" />
+    <Content Include="Areas\Admin\Scripts\app\chat.js" />
+    <Content Include="Areas\Admin\Scripts\app\common.js" />
+    <Content Include="Areas\Admin\Scripts\app\controlMenu.js" />
+    <Content Include="Areas\Admin\Scripts\app\controlUtility.js" />
+    <Content Include="Areas\Admin\Scripts\app\CreateControl.js" />
+    <Content Include="Areas\Admin\Scripts\app\Email.js" />
+    <Content Include="Areas\Admin\Scripts\app\inspinia.js" />
+    <Content Include="Areas\Admin\Scripts\app\Notification.js" />
+    <Content Include="Areas\Admin\Scripts\bootstrap-filestyle.min.js" />
+    <Content Include="Areas\Admin\Scripts\bootstrap.js" />
+    <Content Include="Areas\Admin\Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Scripts\core\ktshopper.js" />
+    <Content Include="Areas\Admin\Scripts\dataTables.bootstrap.min.js" />
+    <Content Include="Areas\Admin\Scripts\dataTables.fixedColumns.min.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_af-na.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_af-za.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_af.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_agq-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_agq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ak-gh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ak.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_am-et.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_am.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-001.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-ae.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-bh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-dj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-dz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-eg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-eh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-er.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-il.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-iq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-jo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-km.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-kw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-lb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-ly.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-ma.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-mr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-om.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-ps.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-qa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-sa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-sd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-so.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-ss.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-sy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-td.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-tn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-xb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar-ye.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ar.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_as-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_as.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_asa-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_asa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ast-es.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ast.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_az-cyrl-az.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_az-cyrl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_az-latn-az.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_az-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_az.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bas-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bas.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_be-by.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_be.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bem-zm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bem.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bez-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bez.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bg-bg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bm-ml.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bn-bd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bn-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bo-cn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bo-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_br-fr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_br.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_brx-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_brx.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bs-cyrl-ba.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bs-cyrl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bs-latn-ba.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bs-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_bs.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ca-ad.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ca-es-valencia.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ca-es.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ca-fr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ca-it.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ca.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ce-ru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ce.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cgg-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cgg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_chr-us.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_chr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-arab-iq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-arab-ir.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-arab.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-iq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-ir.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-latn-iq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ckb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cs-cz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cs.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cu-ru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cy-gb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_cy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_da-dk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_da-gl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_da.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dav-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dav.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-at.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-be.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-it.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-li.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de-lu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dje-ne.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dje.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dsb-de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dsb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dua-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dua.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dyo-sn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dyo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dz-bt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_dz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ebu-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ebu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ee-gh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ee-tg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ee.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_el-cy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_el-gr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_el.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-001.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-150.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ag.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ai.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-as.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-at.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-au.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-bb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-be.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-bi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-bm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-bs.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-bw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-bz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ca.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-cc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ck.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-cx.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-cy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-dg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-dk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-dm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-er.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-fi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-fj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-fk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-fm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-gy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-hk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ie.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-il.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-im.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-io.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-iso.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-je.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-jm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ki.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-kn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ky.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-lc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-lr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ls.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mp.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ms.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-mw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-my.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-na.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-nf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ng.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-nl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-nr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-nu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-nz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-pg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ph.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-pk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-pn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-pr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-pw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-rw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-se.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-si.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ss.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sx.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-sz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-tc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-tk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-to.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-tt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-tv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-um.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-us-posix.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-us.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-vc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-vg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-vi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-vu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-ws.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-xa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-za.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-zm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en-zw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_en.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_eo-001.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_eo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-419.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ar.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-bo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-br.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-bz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-cl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-co.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-cr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-cu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-do.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ea.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ec.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-es.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-gq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-gt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-hn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ic.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-mx.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ni.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-pa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-pe.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ph.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-pr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-py.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-sv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-us.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-uy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es-ve.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_es.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_et-ee.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_et.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_eu-es.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_eu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ewo-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ewo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fa-af.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fa-ir.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ff-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ff-gn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ff-mr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ff-sn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ff.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fi-fi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fil-ph.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fil.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fo-dk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fo-fo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-be.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-bf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-bi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-bj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-bl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ca.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-cd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-cf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-cg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ci.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-dj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-dz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-fr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ga.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-gf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-gn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-gp.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-gq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ht.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-km.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-lu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ma.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-mc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-mf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-mg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ml.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-mq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-mr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-mu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-nc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-ne.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-pf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-pm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-re.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-rw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-sc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-sn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-sy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-td.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-tg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-tn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-vu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-wf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr-yt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fur-it.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fur.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fy-nl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_fy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ga-ie.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ga.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gd-gb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gl-es.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gsw-fr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gsw-li.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gsw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gu-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_guz-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_guz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gv-im.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_gv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ha-gh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ha-ne.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ha-ng.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ha.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_haw-us.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_haw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_he-il.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_he.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hi-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hr-ba.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hr-hr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hsb-de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hsb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hu-hu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hy-am.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_hy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_id-id.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_id.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ig-ng.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ig.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ii-cn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ii.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_is-is.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_is.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_it-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_it-it.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_it-sm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_it-va.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_it.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_iw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ja-jp.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ja.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_jgo-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_jgo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_jmc-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_jmc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ka-ge.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ka.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kab-dz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kab.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kam-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kam.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kde-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kde.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kea-cv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kea.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_khq-ml.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_khq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ki-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ki.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kk-kz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kkj-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kkj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kl-gl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kln-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kln.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_km-kh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_km.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kn-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ko-kp.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ko-kr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ko.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kok-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kok.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ks-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ks.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ksb-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ksb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ksf-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ksf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ksh-de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ksh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kw-gb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_kw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ky-kg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ky.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lag-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lag.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lb-lu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lg-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lkt-us.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lkt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ln-ao.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ln-cd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ln-cf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ln-cg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ln.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lo-la.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lrc-iq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lrc-ir.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lrc.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lt-lt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lu-cd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_luo-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_luo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_luy-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_luy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lv-lv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_lv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mas-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mas-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mas.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mer-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mer.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mfe-mu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mfe.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mg-mg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mgh-mz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mgh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mgo-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mgo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mk-mk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ml-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ml.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mn-mn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mr-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ms-bn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ms-my.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ms-sg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ms.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mt-mt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mua-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mua.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_my-mm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_my.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mzn-ir.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_mzn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_naq-na.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_naq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nb-no.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nb-sj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nb.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nd-zw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nds-de.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nds-nl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nds.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ne-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ne-np.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ne.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-aw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-be.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-bq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-cw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-nl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-sr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl-sx.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nmg-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nmg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nn-no.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nnh-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nnh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_no-no.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_no.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nus-ss.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nus.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nyn-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_nyn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_om-et.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_om-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_om.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_or-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_or.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_os-ge.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_os-ru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_os.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pa-arab-pk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pa-arab.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pa-guru-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pa-guru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pa.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pl-pl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_prg-001.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_prg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ps-af.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ps.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-ao.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-br.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-cv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-gq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-gw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-lu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-mo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-mz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-pt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-st.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt-tl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_pt.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_qu-bo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_qu-ec.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_qu-pe.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_qu.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rm-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rn-bi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ro-md.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ro-ro.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ro.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rof-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rof.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru-by.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru-kg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru-kz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru-md.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru-ru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru-ua.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rw-rw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rwk-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_rwk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sah-ru.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sah.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_saq-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_saq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sbp-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sbp.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_se-fi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_se-no.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_se-se.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_se.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_seh-mz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_seh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ses-ml.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ses.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sg-cf.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_shi-latn-ma.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_shi-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_shi-tfng-ma.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_shi-tfng.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_shi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_si-lk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_si.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sk-sk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sl-si.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_smn-fi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_smn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sn-zw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_so-dj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_so-et.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_so-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_so-so.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_so.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sq-al.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sq-mk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sq-xk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-cyrl-ba.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-cyrl-me.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-cyrl-xk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-cyrl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-latn-ba.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-latn-me.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-latn-xk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sv-ax.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sv-fi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sv-se.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sv.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sw-cd.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sw-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sw-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sw-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_sw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ta-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ta-lk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ta-my.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ta-sg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ta.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_te-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_te.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_teo-ke.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_teo-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_teo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_th-th.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_th.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ti-er.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ti-et.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ti.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tk-tm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_to-to.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_to.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tr-cy.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tr-tr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_twq-ne.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_twq.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tzm-ma.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_tzm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ug-cn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uk-ua.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ur-in.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ur-pk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_ur.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz-arab-af.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz-arab.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz-cyrl-uz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz-cyrl.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz-latn-uz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_uz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vai-latn-lr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vai-latn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vai-vaii-lr.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vai-vaii.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vai.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vi-vn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vo-001.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vun-tz.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_vun.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_wae-ch.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_wae.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_xog-ug.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_xog.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yav-cm.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yav.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yi-001.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yi.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yo-bj.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yo-ng.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yue-hk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_yue.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zgh-ma.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zgh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-cn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hans-hk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hans-mo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hans-sg.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hans.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hant-hk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hant-mo.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hant-tw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hant.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-hk.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh-tw.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zh.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zu-za.js" />
+    <Content Include="Areas\Admin\Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="Areas\Admin\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\font-awesome\less\animated.less" />
+    <Content Include="Areas\Admin\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Areas\Admin\font-awesome\less\core.less" />
+    <Content Include="Areas\Admin\font-awesome\less\fixed-width.less" />
+    <Content Include="Areas\Admin\font-awesome\less\font-awesome.less" />
+    <Content Include="Areas\Admin\font-awesome\less\icons.less" />
+    <Content Include="Areas\Admin\font-awesome\less\larger.less" />
+    <Content Include="Areas\Admin\font-awesome\less\list.less" />
+    <Content Include="Areas\Admin\font-awesome\less\mixins.less" />
+    <Content Include="Areas\Admin\font-awesome\less\path.less" />
+    <Content Include="Areas\Admin\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Areas\Admin\font-awesome\less\stacked.less" />
+    <Content Include="Areas\Admin\font-awesome\less\variables.less" />
+    <Content Include="Areas\Admin\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_animated.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_core.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_icons.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_larger.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_list.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_mixins.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_path.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_stacked.scss" />
+    <Content Include="Areas\Admin\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Content\plugins\footable\fonts\footable.eot" />
+    <Content Include="Areas\Admin\Content\plugins\footable\fonts\footable.ttf" />
+    <Content Include="Areas\Admin\Content\plugins\footable\fonts\footable.woff" />
+    <None Include="Areas\Admin\Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Areas\Admin\Scripts\jquery-1.6.4.js" />
+    <Content Include="Areas\Admin\Scripts\jquery-1.6.4.min.js" />
+    <None Include="Areas\Admin\Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Areas\Admin\Scripts\jquery-2.1.1.js" />
+    <Content Include="Areas\Admin\Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Areas\Admin\Scripts\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.dataTables.min.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.signalR-2.2.1.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.signalR-2.2.1.min.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.signalR-2.2.3.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.signalR-2.2.3.min.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.tabletojson.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\Admin\Scripts\ktshopper.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\bootstrap-datepicker.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\chartist\chartist.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\chartist\loader.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\chartJs\Chart.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\chosen\chosen.jquery.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\clockpicker\clockpicker.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\curvedLines.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\excanvas.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.spline.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.symbol.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.time.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\footable\footable.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\footable\footable.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\fullcalendar\moment.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\gritter\images\gritter-light.png" />
+    <Content Include="Areas\Admin\Scripts\plugins\gritter\images\gritter-long.png" />
+    <Content Include="Areas\Admin\Scripts\plugins\gritter\images\gritter.png" />
+    <Content Include="Areas\Admin\Scripts\plugins\gritter\images\ie-spacer.gif" />
+    <Content Include="Areas\Admin\Scripts\plugins\gritter\jquery.gritter.css" />
+    <Content Include="Areas\Admin\Scripts\plugins\gritter\jquery.gritter.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jasny\jasny-bootstrap.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-bg1251.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-cat.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-da.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-dk.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-hr1250.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-id.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-kr.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-mne.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-tw.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\i18n\grid.locale-vi.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jsNestable\jquery.nestable.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jsTree\jquery.jstree.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\jsTree\jstree.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\metisMenu\metisMenu.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\Notification\toastr.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\pace\pace.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\select2\select2.full.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\summernote\bootstrap-datetimepicker.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\summernote\jquery.hash-contents.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\summernote\summernote.min.js" />
+    <Content Include="Areas\Admin\Scripts\plugins\sweetalert.min.js" />
+    <Content Include="Areas\Admin\Scripts\sitemap.xml" />
+    <Content Include="Areas\Admin\Scripts\ui-bootstrap-tpls-2.3.1.js" />
+    <Content Include="Areas\Admin\Scripts\ui-bootstrap-tpls-2.3.1.min.js" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Content\price-range.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\404\404.png" />
+    <Content Include="Images\blog\blog-one.jpg" />
+    <Content Include="Images\blog\blog-three.jpg" />
+    <Content Include="Images\blog\blog-two.jpg" />
+    <Content Include="Images\blog\man-four.jpg" />
+    <Content Include="Images\blog\man-one.jpg" />
+    <Content Include="Images\blog\man-three.jpg" />
+    <Content Include="Images\blog\man-two.jpg" />
+    <Content Include="Images\blog\socials.png" />
+    <Content Include="Images\cart\one.png" />
+    <Content Include="Images\cart\three.png" />
+    <Content Include="Images\cart\two.png" />
+    <Content Include="Images\home\bg_border.png" />
+    <Content Include="Images\home\gallery1.jpg" />
+    <Content Include="Images\home\gallery2.jpg" />
+    <Content Include="Images\home\gallery3.jpg" />
+    <Content Include="Images\home\gallery4.jpg" />
+    <Content Include="Images\home\girl1.jpg" />
+    <Content Include="Images\home\girl2.jpg" />
+    <Content Include="Images\home\girl3.jpg" />
+    <Content Include="Images\home\iframe1.png" />
+    <Content Include="Images\home\iframe2.png" />
+    <Content Include="Images\home\iframe3.png" />
+    <Content Include="Images\home\iframe4.png" />
+    <Content Include="Images\home\logo.png" />
+    <Content Include="Images\home\map.png" />
+    <Content Include="Images\home\map_sm.png" />
+    <Content Include="Images\home\new.png" />
+    <Content Include="Images\home\partner1.png" />
+    <Content Include="Images\home\partner2.png" />
+    <Content Include="Images\home\partner3.png" />
+    <Content Include="Images\home\partner4.png" />
+    <Content Include="Images\home\pricing.png" />
+    <Content Include="Images\home\product1.jpg" />
+    <Content Include="Images\home\product2.jpg" />
+    <Content Include="Images\home\product3.jpg" />
+    <Content Include="Images\home\product4.jpg" />
+    <Content Include="Images\home\product5.jpg" />
+    <Content Include="Images\home\product6.jpg" />
+    <Content Include="Images\home\recommend1.jpg" />
+    <Content Include="Images\home\recommend2.jpg" />
+    <Content Include="Images\home\recommend3.jpg" />
+    <Content Include="Images\home\sale.png" />
+    <Content Include="Images\home\searchicon.png" />
+    <Content Include="Images\home\shipping.jpg" />
+    <Content Include="Images\home\Video.png" />
+    <Content Include="Images\icon\en-US.png" />
+    <Content Include="Images\icon\fashion.png" />
+    <Content Include="Images\icon\ja-JP.png" />
+    <Content Include="Images\icon\m&amp;b.png" />
+    <Content Include="Images\icon\vi-VN.png" />
+    <Content Include="Images\product-details\1.jpg" />
+    <Content Include="Images\product-details\new.jpg" />
+    <Content Include="Images\product-details\rating.png" />
+    <Content Include="Images\product-details\share.png" />
+    <Content Include="Images\product-details\similar1.jpg" />
+    <Content Include="Images\product-details\similar2.jpg" />
+    <Content Include="Images\product-details\similar3.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245969951780.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245973379792.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245973649625.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245973829530.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245974069398.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245974479148.jpg" />
+    <Content Include="Images\Products\10\1_10_637272245974649057.jpg" />
+    <Content Include="Images\Products\11\1_11_637272228446103594.jpg" />
+    <Content Include="Images\Products\11\1_11_637272228448891983.jpg" />
+    <Content Include="Images\Products\11\1_11_637272228449111853.jpg" />
+    <Content Include="Images\Products\11\1_11_637272228449201808.jpg" />
+    <Content Include="Images\Products\11\1_11_637272228449261783.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288846568033.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288849336432.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288849426394.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288849656245.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288849856135.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288850046019.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288850155972.jpg" />
+    <Content Include="Images\Products\12\1_12_637272288850255890.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263958391221.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263961329539.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263961579396.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263961679349.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263961769317.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263962079097.jpg" />
+    <Content Include="Images\Products\13\1_13_637272263962129087.jpg" />
+    <Content Include="Images\Products\15\1_15_637262738075742634.jpg" />
+    <Content Include="Images\Products\15\1_15_637262738079356285.jpg" />
+    <Content Include="Images\Products\15\1_15_637262738079536179.jpg" />
+    <Content Include="Images\Products\15\1_15_637262738079716080.jpg" />
+    <Content Include="Images\Products\15\1_15_637262738079965947.jpg" />
+    <Content Include="Images\Products\15\1_15_637262738080215798.jpg" />
+    <Content Include="Images\Products\15\1_15_637273029797117652.jpg" />
+    <Content Include="Images\Products\15\1_15_637273029801438994.jpg" />
+    <Content Include="Images\Products\15\1_15_637273029801548926.jpg" />
+    <Content Include="Images\Products\15\1_15_637273029801688869.jpg" />
+    <Content Include="Images\Products\16\1_16_637272274530044227.jpg" />
+    <Content Include="Images\Products\16\1_16_637272274532952547.jpg" />
+    <Content Include="Images\Products\16\1_16_637272274533042497.jpg" />
+    <Content Include="Images\Products\16\1_16_637273805867573312.jpg" />
+    <Content Include="Images\Products\16\1_16_637273805871237003.jpg" />
+    <Content Include="Images\Products\16\1_16_637273805871356944.jpg" />
+    <Content Include="Images\Products\16\1_16_637273805871646763.jpg" />
+    <Content Include="Images\Products\16\1_16_637273821735415197.jpg" />
+    <Content Include="Images\Products\16\1_16_637273821738939805.jpg" />
+    <Content Include="Images\Products\16\1_16_637273821739109697.jpg" />
+    <Content Include="Images\Products\16\1_16_637273821739299586.jpg" />
+    <Content Include="Images\Products\16\1_16_637273821739399552.jpg" />
+    <Content Include="Images\Products\16\1_16_637273838016257768.jpg" />
+    <Content Include="Images\Products\16\1_16_637273838020655242.jpg" />
+    <Content Include="Images\Products\16\1_16_637273838021654663.jpg" />
+    <Content Include="Images\Products\16\1_16_637273838022813997.jpg" />
+    <Content Include="Images\Products\16\1_16_637273838027891068.jpg" />
+    <Content Include="Images\Products\16\1_16_637273842852127293.jpg" />
+    <Content Include="Images\Products\16\1_16_637273842855205338.jpg" />
+    <Content Include="Images\Products\16\1_16_637273842855415222.jpg" />
+    <Content Include="Images\Products\16\1_16_637273842855525162.jpg" />
+    <Content Include="Images\Products\16\1_16_637273842855725045.jpg" />
+    <Content Include="Images\Products\27\1_27_637262707536079542.jpg" />
+    <Content Include="Images\Products\27\1_27_637262707536799132.jpg" />
+    <Content Include="Images\Products\27\1_27_637262707536879072.jpg" />
+    <Content Include="Images\Products\27\1_27_637262707537128928.jpg" />
+    <Content Include="Images\Products\27\1_27_637262707537218881.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176915813473.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176919091598.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176919171539.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176919241507.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176919441409.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176919651257.jpg" />
+    <Content Include="Images\Products\28\1_28_637272176919791176.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203414462749.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203417441058.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203417530991.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203417700885.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203418080686.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203418350522.jpg" />
+    <Content Include="Images\Products\29\1_29_637272203418450452.jpg" />
+    <Content Include="Images\Products\29\1_29_637272211038985225.jpg" />
+    <Content Include="Images\Products\29\1_29_637272211039045191.jpg" />
+    <Content Include="Images\Products\29\1_29_637272211041823589.jpg" />
+    <Content Include="Images\Products\29\1_29_637272211041893540.jpg" />
+    <Content Include="Images\Products\29\1_29_637272211041953499.jpg" />
+    <Content Include="Images\Products\29\1_29_637272211042053465.jpg" />
+    <Content Include="Images\Products\30\1_30_637272217333402068.jpg" />
+    <Content Include="Images\Products\30\1_30_637272217333482013.jpg" />
+    <Content Include="Images\Products\30\1_30_637272217336200634.jpg" />
+    <Content Include="Images\Products\30\1_30_637272217336280398.jpg" />
+    <Content Include="Images\Products\30\1_30_637272217336340368.jpg" />
+    <Content Include="Images\Products\4\1_4_637037969349179396.jpg.jpg" />
+    <Content Include="Images\Products\4\1_4_637037969551815821.jpg.jpg" />
+    <Content Include="Images\Products\4\1_4_637037977097158120.jpg.jpg" />
+    <Content Include="Images\Products\4\1_4_637037977097268055.jpg.jpg" />
+    <Content Include="Images\Products\4\1_4_637037985005363450.jpg.jpg" />
+    <Content Include="Images\Products\5\1_5_637037987814036925.jpg.jpg" />
+    <Content Include="Images\Products\6\1_6_637037983690562221.jpg.jpg" />
+    <Content Include="Images\shop\advertisement.jpg" />
+    <Content Include="Images\shop\product10.jpg" />
+    <Content Include="Images\shop\product11.jpg" />
+    <Content Include="Images\shop\product12.jpg" />
+    <Content Include="Images\shop\product7.jpg" />
+    <Content Include="Images\shop\product8.jpg" />
+    <Content Include="Images\shop\product9.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Scripts\facebookAuthen\facebookAuthentication.js" />
+    <Content Include="Scripts\googelAPI\googleAPILogin.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminMenuLeftPartial.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\About.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Contact.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\Admin\Content\bootstrap-theme.min.css.map" />
+    <Content Include="Areas\Admin\Content\bootstrap.css.map" />
+    <Content Include="Areas\Admin\Content\bootstrap.min.css.map" />
+    <Content Include="Areas\Admin\Scripts\angular-animate.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-aria.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-cookies.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-loader.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-message-format.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-messages.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-parse-ext.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-resource.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-route.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular-touch.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\angular.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\errors.json" />
+    <Content Include="Areas\Admin\Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Areas\Admin\Scripts\plugins\chartist\chartist.min.js.map" />
+    <Content Include="Areas\Admin\Scripts\version.json" />
+    <Content Include="Areas\Admin\Views\Product\AddNew.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\InsertProduct1.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Test.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\InsertProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Roles.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Modules.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\PermissionModule.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\PhanQuyen.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\EditProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Producer\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\CategoryDetail.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\AddNewCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Distributor\Distributor.cshtml" />
+    <Content Include="Areas\Admin\Scripts\Youtube\client_secrets.json" />
+    <Content Include="Areas\Admin\Scripts\Youtube\code_secret_client.json" />
+    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\cesta-feira.js" />
+    <Content Include="Scripts\contact.js" />
+    <Content Include="Scripts\gmaps.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.scrollUp.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\price-range.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Products\CartDetails.cshtml" />
+    <Content Include="Views\Products\ProductDetails.cshtml" />
+    <Content Include="Views\Account\UserLogin.cshtml" />
+    <Content Include="Views\Shared\_footerPartial.cshtml" />
+    <Content Include="Views\Shared\_HeaderPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutClient.cshtml" />
+    <Content Include="Views\Shared\_MenuLeftPartial.cshtml" />
+    <Content Include="Views\Shared\_SliderPartial.cshtml" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Products\Partial_ListProduct.cshtml" />
+    <Content Include="Views\Products\Partial_ProductDetails.cshtml" />
+    <Content Include="Views\Home\CategoryDetailts.cshtml" />
+    <Content Include="Views\Account\AddNewCategory.cshtml" />
+    <Content Include="TemplateReport\Template.xlsx" />
+    <Content Include="TemplateReport\Template.xls" />
+    <Content Include="Views\Products\CheckOut.cshtml" />
+    <Content Include="Views\Products\Shipping.cshtml" />
+    <Content Include="Views\Products\Payment.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\image\Temp\" />
+    <Folder Include="Areas\Admin\Scripts\plugins\jqueryTable\" />
+    <Folder Include="Areas\Admin\VideoUpload\" />
+    <Folder Include="Areas\Admin\Views\YouTube\" />
+    <Folder Include="Images\Products\24\" />
+    <Folder Include="Images\Products\2\" />
+    <Folder Include="Images\Products\3\" />
+    <Folder Include="Images\Products\8\" />
+    <Folder Include="Views\Distributor\" />
+    <Folder Include="Views\Producer\" />
+    <Folder Include="Views\UOrder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Language\language.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>language.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\language.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>language.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\language.vi-VN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>language.vi-VN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63797</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

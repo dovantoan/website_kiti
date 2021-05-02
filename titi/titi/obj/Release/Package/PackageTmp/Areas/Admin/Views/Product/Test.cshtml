@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "Danh sach san pham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Html.BeginForm("AddUser", "Admin", FormMethod.Post, new { area = "Admin", @class = "my_form" }) {
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox">
+                    <div class="ibox-title">Tìm kiếm sản phẩm</div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-4">Hình ảnh: </div>
+                                @*<div class="col-md-8"><input type="file" id="flImage" name="ImageUpload" multiple onchange='uploadTempImage()' class="form-control" /></div>*@
+                                <div class="col-md-8"><input type="file" id="flImage" name="ImageUpload" multiple class="form-control" /></div>
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="imgPreview" style="margin-bottom:5px"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="center-block">
+                                    <button type="button" class="btn btn-info" onclick="checkLocation()">Thêm mới</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal inmodal fade" id="addNewModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div id="Reponse_modalWindow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD88G7TNscK2jCKSzO4zD-jukd_6EIb0Ao&callback=initMap"></script>
+<script type="text/javascript">
+    function initMap() {
+        var uluru = { lat: 10.838333333333335, lng: 106.63472222222222 };
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 8, center: uluru });
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
+    function readURL(input) {
+        $("#imgPreview").empty();
+        if (input.files && input.files[0]) {
+            for (var i = 0; i < input.files.length; i++) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var image = '<img src="' + e.target.result + '" alt="image" style="width:100px">&nbsp';
+                    $("#imgPreview").append(image);
+                }
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+    }
+    $("#flImage").change(function () {
+        readURL(this);
+    });
+
+    function reloadMap(_lat,_lng) {
+        var uluru = { lat: _lat, lng: _lng };
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 15, center: uluru });
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
+    function checkLocation() {
+        var formData = new FormData();
+        for (var i = 0; i < $('#flImage')[0].files.length; i++) {
+            formData.append("files[" + i + "]", $('#flImage')[0].files[i]);
+        }
+        $.ajax({
+            url: '/Product/Test1',
+            type: 'POST',
+            data: formData,
+            success: function (response) {
+                if (response.Success) {
+                    var res = response.Data;
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 8,
+                        center: { lat: parseFloat(res.Lat), lng: parseFloat(res.Lon) }
+                    });
+                    var geocoder = new google.maps.Geocoder;
+                    var infowindow = new google.maps.InfoWindow;
+                    geocodeLatLng(geocoder, map, infowindow, res.Lat, res.Lon);
+                    reloadMap(res.Lat, res.Lon);
+                }
+            },
+            processData: false,
+            contentType: false,
+            error: function () {
+                swal("Thông báo!", "Whoops something went wrong!", "error");
+            }
+        });
+    }
+
+    function geocodeLatLng(geocoder, map, infowindow,lat,lng) {
+        //var input = document.getElementById('latlng').value;
+        //var latlngStr = input.split(',', 2);
+        var latlng = { lat: parseFloat(lat), lng: parseFloat(lng) };
+        geocoder.geocode({ 'location': latlng }, function (results, status) {
+            if (status === 'OK') {
+                if (results[0]) {
+                    map.setZoom(11);
+                    var marker = new google.maps.Marker({
+                        position: latlng,
+                        map: map
+                    });
+                    infowindow.setContent(results[0].formatted_address);
+                    infowindow.open(map, marker);
+                } else {
+                    swal("Thông báo!", "No results found!", "error");
+                }
+            } else {
+                swal("Thông báo!", 'Geocoder failed due to:  '+ status, "error");
+            }
+        });
+    }
+</script>
+<style>
+    #paged {
+        width: 40%
+    }
+
+    #map {
+        height: 400px; /* The height is 400 pixels */
+        width: 100%; /* The width is the width of the web page */
+    }
+</style>

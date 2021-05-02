@@ -1,0 +1,731 @@
+﻿@using titi.Models.MasterModels
+@using Util.Entity
+@{
+    ViewBag.Title = "Thông tin thanh toán";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row row-style-1">
+    <div class="col-lg-2 visible-lg-block">
+    </div>
+    <div class="col-lg-12">
+        <div class="row bs-wizard">
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step complete">
+                <div class="text-center bs-wizard-stepnum">
+                    <span>Đăng Nhập</span>
+                </div>
+                <div class="progress"><div class="progress-bar"></div></div>
+                <span class="bs-wizard-dot">1</span>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step complete">
+                <div class="text-center bs-wizard-stepnum">
+                    <span class="">Địa Chỉ Giao Hàng</span>
+                    <span class="visible-xs-inline-block">Địa Chỉ</span>
+                </div>
+                <div class="progress"><div class="progress-bar"></div></div>
+                <span class="bs-wizard-dot">2</span>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step active">
+                <div class="text-center bs-wizard-stepnum" style="max-height:20px">
+                    <span class="">Thanh Toán &amp; Đặt Mua</span>
+                    <span class="visible-xs-inline-block">Thanh Toán</span>
+                </div>
+                <div class="progress"><div class="progress-bar"></div></div>
+                <span class="bs-wizard-dot">3</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-8 col-sm-12">
+            <h3>3. Thanh toán & đặt mua</h3>
+            <div class="panel panel-default address-form is-edit" style="display: block;">
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <input type="radio" checked name="selected_payment_method" value="1" />&ensp;<label>Thanh toán tiền mặt khi nhận hàng</label>
+
+                    </div>
+                    <div class="col-md-12">
+                        <input type="radio" name="selected_payment_method" value="2" />&ensp;<label>Thanh toán bằng chuyển khoản</label>
+                        <div class="form-group row row-style-3 js-payment-sub" style="display: block;">
+                            <div class="col-lg-11 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-default payment-sub is-small js-atm-list">
+                                    <div class="panel-body">
+                                        <input type="hidden" name="atm-id" value="48">
+                                        <ul class="bank">
+                                            <li class="active"><a title="Vietinbank" href="javascript:void(0)" class="li-bank" data-atm-id="48"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/VTB.jpg?v=2" alt="Vietinbank" width="120" height="74"></a></li>
+                                            <li class=""><a title="Vietcombank" href="javascript:void(0)" class="li-bank" data-atm-id="49"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/VCB.jpg?v=2" alt="Vietcombank" width="120" height="74"></a></li>
+                                            <li class=""><a title="Sacombank" href="javascript:void(0)" class="li-bank" data-atm-id="50"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/SCB.jpg?v=2" alt="Sacombank" width="120" height="74"></a></li>
+
+                                            <li class=""><a title="BIDV" href="javascript:void(0)" class="li-bank" data-atm-id="53"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/BIDV.jpg?v=2" alt="BIDV" width="120" height="74"></a></li>
+                                            <li><a title="DongA Bank" href="javascript:void(0)" class="li-bank" data-atm-id="54"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/DAB.jpg?v=2" alt="DongA Bank" width="120" height="74"></a></li>
+                                            <li><a title="ACB" href="javascript:void(0)" class="li-bank" data-atm-id="55"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/ACB.jpg?v=2" alt="ACB" width="120" height="74"></a></li>
+
+                                            <li><a title="Techcombank" href="javascript:void(0)" class="li-bank" data-atm-id="57"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/TCB.jpg?v=2" alt="Techcombank" width="120" height="74"></a></li>
+
+                                            <li><a title="VIB" href="javascript:void(0)" class="li-bank" data-atm-id="59"><img src="https://salt.tikicdn.com/assets/img/zalopaygw/VIB.jpg?v=2" alt="VIB" width="120" height="74"></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="panel panel-default cart">
+                <div class="panel-body">
+                    <div class="order">
+                        <span class="title">
+                            Địa chỉ giao hàng
+                        </span>
+                        <a href="@Url.Action("Shipping","Products")" class="btn btn-default btn-custom1" >Sửa</a>
+                    </div>
+                    <div class="information">
+                        @if (ViewBag.Shipping != null)
+                        {
+                            ShippingEntity shipping = ViewBag.Shipping;
+                            <h6>@shipping.FullName</h6>
+                            <p class="end">@shipping.FAddress<br>Việt Nam<br>Điện thoại: @shipping.PhoneNumber</p>
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default cart">
+                <div class="panel-body">
+                    <div class="order">
+                        <span class="title">
+                            Đơn hàng
+                        </span>
+                        <a href="@Url.Action("CartDetails","Products")" class="btn btn-default btn-custom1">Sửa</a>
+                    </div>
+                    <div class="product" id="product">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-12"><input type="button" id="btnOrder" onclick="orderProduct()" class="btn btn-w-m btn-warning" value="Đặt hàng" /></div>
+    </div>
+</div>
+<div class="row">
+
+</div>
+@section Scripts{
+    <script type="text/javascript">
+    var totalAmount = 0;
+    function mountLayout(index, data) {
+        var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
+        var $layout = "<div class='item'>" +
+            "<p class='title'>" +
+            "<strong>" + data.quantity + " x</strong>" +
+            "<a href='" + data.item_url + "' target='_blank'>" + data.product_name + "</a>" +
+            "<p class='text-right'><span>" + parseFloat(totalValueTemp).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" vnđ </span></p>"+
+            "</p>" +
+            "</div>";
+        $cartItems.append($layout);
+        totalAmount += totalValueTemp;
+    }
+
+
+    $(document).ready(function () {
+        $cartItems = $('#product');
+        var products = $.CestaFeira({
+            debug: true
+        }).getItems(),
+            totalValueTemp = 0;
+        var next = 0;
+        //var totalAmount = 0;
+        $.each(products, function (index, value) {
+            mountLayout(index, value);
+            next++;
+            var lengthObj = Object.keys(products).length;
+            if (next == lengthObj) {
+                var str = "<p class='list-info-price'><b>Tạm tính</b><span>" + parseFloat(totalAmount).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " vnđ</span></p>";
+                str += "<p class='list-info-price'><b>Phí vận chuyển</b><span>" + parseFloat(39000).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + " vnđ</span></p>";
+                str += "<p class='total2'>Thành tiền:<span>" + parseFloat(totalAmount + 39000).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") +" vnđ </span></p>";
+                str += "<p class='text-right'><i>(Đã bao gồm VAT nếu có)</i></p>";
+                $cartItems.append(str);
+            }
+        });
+
+        $('#region_id').change(function (e) {
+            $("#ward_id").empty();
+            $("#city_id").empty();
+            var _url = "@Url.Action("AjaxGetDistrict", "Products")";
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: {
+                provinceID: e.target.value
+            },
+            dataType: 'json',
+            beforeSend: function () {
+
+            },
+            success: function (respon) {
+                if (respon.Success) {
+                    $("#city_id").empty();
+                    $("#city_id").append(respon.Data);
+                }
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+        });
+        $('#city_id').change(function (e) {
+            $("#ward_id").empty();
+            var _url = "@Url.Action("AjaxGetDWard", "Products")";
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: {
+                districtID: e.target.value
+            },
+            dataType: 'json',
+            beforeSend: function () {
+
+            },
+            success: function (respon) {
+                if (respon.Success) {
+                    $("#ward_id").empty();
+                    $("#ward_id").append(respon.Data);
+                }
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+        });
+        @*$('#btnOrder').click(function (e) {
+            var _url = "@Url.Action("AjaxOrder", "UOrder")";
+            var products = $.CestaFeira({
+                debug: true
+            }).getItems();
+            var postData = {};
+            var OrderDetails = [];
+            var sumAmount = 0;
+            $.each(products, function (index, data) {
+                var orderDetail = {};
+                orderDetail.ProductCode = data.product_code;
+                if (data.property != "") {
+                    var tem = data.property.split('_');
+                    orderDetail.Color = tem[0];
+                    orderDetail.ColorValue = tem[1];
+                    orderDetail.Size = tem[2];
+                    orderDetail.SizeValue = tem[3];
+                }
+                orderDetail.Quantity = data.quantity;
+                debugger;
+                orderDetail.Amount = parseFloat(data.unity_price);
+                OrderDetails.push(orderDetail);
+                sumAmount += orderDetail.Amount;
+            });
+            postData.Amount = sumAmount;
+            postData.TruckingCode = "IN_CITY"
+            postData.PaymentMethods = $("input[name='selected_payment_method']:checked").val();
+            postData.OrderDetails = OrderDetails;
+            $.ajax({
+                type: "POST",
+                url: _url,
+                data: postData,
+                dataType: 'json',
+                beforeSend: function () {
+                    $("#btnOrder").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đặt hàng');
+                    $('#btnOrder').prop('disabled', true);
+                },
+                success: function (respon) {
+                    //$("#btnOrder").html('Thêm mới');
+                    //$('#btn-address').removeAttr('disabled');
+                    if (respon.Success) {
+                        alert("Đặt hàng thành công, nhà phân phối sẽ sớm liên hệ với bạn");
+                        e.preventDefault();
+                        clearBasket();
+                    }
+                },
+                error: function () {
+                    alert('Lỗi');
+                }
+            });
+        });*@
+
+    });
+    function register() {
+        var url = "@Url.Action("ResgisterUserAccount", "UAccount")";
+        var postData = {};
+        postData.FirstName = $('#rg_fullName').val();
+        postData.Phone = $('#rg_phoneNumber').val();
+        postData.Email = $('#rg_email').val();
+        postData.P = $('#rg_password').val();
+        postData.BirthDate = $('#rd_birthDay').val();
+        postData.Sex = $("input[name='gender']:checked").val() =="male" ? 0 : 1;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: postData ,
+            dataType: 'json',
+            beforeSend: function () {
+                $("#btnRegister").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đăng ký');
+                $('#btnRegister').prop('disabled', true);
+
+            },
+            success: function (respon) {
+                $("#btnRegister").html('Đăng ký');
+                $('#btnRegister').removeAttr('disabled');
+                if (respon.Success) {
+                    alert(respon.Message);
+                }
+            },
+            error: function () {
+
+            }
+        });
+    }
+
+    function userLogin() {
+        var _url = "@Url.Action("UserLogin", "UAccount")";
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: {
+                userName: $('#u_userName').val(),
+                password: $('#u_password').val()
+            },
+            dataType: 'html',
+            beforeSend: function () {
+                $("#btnULogin").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đăng nhập');
+                $('#btnULogin').prop('disabled', true);
+
+            },
+            success: function (respon) {
+                $("#btnULogin").html('Đăng nhập');
+                $('#btnULogin').removeAttr('disabled');
+                if (respon.Success) {
+                    alert(respon.Message);
+                }
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+    }
+
+    function getDistrict() {
+        var _url = "@Url.Action("AjaxGetDistrict", "Products")";
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: {
+                provinceID: $('#u_userName').val()
+            },
+            dataType: 'html',
+            beforeSend: function () {
+                $("#btnULogin").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đăng nhập');
+                $('#btnULogin').prop('disabled', true);
+
+            },
+            success: function (respon) {
+                $("#btnULogin").html('Đăng nhập');
+                $('#btnULogin').removeAttr('disabled');
+                if (respon.Success) {
+                    alert(respon.Message);
+                }
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+    }
+
+    function insertShipping() {
+        var _url = "@Url.Action("AjaxInsertShipping", "Products")";
+        var postData = {};
+        postData.FullName = $('#full_name').val();
+        postData.PhoneNumber = $('#telephone').val();
+        postData.ProvinceID = $("#region_id").val();//$("#region_id option:selected").val();
+        postData.DistrictID = $("#city_id").val();
+        postData.WardID = $("#ward_id").val();
+        postData.Address = $("#street").val();
+        postData.AddressType = $("input[name='delivery_address_type']:checked").val();
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: postData,
+            dataType: 'json',
+            beforeSend: function () {
+                $("#btn-address").html('<i class="fa fa-spinner fa-spin loading"></i> Đang thêm mới');
+                $('#btn-address').prop('disabled', true);
+
+            },
+            success: function (respon) {
+                $("#btn-address").html('Thêm mới');
+                $('#btn-address').removeAttr('disabled');
+                if (respon.Success) {
+                    alert(respon.Message);
+                }
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+    }
+
+    function orderProduct() {
+        var _url = "@Url.Action("AjaxOrder", "UOrder")";
+        var products = $.CestaFeira({
+            debug: true
+        }).getItems();
+        var postData = {};
+        var OrderDetails = [];
+        var sumAmount = 0;
+        $.each(products, function (index, data) {
+            //mountLayout(index, value);
+            var orderDetail = {};
+            orderDetail.ProductCode = data.product_code;
+            if (data.property != "") {
+                var tem = data.property.split('_');
+                orderDetail.Color = tem[0];
+                orderDetail.ColorValue = tem[1];
+                orderDetail.Size = tem[2];
+                orderDetail.SizeValue = tem[3];
+            }
+            orderDetail.Quantity = data.quantity;
+            debugger;
+            orderDetail.Amount = parseFloat(data.unity_price);
+            OrderDetails.push(orderDetail);
+            sumAmount += (orderDetail.Amount * orderDetail.Quantity);
+        });
+        postData.Amount = sumAmount;
+        postData.TruckingCode = "IN_CITY"
+        postData.PaymentMethods = $("input[name='selected_payment_method']:checked").val();
+        postData.OrderDetails = OrderDetails;
+        $.ajax({
+            type: "POST",
+            url: _url,
+            data: postData,
+            dataType: 'json',
+            beforeSend: function () {
+                $("#btnOrder").html('<i class="fa fa-spinner fa-spin loading"></i> Đang đặt hàng');
+                $('#btnOrder').prop('disabled', true);
+            },
+            success: function (respon) {
+                //$("#btnOrder").html('Thêm mới');
+                //$('#btn-address').removeAttr('disabled');
+                if (respon.Success) {
+                    alert("Đặt hàng thành công, nhà phân phối sẽ sớm liên hệ với bạn");
+                    $.jStorage.flush();
+                    window.location.href = "@Url.Action("index", "Home")";
+                }
+
+            },
+            error: function () {
+                alert('Lỗi');
+            }
+        });
+    }
+    </script>
+}
+
+<style>
+    .visible-lg-block {
+        display: block !important;
+    }
+
+    .bs-wizard-step {
+        padding: 0;
+        position: relative;
+    }
+
+    .bs-wizard > .bs-wizard-step {
+        padding: 0;
+        position: relative
+    }
+
+        .bs-wizard > .bs-wizard-step.bs-wizard-stepnum {
+            color: #595959;
+            font-size: 14px
+        }
+
+        .bs-wizard > .bs-wizard-step.bs-wizard-info {
+            color: #999;
+            font-size: 14px
+        }
+
+        .bs-wizard > .bs-wizard-step:first-child > .progress {
+            left: 50%;
+            width: 50%;
+        }
+
+        .bs-wizard > .bs-wizard-step > .progress {
+            position: relative;
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+    .progress {
+        overflow: hidden;
+    }
+
+    .bs-wizard > .bs-wizard-step > .progress {
+        height: 6px;
+        margin: 20px 0;
+        background: #ebebeb;
+    }
+
+    .bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+        width: 0;
+    }
+
+    .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+        width: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #00b6f0;
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    .progress-bar {
+        float: left;
+        width: 0%;
+        height: 100%;
+        line-height: 20px;
+        color: #fff;
+        background-color: #337ab7;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        -webkit-transition: width .6s ease;
+        transition: width .6s ease;
+    }
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        display: block;
+        top: 41px;
+        left: 50%;
+        margin-top: -15px;
+        margin-left: -15px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+        background: #5ec56f;
+        font-size: 15px;
+        color: #fff;
+        border: none;
+        line-height: 26px;
+        -webkit-box-shadow: #666 0 0 2px;
+        box-shadow: #666 0 0 2px
+    }
+
+    .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-stepnum {
+        color: #a3a3a3;
+        max-height: 20px;
+    }
+
+    .visible-xs-inline-block {
+        display: none !important;
+    }
+
+    .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .nav-tabs li.active a {
+        color: #0F0E0E;
+        border-bottom: thick solid #229133;
+        background-color: #fff;
+    }
+
+    .shop-details-tab {
+        border: none;
+    }
+
+    .category-tab ul {
+        background: none;
+    }
+
+    .nav-tabs li.active a:hover {
+        background: #5ec56f;
+        border-bottom: thick solid #229133;
+    }
+
+    .nav-tabs li.active a:focus {
+        /*background:none;*/
+        color: #0F0E0E;
+        border-bottom: thick solid #229133;
+        background-color: #fff;
+    }
+
+    .category-tab ul li a:hover {
+        border-bottom: thick solid #229133;
+    }
+
+    .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+        box-shadow: none;
+        background: #5ec56f;
+        transition: none;
+    }
+
+    .bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+        width: 100%;
+    }
+
+    .bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+        width: 100%;
+    }
+
+    .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+        box-shadow: none;
+        background: #5ec56f;
+        transition: none;
+    }
+
+    .bs-wizard > .bs-wizard-step:last-child > .progress {
+        width: 50%;
+    }
+
+    .btn.btn-primary {
+        margin-top: 0px;
+    }
+    /*==============*/
+    body {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .panel {
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .panel-default {
+        border-color: #ddd;
+    }
+
+    .btn-custom1 {
+        float: right;
+    }
+
+    .order {
+        border-bottom: 1px solid #c9c9c9;
+        padding-bottom: 20px;
+    }
+
+    .cart {
+        margin-left: 0px;
+        color: black;
+    }
+
+    .payment-sub .bank > li a {
+        width: 91px;
+    }
+
+    .payment-sub .bank > li a {
+        display: block;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+    }
+
+    .payment-sub .bank > li {
+        float: left;
+        border: 1px dashed #ccc;
+        margin: 3px;
+        height: 60px;
+        border-radius: 3px;
+    }
+
+        .payment-sub .bank > li.active {
+            border: 2px solid #25911c;
+            position: relative;
+        }
+
+            .payment-sub .bank > li.active::after {
+                content: "\e013";
+                position: absolute;
+                background: #25911c;
+                width: 25px;
+                height: 25px;
+                right: -12px;
+                top: -12px;
+                color: #fff;
+                display: inline-block;
+                font-family: 'Glyphicons Halflings';
+                font-style: normal;
+                font-weight: 300;
+                text-align: center;
+                line-height: 25px;
+                border-radius: 50%;
+            }
+
+        .payment-sub .bank > li a img {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+
+    .item {
+        clear: both;
+        min-height: 75px;
+        width: 100%;
+        padding-left: 0px !important;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #c9c9c9;
+        font-size: 11px;
+        margin: auto;
+    }
+
+        .item .title {
+            color: #000;
+            float: left;
+            width: 170px;
+            margin-bottom: 0;
+        }
+
+        .item a {
+            font-size: 12px;
+        }
+
+        .item p {
+            font-size: 12px;
+        }
+
+    .cart p span {
+        float: right;
+    }
+
+    .cart .total2 {
+        border-top: 2px solid #c9c9c9;
+        padding-top: 12px;
+        margin-bottom: 0;
+        line-height: 19px;
+    }
+
+        .cart .total2 span {
+            color: #ee2347;
+            font-size: 19px;
+            font-weight: 400;
+        }
+
+    .text-right {
+        text-align: right;
+        font-size: 12px;
+    }
+</style>

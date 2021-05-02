@@ -1,0 +1,139 @@
+﻿@using titi.Language;
+@using titi.Models.Security;
+@using titi.Helper;
+@{
+    UserLoginProfiles user = SharedContext.Current.UserLoginProfiles;
+}
+<div class="header_top">
+    <!--header_top-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="contactinfo">
+                    <ul class="nav nav-pills">
+                        <li><a href="#" title=""><i class="fa fa-phone"></i> +0937 550 946</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> dovantoan86@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="social-icons pull-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header_top-->
+
+<div class="header-middle">
+    <!--header-middle-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="logo pull-left">
+                    <a href="@Url.Action("Index","Home")"><img src="~/Images/home/logo.png" title="K & T Shophouse" height="39px" /></a>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="shop-menu pull-right">
+                    <ul class="nav navbar-nav">
+                        @*<li><a href="#"><i class="fa fa-user"></i> Account</a></li>*@
+                        @*<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>*@
+                        @*<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>*@
+                        <li><a href="~/cart/cartdetails" data-cesta-feira-items-count><i class="fa fa-shopping-cart"><span class="cesta-feira__num-items" id="totalItems">0</span></i> @language.Cart</a></li>
+                        <li>
+                            @if (user != null)
+                            {
+                            <a href="#"><i class="fa fa-user"></i>@user.UserProfile.FirstName @user.UserProfile.LastName</a>
+                            }
+                            else
+                            {
+                                <a href="#" onclick="userLogin()"><i class="fa fa-lock"></i> @language.Login</a>
+                            }
+                        </li>
+                        <li style="padding-left:0px"><a href="@Url.Action("Change","Home",new { languageAbbrevation = "vi-VN" })"><img src="~/Images/icon/vi-VN.png" title="@language.keylanguage1" width="24px" /></a></li>
+                        <li style="padding-left:0px"><a href="@Url.Action("Change","Home",new { languageAbbrevation = "en-US" })"><img src="~/Images/icon/en-US.png" title="@language.keylanguage2" width="24px" /></a></listyle="padding-left:0px">
+                        <li style="padding-left:0px"><a href="@Url.Action("Change","Home",new { languageAbbrevation = "ja-JP" })"><img src="~/Images/icon/ja-JP.png" title="@language.keylanguage3" width="24px" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header-middle-->
+
+<div class="header-bottom">
+    <!--header-bottom-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="mainmenu pull-left">
+                    <ul class="nav navbar-nav collapse navbar-collapse">
+                        <li><a href="@Url.Action("Index","Home")" class="active" title="@language.Home">@language.Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                            <ul role="menu" class="sub-menu">
+                                <li><a href="@Url.Action("Index","Home")">@language.Product</a></li>
+                                @*<li><a href="product-details.html">Product Details</a></li>*@
+                                <li><a href="@Url.Action("CheckOut","Products")">@language.Checkout</a></li>
+                                <li><a href="@Url.Action("CartDetails","Products")">@language.Cart</a></li>
+                                <li><a href="#" onclick="userLogin()">@language.Login</a></li>
+                            </ul>
+                        </li>
+                        @*<li class="dropdown">
+                                <a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="blog.html">Blog List</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="404.html">Chính Sách Bán Hàng</a></li>
+                            <li><a href="contact-us.html">@language.ContactUs</a></li>*@
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="search_box pull-right">
+                    <input type="text" placeholder="@language.SearchProduct" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header-bottom-->
+<style>
+    .cesta-feira__num-items {
+        position: absolute;
+        top: -14px;
+        right: 54px;
+        height: 18px;
+        width: 18px;
+        line-height: 18px;
+        background-color: #46b29d;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50%;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: -webkit-transform 0.2s 0s;
+        -moz-transition: -moz-transform 0.2s 0s;
+        transition: transform 0.2s 0s;
+    }
+</style>

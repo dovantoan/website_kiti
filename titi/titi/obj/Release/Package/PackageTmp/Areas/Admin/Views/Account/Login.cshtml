@@ -1,0 +1,79 @@
+﻿@model titi.Areas.Admin.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&T SHOPPER | Login</title>
+
+    @Styles.Render("~/Content/cssAdmin")
+    <link href="~/Areas/Admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen animated fadeInDown" id="loginModal">
+        <div style="padding-left: 10px;padding-right: 10px;background-color: #8cb7a1d6; border-radius:5px">
+            <div>
+                <h1 class="logo-name">
+                    <img src="~/Areas/Admin/image/logo.png" width="300px" />
+                </h1>
+            </div>
+            <p>Login in to see Admin Control Panel.</p>
+            <p style="color:red">@ViewBag.messageErr</p>
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new {area="Admin", id = "frmLogin",@class="m-t" }))
+            {
+                <input type="hidden" name="_token" value="">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <input name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input name="password" type="password" class="form-control" placeholder="Password" required>
+                    <input name="ReturnUrl" type="hidden" value="@ViewBag.ReturnUrl">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b" id="btnSubmit">Login</button>
+            }
+            <p class="m-t"> <small>Copyright(c) <strong>K&T SHOPPER</strong> &copy; 2018 All Rights Reserved.</small> </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+@Scripts.Render("~/bundles/jqueryAdmin")
+@Scripts.Render("~/bundles/bootstrapAdmin")
+@Scripts.Render("~/bundles/signalR")
+@Scripts.Render("/signalr/hubs")
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //var adapt = $.connection.chatHub;
+        //$.connection.hub.start().done(function () {
+        //    adapt.server.getAllUserLogin();
+        //});
+
+        //adapt.client.sendNotify = function () {
+        //};
+
+
+        $("#frmLogin").on("submit", function () {
+            $("#btnSubmit").html('<i class="fa fa-spinner fa-spin loading"></i> Login..');
+            $('#btnSubmit').prop('disabled', true);
+        });
+    });
+</script>
+<style>
+    .loading {
+        margin-left: -12px;
+        margin-right: 8px;
+    }
+</style>
+
+
+

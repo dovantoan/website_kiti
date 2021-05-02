@@ -1,0 +1,130 @@
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Utility\Messages.txt
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Address-Book-blue-icon48x48.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Address-Book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Apps-Computer-Login-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Apps-Dialog-Close-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Back-2-2-icon (1).png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Back-2-2-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\back-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\export-excel-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\folder-orange-printer-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\green-cross-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Magnifying-glass-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\office-address-book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\office-calendar-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\office-drawing-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\red-cross-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\red-search-icon (3).png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\refresh-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\Save-as-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Resources\save-icon.png
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Utility\definition-item-en.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Utility\definition-control-vn.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Utility\definition-item-vn.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Shared.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Shared.pdb
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.ReportSource.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.Shared.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.Windows.Forms.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Shared.v15.1.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.Misc.v15.1.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.UltraWinEditors.v15.1.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.UltraWinGrid.v15.1.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.v15.1.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Microsoft.ReportViewer.Common.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Microsoft.ReportViewer.WinForms.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\stdole.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\ADODB.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.CrystalReports.Engine.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.ReportSource.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.Shared.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\CrystalDecisions.Windows.Forms.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Shared.v15.1.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.Misc.v15.1.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.UltraWinEditors.v15.1.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.UltraWinGrid.v15.1.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Infragistics4.Win.v15.1.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\bin\Release\Microsoft.ReportViewer.WinForms.xml
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.csprojResolveAssemblyReference.cache
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.Properties.Resources.resources
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.View_Report.resources
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.MainUserControl.resources
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.ValueChangedEventArgs.resources
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.csproj.GenerateResource.Cache
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.dll.licenses
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.dll
+F:\TGKC_ERP\04. Source Code\TGKC_ERP\Shared\obj\Release\Shared.pdb
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\Messages.txt
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Address-Book-blue-icon48x48.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Address-Book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Apps-Computer-Login-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Apps-Dialog-Close-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Back-2-2-icon (1).png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Back-2-2-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\back-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\export-excel-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\folder-orange-printer-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\green-cross-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Magnifying-glass-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\office-address-book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\office-calendar-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\office-drawing-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\red-cross-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\red-search-icon (3).png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\refresh-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Save-as-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\save-icon.png
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\definition-item-en.xml
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\definition-control-vn.xml
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\definition-item-vn.xml
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Shared.dll
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Shared.pdb
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Microsoft.ReportViewer.Common.dll
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Microsoft.ReportViewer.WinForms.dll
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\ADODB.dll
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Microsoft.ReportViewer.WinForms.xml
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.csprojResolveAssemblyReference.cache
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.Properties.Resources.resources
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.csproj.GenerateResource.Cache
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.dll.licenses
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.dll
+F:\TGKC_ERP\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.pdb
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\Messages.txt
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Address-Book-blue-icon48x48.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Address-Book-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Apps-Computer-Login-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Apps-Dialog-Close-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Back-2-2-icon (1).png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Back-2-2-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\back-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Book-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\export-excel-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\folder-orange-printer-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\green-cross-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Magnifying-glass-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\office-address-book-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\office-calendar-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\office-drawing-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\red-cross-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\red-search-icon (3).png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\refresh-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\Save-as-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Resources\save-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\definition-item-en.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\definition-control-vn.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Utility\definition-item-vn.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Shared.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Shared.pdb
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\ADODB.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Release\Microsoft.ReportViewer.WinForms.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.csprojResolveAssemblyReference.cache
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.Properties.Resources.resources
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.csproj.GenerateResource.Cache
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.dll.licenses
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Release\Shared.pdb

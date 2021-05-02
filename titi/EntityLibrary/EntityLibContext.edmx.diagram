@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa885e8bacb940dfa617805034553c61" Name="Diagram1">
+        <EntityTypeShape EntityType="TitiModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.DefineUI" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.DefinitionMultiLanguage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Distributor" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Group" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.GroupImage" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.GroupsRole" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.GroupsUI" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.GroupUser" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Images" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Master" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.MasterDetail" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.ProductDetail" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.PHANQUYEN" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Session" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Tokens" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.User" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TitiModel.Producer" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="TitiModel.Role" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="TitiModel.Product" Width="1.5" PointX="9.375" PointY="10.75" />
+        <EntityTypeShape EntityType="TitiModel.District" Width="1.5" PointX="5.375" PointY="14.75" />
+        <EntityTypeShape EntityType="TitiModel.Province" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TitiModel.Shipping" Width="1.5" PointX="15.375" PointY="4.75" />
+        <EntityTypeShape EntityType="TitiModel.Ward" Width="1.5" PointX="15.375" PointY="8.75" />
+        <EntityTypeShape EntityType="TitiModel.Property" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="TitiModel.PropertyDetail" Width="1.5" PointX="15.375" PointY="15.75" />
+        <EntityTypeShape EntityType="TitiModel.TBCategory_TBProperty" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TitiModel.PaymentMethods" Width="1.5" PointX="9.375" PointY="17.75" />
+        <EntityTypeShape EntityType="TitiModel.OrderDetails" Width="1.5" PointX="17.375" PointY="3.75" />
+        <EntityTypeShape EntityType="TitiModel.Trucking" Width="1.5" PointX="17.375" PointY="8.75" />
+        <EntityTypeShape EntityType="TitiModel.Order" Width="1.5" PointX="17.375" PointY="11.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,76 @@
+﻿@using EntityLibrary.ModuleImplement;
+@using titi.Language;
+@using titi.Models;
+@{
+    ViewBag.Title = "CategoryDetailts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    CategoryModel cate = ViewBag.CateDetail;
+    List<EntityLibrary.ModuleImplement.ProductView> list = ViewBag.ListProduct;
+    string strUrl = Request.Url.Scheme + "://" + (Request.Url.Host.Contains("localhost") ? Request.Url.Host + ":" + Request.Url.Port : Request.Url.Host);
+}
+<div class="features_items">
+    <div class="main title text-center"><i class="@cate.Image"></i><a href="#" title="@cate.CategoryName">@cate.CategoryName</a></div>
+    @if (list != null)
+    {
+        foreach (var item in list)
+        {
+            var pathImg = "/Images/Products/" + item.CategoryId + "/";
+            if (!string.IsNullOrEmpty(item.Image))
+            {
+                string[] imgArr = item.Image.Split(';');
+                pathImg += imgArr[0];
+            }
+            else
+            {
+                pathImg = "";
+            }
+            <div class="col-sm-4">
+                <div class="product-image-wrapper" href="#" title="@item.ProductName">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <a href='@strUrl/san-pham/@item.URL-@item.Pid'><img src="@pathImg" alt="" /></a>
+
+                            <div class="row row-price">
+                                <span class="price-discount">@item.FPrice VND</span> @if (item.Price < item.Cost)
+                                {<sup class="price">@item.FCost</sup>}
+                            </div>
+                            <p>@item.ProductName</p>
+                            <form action="" class="form" data-cesta-feira-form>
+                                <div class="form-group">
+                                    <input type="hidden" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                </div>
+                                <input type="hidden" value="@item.ProductName" name="product_name" data-cesta-feira-attribute="">
+                                <input type="hidden" value="@item.Price" name="unity_price" data-cesta-feira-attribute>
+                                <input type="hidden" value="@item.Pid" data-cesta-feira-item-id />
+                                <input type="hidden" value="@item.CategoryId" name="item_type" data-cesta-feira-attribute>
+                                <input type="hidden" value="@pathImg" name="item_url" data-cesta-feira-attribute>
+                                <input type="hidden" value="@item.FPrice" name="unity_fprice" data-cesta-feira-attribute>
+                                <input type="hidden" value="@item.ProductCode" name="product_code" data-cesta-feira-attribute>
+                                @if (item.ProductDetails.Count > 0)
+                                {
+                                    foreach (var ite in item.ProductDetails)
+                                    {
+                                        var str = ite.Color + "_" + ite.ColorValue + "_" + ite.Size + "_" + ite.SizeValue;
+                                        <input type="hidden" value="@str" name="property" data-cesta-feira-attribute>
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    <input type="hidden" value="" name="property" data-cesta-feira-attribute>
+                                }
+                                <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="choose">
+                        <ul class="nav nav-pills nav-justified">
+                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

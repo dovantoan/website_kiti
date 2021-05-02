@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/Content/price-range.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <link href="~/Content/responsive.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <header id="header">
+        @Html.Partial("_HeaderPartial")
+    </header>
+    @RenderSection("_SliderPartial", required: false)
+    <section>
+        <div class="container">
+            <div class="row">
+                <!--PHẦN MENU LEFT-->
+                <div class="col-sm-3" style="margin-top:16px; margin-bottom:20px">
+                    @{Html.RenderAction("GetCategory", "Home");}
+                </div>
+
+                <!--PHẦN NỘI DUNG CHÍNH-->
+                <div class="col-sm-9 padding-right" id="mainContent">
+
+                    @RenderBody()
+
+                    <div class="modal inmodal fade" id="extModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" style="left:0 !important">
+                        <div class="modal-dialog" style="width:900px;left:0px">
+                            <div class="modal-content" style="width:877px">
+                                <div id="Reponse_modalWindow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <!--Footer-->
+        @Html.Partial("_footerPartial")
+
+    </footer><!--/Footer-->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrapClient")
+    @Scripts.Render("~/bundles/extend")
+    @*<script src="~/Scripts/jquery.scrollUp.min.js"></script>*@
+    @*<script src="~/Scripts/price-range.js"></script>*@
+    @*<script src="~/Scripts/jquery.prettyPhoto.js"></script>*@
+    @*<script src="~/Scripts/main.js"></script>*@
+    @RenderSection("scripts", required: false)
+    @*<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+    <script src="~/Scripts/cesta-feira.js"></script>
+    <script type="application/javascript">
+        $( document ).ready(function() {
+          $.CestaFeira({
+            debug: false,
+            onItemAdded: function (item) {
+              console.log(item);
+            },
+            onItemUpdated: function (item) {
+              console.log(item);
+            }
+          });
+        });
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>

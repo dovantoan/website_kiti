@@ -1,0 +1,351 @@
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.View_Report.resources
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.dll
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.pdb
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Utility\Messages.txt
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Shared.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Shared.pdb
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Shared.v15.1.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Win.v15.1.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\stdole.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\ADODB.dll
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.ReportSource.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.Shared.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\CrystalDecisions.Windows.Forms.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Shared.v15.1.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Infragistics4.Win.v15.1.xml
+C:\Users\anh.dvh\Desktop\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\anh.dvh\Desktop\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Utility\Messages.txt
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Shared.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Shared.pdb
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Shared.v15.1.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.v15.1.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\stdole.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\ADODB.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.ReportSource.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Shared.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Windows.Forms.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Shared.v15.1.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.v15.1.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.Properties.Resources.resources
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.View_Report.resources
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.dll.licenses
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.dll
+C:\Users\anh.dvh\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.pdb
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Utility\Messages.txt
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Back-2-2-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\back-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Book-icon-32x32.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\export-excel-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\green-cross-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\red-cross-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\red-search-icon (3).png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\refresh-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\Save-as-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Resources\save-icon.png
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Utility\definition-item-en.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Utility\definition-control-vn.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Utility\definition-item-vn.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Shared.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Shared.pdb
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Shared.v15.1.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.1.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.v15.1.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\stdole.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\ADODB.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.ReportSource.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Shared.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Windows.Forms.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Shared.v15.1.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.1.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.v15.1.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.Properties.Resources.resources
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.View_Report.resources
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.MainUserControl.resources
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.dll.licenses
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.dll
+C:\Users\Deidara\Desktop\TGKC_ERP\Shared\obj\Debug\Shared.pdb
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Utility\Messages.txt
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Back-2-2-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\back-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\export-excel-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\green-cross-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\red-cross-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\red-search-icon (3).png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\refresh-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\Save-as-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Resources\save-icon.png
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Utility\definition-item-en.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Utility\definition-control-vn.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Utility\definition-item-vn.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Shared.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Shared.pdb
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Shared.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Shared.v15.1.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.1.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.v15.1.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\stdole.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\ADODB.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.CrystalReports.Engine.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.ReportSource.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Shared.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\CrystalDecisions.Windows.Forms.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Shared.v15.1.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.Misc.v15.1.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.1.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.1.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Infragistics4.Win.v15.1.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.Properties.Resources.resources
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.View_Report.resources
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.MainUserControl.resources
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.ValueChangedEventArgs.resources
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.dll.licenses
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.dll
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.pdb
+F:\TGKC_ERP\04. Source Code\01. TGKC_ERP\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Utility\Messages.txt
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Back-2-2-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\back-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Book-icon-32x32.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\export-excel-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\green-cross-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\red-cross-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\red-search-icon (3).png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\refresh-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\Save-as-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Resources\save-icon.png
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Utility\definition-item-en.xml
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Utility\definition-control-vn.xml
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Utility\definition-item-vn.xml
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Shared.dll
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Shared.pdb
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\ADODB.dll
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\obj\Debug\Shared.Properties.Resources.resources
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\obj\Debug\Shared.dll.licenses
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\obj\Debug\Shared.dll
+C:\Users\Deidara\Desktop\02. TGKC_HRD\Shared\obj\Debug\Shared.pdb
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Utility\Messages.txt
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Back-2-2-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\back-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Book-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\export-excel-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\green-cross-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\red-cross-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\red-search-icon (3).png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\refresh-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\Save-as-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Resources\save-icon.png
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Utility\definition-item-en.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Utility\definition-control-vn.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Utility\definition-item-vn.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Shared.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Shared.pdb
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\ADODB.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Debug\Shared.Properties.Resources.resources
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Debug\Shared.dll.licenses
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Debug\Shared.dll
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Debug\Shared.pdb
+D:\TGKC NEW\04. Source Code\02. TGKC_HRD\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\Messages.txt
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Back-2-2-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\back-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Book-icon-32x32.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\export-excel-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\green-cross-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\red-cross-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\red-search-icon (3).png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\refresh-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Save-as-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\save-icon.png
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\definition-item-en.xml
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\definition-control-vn.xml
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\definition-item-vn.xml
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Shared.dll
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Shared.pdb
+E:\websileEproject\choquekimthuy.com\Shared\bin\Debug\ADODB.dll
+E:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.Properties.Resources.resources
+E:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.csproj.GenerateResource.Cache
+E:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.dll
+E:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.pdb
+E:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\Messages.txt
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Back-2-2-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\back-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Book-icon-32x32.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\export-excel-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\green-cross-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\red-cross-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\red-search-icon (3).png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\refresh-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\Save-as-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Resources\save-icon.png
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\definition-item-en.xml
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\definition-control-vn.xml
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Utility\definition-item-vn.xml
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Shared.dll
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\Shared.pdb
+F:\websileEproject\choquekimthuy.com\Shared\bin\Debug\ADODB.dll
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.Properties.Resources.resources
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.csproj.GenerateResource.cache
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.csproj.CopyComplete
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.dll
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.pdb
+F:\websileEproject\choquekimthuy.com\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+F:\websileEproject\titi\Shared\bin\Debug\Utility\Messages.txt
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Address-Book-blue-icon48x48.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Address-Book-icon-32x32.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Apps-Computer-Login-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Apps-Dialog-Close-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Back-2-2-icon (1).png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Back-2-2-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\back-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Book-icon-32x32.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\export-excel-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\folder-orange-printer-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\green-cross-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Magnifying-glass-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\office-address-book-icon-32x32.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\office-calendar-icon-32x32.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\office-drawing-icon-32x32.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\red-cross-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\red-search-icon (3).png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\refresh-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\Save-as-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Resources\save-icon.png
+F:\websileEproject\titi\Shared\bin\Debug\Utility\definition-item-en.xml
+F:\websileEproject\titi\Shared\bin\Debug\Utility\definition-control-vn.xml
+F:\websileEproject\titi\Shared\bin\Debug\Utility\definition-item-vn.xml
+F:\websileEproject\titi\Shared\bin\Debug\Shared.dll
+F:\websileEproject\titi\Shared\bin\Debug\Shared.pdb
+F:\websileEproject\titi\Shared\bin\Debug\ADODB.dll
+F:\websileEproject\titi\Shared\obj\Debug\Shared.Properties.Resources.resources
+F:\websileEproject\titi\Shared\obj\Debug\Shared.csproj.GenerateResource.cache
+F:\websileEproject\titi\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+F:\websileEproject\titi\Shared\obj\Debug\Shared.csproj.CopyComplete
+F:\websileEproject\titi\Shared\obj\Debug\Shared.dll
+F:\websileEproject\titi\Shared\obj\Debug\Shared.pdb
+F:\websileEproject\titi\Shared\obj\Debug\Shared.csprojAssemblyReference.cache

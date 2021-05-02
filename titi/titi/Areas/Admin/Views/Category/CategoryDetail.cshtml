@@ -1,0 +1,106 @@
+﻿@using System.Web.Mvc.Html
+@using titi.Areas.Admin.Models
+@model CategoryModel
+@{ 
+    Dictionary<string, int> listStatus = new Dictionary<string, int>();
+    listStatus.Add("Đang chờ duyệt", 0);
+    listStatus.Add("kích hoạt", 1);
+    listStatus.Add("khóa", 2);
+}
+<div class="float-e-margins">
+    <div class="ibox-title" style="border-width:0px">
+        <h5 style="color:white !important">Cập nhật loại sản phẩm</h5>
+        <div class="ibox-tools">
+            <a class="close-link" data-dismiss="modal" title="Đóng">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        @using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post, new { id = "frmUpdateCategory", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Mã loại sản phẩm</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.CategoryCode, new { @class = "form-control", @disabled=true })</div>
+                    <label class="col-lg-2 control-label">Trạng thái</label>
+                    @*<div class="col-lg-4">@Html.CheckBox("Status",(Model.Status==1)?true:false)</div>*@
+                    <div class="col-lg-4">
+                        <select id="Status" name="Status" class="form-control m-b">
+                            @foreach (var it in listStatus)
+                            {
+                                if (it.Value == Model.Status)
+                                {
+                                    <option value="@it.Value" selected>@it.Key</option>
+                                }
+                                else
+                                {
+                                    <option value="@it.Value">@it.Key</option>
+                                }
+                            }
+                        </select>
+                        @Html.HiddenFor(e=>e.Pid)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Tên loại sản phẩm</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.CategoryName, new { @class = "form-control" })</div>
+                    <label class="col-lg-2 control-label">Icon</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.Image, new { @class = "form-control" })</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Loại sản phẩm cha</label>
+                    <div class="col-lg-4">
+                        <select name="ParentPid" class="form-control m-b">
+                            @foreach (var it in ViewBag.listCategory)
+                            {
+                                if (it.Pid == Model.ParentPid)
+                                {
+                                    <option value="@it.Pid" selected>@it.CategoryName</option>
+                                }
+                                else
+                                {
+                                    <option value="@it.Pid">@it.CategoryName</option>
+                                }
+                            }
+                        </select>
+                        @*@Html.TextBoxFor(e => e.ParentPid, new { @class = "form-control" })*@
+                    </div>
+                    <label class="col-lg-2 control-label">Orderby</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.Orderby, new { @class = "form-control" })</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">MetaTitle &emsp;&emsp;</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.MetaTitle, new { @class = "form-control" })</div>
+                    <label class="col-lg-2 control-label">MetaDescription &emsp;&emsp;&emsp;<br />&emsp;</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.MetaDescription, new { @class = "form-control" })</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">URL &emsp;</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.URL, new { @class = "form-control" })</div>
+                    <label class="col-lg-2 control-label m-b">Mô tả</label>
+                    <div class="col-lg-4">@Html.TextBoxFor(e => e.Description, new { @class = "form-control" })</div>
+                </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <a onclick="Update()" class="btn btn-primary pull-left">Cập Nhật</a>
+                        <a class="btn btn-white pull-left" data-dismiss="modal">Đóng</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

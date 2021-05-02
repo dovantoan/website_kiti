@@ -1,0 +1,5 @@
+﻿<definition-item>
+  <textbox_code align="right"/>
+  <textbox_number number="true" align="right"/>
+  <datetime align="right" format="dd/MM/yyyy"/>
+</definition-item>

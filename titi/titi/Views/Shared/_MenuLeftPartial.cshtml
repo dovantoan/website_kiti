@@ -1,0 +1,191 @@
+﻿@using titi.Language;
+@using titi.Models;
+@{
+    List<CategoryModel> listCategory = ViewBag.listCategory;
+}
+<div class="left-sidebar">
+    <h2>@language.Category</h2>
+    <div class="panel-group category-products" id="accordian">
+        <!--category-productsr-->
+        @if (listCategory != null && listCategory.Count > 0)
+        {
+            foreach (var item in listCategory)
+            {
+                List<CategoryModel> childs = (from n in listCategory where n.ParentPid == item.Pid select n).ToList();
+                if (item.ParentPid == 0 && childs.Count > 0)
+                {
+                    if (childs.Count > 0)
+                    {
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#@item.CategoryCode" title="@item.CategoryName">
+                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                        @item.CategoryName
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="@item.CategoryCode" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul>
+                                        @foreach (var it in childs)
+                                        {
+                                            if (!string.IsNullOrEmpty(it.URL))
+                                            {
+                                                <li><a href="@Url.Action("CategoryDetailts","Home",new {categotyId=""+@it.Pid+"" })" title="@it.CategoryName">@it.CategoryName </a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="#" title="@it.CategoryName">@it.CategoryName </a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                if(item.ParentPid == 0 && childs.Count == 0)
+                {
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#" title="@item.CategoryName">@item.CategoryName</a></h4>
+                            </div>
+                        </div>
+                }
+            }
+        }
+        @*<div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Thời Trang - Phụ Kiện
+                        </a>
+                    </h4>
+                </div>
+                <div id="sportswear" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Nike </a></li>
+                            <li><a href="#">Under Armour </a></li>
+                            <li><a href="#">Adidas </a></li>
+                            <li><a href="#">Puma</a></li>
+                            <li><a href="#">ASICS </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Mẹ & Bé
+                        </a>
+                    </h4>
+                </div>
+                <div id="mens" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Thực Phẩm Cho Bé</a></li>
+                            <li><a href="#">Đồ Dùng Ăn Uống Cho Bé</a></li>
+                            <li><a href="#">Vệ Sinh & Sức Khỏe</a></li>
+                            <li><a href="#">Đồ Chơi</a></li>
+                            <li><a href="#">Thời Trang</a></li>
+                            <li><a href="#">Phụ Kiện</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Thực Phẩm - Hàng Tiêu Dùng
+                        </a>
+                    </h4>
+                </div>
+                <div id="womens" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Fendi</a></li>
+                            <li><a href="#">Guess</a></li>
+                            <li><a href="#">Valentino</a></li>
+                            <li><a href="#">Dior</a></li>
+                            <li><a href="#">Versace</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Nhà Cữa & Đời Sống</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Đồ Gia Dụng</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Sản Phẩm Công Nghệ</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Rao Vặt</a></h4>
+                </div>
+            </div>*@
+    </div><!--/category-products-->
+
+    @*<div class="brands_products">
+        <h2>Nhãn Hiệu</h2>
+        <div class="brands-name">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
+                <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
+                <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
+                <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
+                <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
+                <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
+                <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+            </ul>
+        </div>
+    </div>*@
+    <!--/brands_products-->
+
+    @*<div class="price-range">
+        <!--price-range-->
+        <h2>Price Range</h2>
+        <div class="well text-center">
+            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
+            <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+        </div>
+    </div><!--/price-range-->
+
+    <div class="shipping text-center">
+        <!--shipping-->
+        <img src="~/Images/home/shipping.jpg" alt="" />
+    </div><!--/shipping-->*@
+
+</div>
+<script src="~/Scripts/jquery.js"></script>
+<script type="text/javascript">
+                //$(document).ready(function () {
+                //    GetCategory();
+                //})
+                //function GetCategory() {
+                //    $.ajax({
+                //        url: '/Home/GetCategory',
+                //        method: 'GET',
+                //        data: {}
+                //    }).done(function (data) {
+                //    });
+                //}
+</script>
+

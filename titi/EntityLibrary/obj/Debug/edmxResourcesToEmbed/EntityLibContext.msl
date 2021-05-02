@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TitiModelStoreContainer" CdmEntityContainer="EntityLibContext">
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="TitiModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ParentPid" ColumnName="ParentPid" />
+          <ScalarProperty Name="Orderby" ColumnName="Orderby" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="SeoTitle" ColumnName="SeoTitle" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefineUI">
+      <EntityTypeMapping TypeName="TitiModel.DefineUI">
+        <MappingFragment StoreEntitySet="DefineUI">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameSpace" ColumnName="NameSpace" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+          <ScalarProperty Name="ViewState" ColumnName="ViewState" />
+          <ScalarProperty Name="WindowState" ColumnName="WindowState" />
+          <ScalarProperty Name="ParentPid" ColumnName="ParentPid" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UIParam" ColumnName="UIParam" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefinitionMultiLanguage">
+      <EntityTypeMapping TypeName="TitiModel.DefinitionMultiLanguage">
+        <MappingFragment StoreEntitySet="DefinitionMultiLanguage">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="vi_VN" ColumnName="vi_VN" />
+          <ScalarProperty Name="ar_AE" ColumnName="ar_AE" />
+          <ScalarProperty Name="sq_AL" ColumnName="sq_AL" />
+          <ScalarProperty Name="uz_Latn_UZ" ColumnName="uz_Latn_UZ" />
+          <ScalarProperty Name="en_US" ColumnName="en_US" />
+          <ScalarProperty Name="hy_AM" ColumnName="hy_AM" />
+          <ScalarProperty Name="az_Cyrl_AZ" ColumnName="az_Cyrl_AZ" />
+          <ScalarProperty Name="pl_PL" ColumnName="pl_PL" />
+          <ScalarProperty Name="fa_IR" ColumnName="fa_IR" />
+          <ScalarProperty Name="et_EE" ColumnName="et_EE" />
+          <ScalarProperty Name="eu_ES" ColumnName="eu_ES" />
+          <ScalarProperty Name="be_BY" ColumnName="be_BY" />
+          <ScalarProperty Name="ka_GE" ColumnName="ka_GE" />
+          <ScalarProperty Name="bs_Latn_BA" ColumnName="bs_Latn_BA" />
+          <ScalarProperty Name="pt_BR" ColumnName="pt_BR" />
+          <ScalarProperty Name="bg_BG" ColumnName="bg_BG" />
+          <ScalarProperty Name="ca_ES" ColumnName="ca_ES" />
+          <ScalarProperty Name="he_IL" ColumnName="he_IL" />
+          <ScalarProperty Name="da_DK" ColumnName="da_DK" />
+          <ScalarProperty Name="de_DE" ColumnName="de_DE" />
+          <ScalarProperty Name="nl_NL" ColumnName="nl_NL" />
+          <ScalarProperty Name="ko_KR" ColumnName="ko_KR" />
+          <ScalarProperty Name="el_GR" ColumnName="el_GR" />
+          <ScalarProperty Name="hi_IN" ColumnName="hi_IN" />
+          <ScalarProperty Name="te_IN" ColumnName="te_IN" />
+          <ScalarProperty Name="ms_MY" ColumnName="ms_MY" />
+          <ScalarProperty Name="mn_MN" ColumnName="mn_MN" />
+          <ScalarProperty Name="es_ES" ColumnName="es_ES" />
+          <ScalarProperty Name="nb_NO" ColumnName="nb_NO" />
+          <ScalarProperty Name="ur_PK" ColumnName="ur_PK" />
+          <ScalarProperty Name="ru_RU" ColumnName="ru_RU" />
+          <ScalarProperty Name="ja_JP" ColumnName="ja_JP" />
+          <ScalarProperty Name="fr_FR" ColumnName="fr_FR" />
+          <ScalarProperty Name="fi_FI" ColumnName="fi_FI" />
+          <ScalarProperty Name="cs_CZ" ColumnName="cs_CZ" />
+          <ScalarProperty Name="th_TH" ColumnName="th_TH" />
+          <ScalarProperty Name="tr_TR" ColumnName="tr_TR" />
+          <ScalarProperty Name="sv_SE" ColumnName="sv_SE" />
+          <ScalarProperty Name="zh_CN" ColumnName="zh_CN" />
+          <ScalarProperty Name="it_IT" ColumnName="it_IT" />
+          <ScalarProperty Name="id_ID" ColumnName="id_ID" />
+          <ScalarProperty Name="sr_Latn_BA" ColumnName="sr_Latn_BA" />
+          <ScalarProperty Name="kn_IN" ColumnName="kn_IN" />
+          <ScalarProperty Name="en_IE" ColumnName="en_IE" />
+          <ScalarProperty Name="zu_ZA" ColumnName="zu_ZA" />
+          <ScalarProperty Name="ro_RO" ColumnName="ro_RO" />
+          <ScalarProperty Name="mi_NZ" ColumnName="mi_NZ" />
+          <ScalarProperty Name="mr_IN" ColumnName="mr_IN" />
+          <ScalarProperty Name="uk_UA" ColumnName="uk_UA" />
+          <ScalarProperty Name="sr_Latn_CS" ColumnName="sr_Latn_CS" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distributor">
+      <EntityTypeMapping TypeName="TitiModel.Distributor">
+        <MappingFragment StoreEntitySet="Distributor">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BusinessLicense" ColumnName="BusinessLicense" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Group">
+      <EntityTypeMapping TypeName="TitiModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActice" ColumnName="IsActice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupImage">
+      <EntityTypeMapping TypeName="TitiModel.GroupImage">
+        <MappingFragment StoreEntitySet="GroupImage">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupsRole">
+      <EntityTypeMapping TypeName="TitiModel.GroupsRole">
+        <MappingFragment StoreEntitySet="GroupsRole">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupsUI">
+      <EntityTypeMapping TypeName="TitiModel.GroupsUI">
+        <MappingFragment StoreEntitySet="GroupsUI">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="UIPid" ColumnName="UIPid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupUser">
+      <EntityTypeMapping TypeName="TitiModel.GroupUser">
+        <MappingFragment StoreEntitySet="GroupUser">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="GroupPid" ColumnName="GroupPid" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Images">
+      <EntityTypeMapping TypeName="TitiModel.Images">
+        <MappingFragment StoreEntitySet="Images">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageGroup" ColumnName="ImageGroup" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Master">
+      <EntityTypeMapping TypeName="TitiModel.Master">
+        <MappingFragment StoreEntitySet="Master">
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Int1" ColumnName="Int1" />
+          <ScalarProperty Name="Int2" ColumnName="Int2" />
+          <ScalarProperty Name="Varchar1" ColumnName="Varchar1" />
+          <ScalarProperty Name="Varchar2" ColumnName="Varchar2" />
+          <ScalarProperty Name="Datetime1" ColumnName="Datetime1" />
+          <ScalarProperty Name="Datetime2" ColumnName="Datetime2" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterDetail">
+      <EntityTypeMapping TypeName="TitiModel.MasterDetail">
+        <MappingFragment StoreEntitySet="MasterDetail">
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Int1" ColumnName="Int1" />
+          <ScalarProperty Name="Int2" ColumnName="Int2" />
+          <ScalarProperty Name="Dec1" ColumnName="Dec1" />
+          <ScalarProperty Name="Dec2" ColumnName="Dec2" />
+          <ScalarProperty Name="Varchar1" ColumnName="Varchar1" />
+          <ScalarProperty Name="Varchar2" ColumnName="Varchar2" />
+          <ScalarProperty Name="Datetime1" ColumnName="Datetime1" />
+          <ScalarProperty Name="Datetime2" ColumnName="Datetime2" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductDetail">
+      <EntityTypeMapping TypeName="TitiModel.ProductDetail">
+        <MappingFragment StoreEntitySet="ProductDetail">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHANQUYEN">
+      <EntityTypeMapping TypeName="TitiModel.PHANQUYEN">
+        <MappingFragment StoreEntitySet="PHANQUYEN">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="RolePid" ColumnName="RolePid" />
+          <ScalarProperty Name="UserPid" ColumnName="UserPid" />
+          <ScalarProperty Name="GroupPid" ColumnName="GroupPid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Session">
+      <EntityTypeMapping TypeName="TitiModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Expired" ColumnName="Expired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tokens">
+      <EntityTypeMapping TypeName="TitiModel.Tokens">
+        <MappingFragment StoreEntitySet="Tokens">
+          <ScalarProperty Name="TokenId" ColumnName="TokenId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AuthToken" ColumnName="AuthToken" />
+          <ScalarProperty Name="IssuedOn" ColumnName="IssuedOn" />
+          <ScalarProperty Name="ExpiresOn" ColumnName="ExpiresOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="TitiModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+          <ScalarProperty Name="ParentB_ID" ColumnName="ParentB_ID" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="Right" ColumnName="Right" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="BirthAddress" ColumnName="BirthAddress" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Ward" ColumnName="Ward" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="CIDDate" ColumnName="CIDDate" />
+          <ScalarProperty Name="CIDPlace" ColumnName="CIDPlace" />
+          <ScalarProperty Name="PassportID" ColumnName="PassportID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="PreLevel" ColumnName="PreLevel" />
+          <ScalarProperty Name="LevelUpdate" ColumnName="LevelUpdate" />
+          <ScalarProperty Name="AccountBank" ColumnName="AccountBank" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="DistributorId" ColumnName="DistributorId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetDefineUIByUserID" FunctionName="TitiModel.Store.sp_GetDefineUIByUserID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TitiModel.sp_GetDefineUIByUserID_Result">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameSpace" ColumnName="NameSpace" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+          <ScalarProperty Name="ViewState" ColumnName="ViewState" />
+          <ScalarProperty Name="WindowState" ColumnName="WindowState" />
+          <ScalarProperty Name="ParentPid" ColumnName="ParentPid" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UIParam" ColumnName="UIParam" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetPhanQuyenByUserId" FunctionName="TitiModel.Store.sp_GetPhanQuyenByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TitiModel.sp_GetPhanQuyenByUserId_Result">
+          <ScalarProperty Name="RolePid" ColumnName="RolePid" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Product_Search" FunctionName="TitiModel.Store.sp_Product_Search" />
+    <EntitySetMapping Name="Producer">
+      <EntityTypeMapping TypeName="TitiModel.Producer">
+        <MappingFragment StoreEntitySet="Producer">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="ProducerName" ColumnName="ProducerName" />
+          <ScalarProperty Name="ProducerCode" ColumnName="ProducerCode" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="TitiModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="TitiModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+          <ScalarProperty Name="Producer" ColumnName="Producer" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="DistributorId" ColumnName="DistributorId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Promotion" ColumnName="Promotion" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="SeoTitle" ColumnName="SeoTitle" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="District">
+      <EntityTypeMapping TypeName="TitiModel.District">
+        <MappingFragment StoreEntitySet="District">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="District1" ColumnName="District" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Province">
+      <EntityTypeMapping TypeName="TitiModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Province1" ColumnName="Province" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shipping">
+      <EntityTypeMapping TypeName="TitiModel.Shipping">
+        <MappingFragment StoreEntitySet="Shipping">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="WardID" ColumnName="WardID" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ward">
+      <EntityTypeMapping TypeName="TitiModel.Ward">
+        <MappingFragment StoreEntitySet="Ward">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="DistrictID" ColumnName="DistrictID" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Ward1" ColumnName="Ward" />
+          <ScalarProperty Name="WardID" ColumnName="WardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property">
+      <EntityTypeMapping TypeName="TitiModel.Property">
+        <MappingFragment StoreEntitySet="Property">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertyDetail">
+      <EntityTypeMapping TypeName="TitiModel.PropertyDetail">
+        <MappingFragment StoreEntitySet="PropertyDetail">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Vavule" ColumnName="Vavule" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBCategory_TBProperty">
+      <EntityTypeMapping TypeName="TitiModel.TBCategory_TBProperty">
+        <MappingFragment StoreEntitySet="TBCategory_TBProperty">
+          <ScalarProperty Name="TBPropertyId" ColumnName="TBPropertyId" />
+          <ScalarProperty Name="TBCategoryId" ColumnName="TBCategoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMethods">
+      <EntityTypeMapping TypeName="TitiModel.PaymentMethods">
+        <MappingFragment StoreEntitySet="PaymentMethods">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="TitiModel.OrderDetails">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="ColorValue" ColumnName="ColorValue" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="SizeValue" ColumnName="SizeValue" />
+          <ScalarProperty Name="ProductDettailId" ColumnName="ProductDettailId" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trucking">
+      <EntityTypeMapping TypeName="TitiModel.Trucking">
+        <MappingFragment StoreEntitySet="Trucking">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TruckingCode" ColumnName="TruckingCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="TitiModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+          <ScalarProperty Name="TruckingCode" ColumnName="TruckingCode" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1125 @@
+﻿@using titi.Language;
+@{
+    ViewBag.Title = language.Home;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section _SliderPartial{@Html.Partial("_SliderPartial")}
+@*Kiểm tra trình duyệt có support localStorage*@
+<script>
+    //if (localStorage)
+    //{
+    //	alert("STDIO: Yes, localStorage is here!");
+    //}
+    //else
+    //{
+    //	alert("STDIO: Your browser does not support localStorage!");
+    //}
+</script>
+
+@*<h2>Index</h2>
+    @ViewBag.cookies*@
+
+<div class="features_items">
+    <!--features_items-->
+    <div class="main title text-center"><i class=" fa icon-fashion"></i><a href="#" title="thời trang - phụ kiện">Thời Trang - Phụ Kiện</a></div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper" href="#" title="Easy Polo Black Edition">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <a href="/Products/ProductDetails"><img src="~/Images/home/product1.jpg" alt="" /></a>
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product2.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product3.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product4.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+                <img src="~/Images/home/new.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product5.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+                <img src="~/Images/home/sale.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product6.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div><!--features_items-->
+
+<div class="category-tab">
+    <!--category-tab-->
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tshirt" data-toggle="tab">NIKE</a></li>
+            <li><a href="#blazers" data-toggle="tab">Under Armour </a></li>
+            <li><a href="#sunglass" data-toggle="tab">Adidas </a></li>
+            <li><a href="#kids" data-toggle="tab">Puma</a></li>
+            <li><a href="#poloshirt" data-toggle="tab">ASICS </a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="tshirt">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <form action="" class="form" data-cesta-feira-form>
+                                <div class="form-group">
+                                    <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                        <option value="">Number</option>
+                                        <option value="38">38</option>
+                                        <option value="40">40</option>
+                                        <option value="42">42</option>
+                                    </select>
+                                </div>
+                                <input type="hidden" value="Product 1" name="product_name" data-cesta-feira-attribute="">
+                                <input type="hidden" value="23.02" name="unity_price" data-cesta-feira-attribute>
+                                <input type="hidden" value="1" data-cesta-feira-item-id />
+                                <input type="hidden" value="shoe" name="item_type" data-cesta-feira-attribute>
+                                <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart </button>
+                                @*<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>*@
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="blazers">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="sunglass">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="kids">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="poloshirt">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/category-tab-->
+@*product2*@
+<div class="features_items">
+    <div class="main title text-center"><i class=" fa icon-mandbe"></i><a href="#" title="Mẹ & Bé">Mẹ & Bé</a></div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product1.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product2.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product3.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product4.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+                <img src="~/Images/home/new.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product5.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+                <img src="~/Images/home/sale.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="~/Images/home/product6.jpg" alt="" />
+                    <div class="row row-price">
+                        <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                    </div>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="category-tab">
+    <!--category-tab-->
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#thucpham" data-toggle="tab">Thực Phẩm Cho Bé</a></li>
+            <li><a href="#anuong" data-toggle="tab">Đồ Dùng Ăn Uống Cho Bé</a></li>
+            <li><a href="#vesinh" data-toggle="tab">Vệ Sinh & Sức Khỏe</a></li>
+            <li><a href="#dochoi" data-toggle="tab">Đồ Chơi</a></li>
+            <li><a href="#thoitrang" data-toggle="tab">Thời Trang</a></li>
+            <li><a href="#phukien" data-toggle="tab">Phụ Kiện</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="thucpham">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="anuong">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="vesinh">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="dochoi">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="thoitrang">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="phukien">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <div class="row row-price">
+                                <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                            </div>
+                            <p>Easy Polo Black Edition</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recommended_items">
+    <!--recommended_items-->
+    <h2 class="title text-center">recommended items</h2>
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Images/home/recommend1.jpg" alt="" />
+                                <div class="row row-price">
+                                    <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                                </div>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Images/home/recommend2.jpg" alt="" />
+                                <div class="row row-price">
+                                    <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                                </div>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Images/home/recommend3.jpg" alt="" />
+                                <div class="row row-price">
+                                    <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                                </div>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Images/home/recommend1.jpg" alt="" />
+                                <div class="row row-price">
+                                    <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                                </div>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Images/home/recommend2.jpg" alt="" />
+                                <div class="row row-price">
+                                    <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                                </div>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="~/Images/home/recommend3.jpg" alt="" />
+                                <div class="row row-price">
+                                    <span class="price-discount">150.000 VND</span> <sup class="price">199.000</sup>
+                                </div>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</div><!--/recommended_items-->
+

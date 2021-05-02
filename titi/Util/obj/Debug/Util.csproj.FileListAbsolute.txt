@@ -1,0 +1,17 @@
+F:\websileEproject\choquekimthuy.com\util\bin\Debug\Util.dll
+F:\websileEproject\choquekimthuy.com\util\bin\Debug\Util.pdb
+F:\websileEproject\choquekimthuy.com\util\bin\Debug\AutoMapper.dll
+F:\websileEproject\choquekimthuy.com\util\bin\Debug\AutoMapper.xml
+F:\websileEproject\choquekimthuy.com\util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+F:\websileEproject\choquekimthuy.com\util\obj\Debug\Util.csproj.CopyComplete
+F:\websileEproject\choquekimthuy.com\util\obj\Debug\Util.dll
+F:\websileEproject\choquekimthuy.com\util\obj\Debug\Util.pdb
+F:\websileEproject\titi\Util\bin\Debug\Util.dll
+F:\websileEproject\titi\Util\bin\Debug\Util.pdb
+F:\websileEproject\titi\Util\bin\Debug\AutoMapper.dll
+F:\websileEproject\titi\Util\bin\Debug\AutoMapper.xml
+F:\websileEproject\titi\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+F:\websileEproject\titi\Util\obj\Debug\Util.csproj.CopyComplete
+F:\websileEproject\titi\Util\obj\Debug\Util.dll
+F:\websileEproject\titi\Util\obj\Debug\Util.pdb
+F:\websileEproject\titi\Util\obj\Debug\Util.csprojAssemblyReference.cache

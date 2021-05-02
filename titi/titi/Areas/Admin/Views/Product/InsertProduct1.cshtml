@@ -1,0 +1,395 @@
+﻿@using titi.Areas.Admin.Models
+@using titi.Helper;
+@{
+    ViewBag.Title = "InsertProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    UserModel userLogin = SharedContext.Current.AdminLogdedProfile.UserProfile;
+}
+
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Thêm mới sản phẩm</div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Tên sản phẩm: </div>
+                            <div class="col-md-8"><input type="text" name="ProductName" id="ProductName" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Mã sản phẩm: </div>
+                            <div class="col-md-8"><input type="text" id="ProductCode" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">URL: </div>
+                            <div class="col-md-8"><input type="text" name="URL" id="URL" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">MetaTitle: </div>
+                            <div class="col-md-8"><input name="MetaTitle" id="MetaTitle" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">MetaKeywords: </div>
+                            <div class="col-md-8"><input type="text" name="MetaKeywords" id="MetaKeywords" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">MetaDescription: </div>
+                            <div class="col-md-8"><input name="MetaDescription" id="MetaDescription" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Description: </div>
+                            <div class="col-md-8"><input type="text" name="Description" id="Description" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Loại sản phẩm: </div>
+                            <div class="col-md-8">
+                                <select id="CategoryId" name="CategoryId" class="form-control m-b">
+                                    <option>--- chọn loại sản phẩm ---</option>
+                                    @foreach (var it in ViewBag.listCategory)
+                                    {
+                                        <option value="@it.Pid">@it.CategoryName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Giá gốc: </div>
+                            <div class="col-md-8"><input type="text" name="Cost" id="Cost" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Size: </div>
+                            <div class="col-md-8"><input name="Size" id="Size" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">TypeCode: </div>
+                            <div class="col-md-8"><input type="text" name="TypeCode" id="TypeCode" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">khuyến mãi: </div>
+                            <div class="col-md-8"><input name="Prommotion" id="Prommotion" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Giá bán: </div>
+                            <div class="col-md-8"><input type="text" name="Price" id="Price" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Nhà phân phối: </div>
+                            <div class="col-md-8"><input name="DistributorId" id="DistributorId" type="text" class="form-control m-b" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Số lượng: </div>
+                            <div class="col-md-8"><input type="text" name="Quantity" id="Quantity" class="form-control m-b" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Nhà sản xuất: </div>
+                            <div class="col-md-8">
+                                <select id="Producer" name="Producer" class="form-control m-b">
+                                    <option>--- chọn nhà sản xuất ---</option>
+                                    @foreach (var it in ViewBag.listProducer)
+                                    {
+                                        <option value="@it.Pid">@it.ProducerName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-4">Ngày sản xuất: </div>
+                            <div class="col-md-8 datepicker">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input id="toDate" name="toDate" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-4">Hình ảnh: </div>
+                            @*<div class="col-md-8"><input type="file" id="flImage" name="ImageUpload" multiple onchange='uploadTempImage()' class="form-control" /></div>*@
+                            <div class="col-md-8"><input type="file" id="flImage" name="ImageUpload" multiple class="form-control" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="imgPreview" style="margin-bottom:5px"></div>
+                    </div>
+                    <div class="row" id="productDetails">
+                        <fieldset>
+                            <legend>Thông tin chi tiết</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-4">Số lượng: </div>
+                                    <div class="col-md-8"><input type="text" name="Quantity1" id="Quantity1" class="form-control m-b" /></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-4">Dài: </div>
+                                    <div class="col-md-8"><input name="Produce1r" id="Produce1r" type="text" class="form-control m-b" /></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-4">Rộng: </div>
+                                    <div class="col-md-8"><input type="text" name="Quantity1" id="Quantity1" class="form-control m-b" /></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-4">Màu sắc: </div>
+                                    <div class="col-md-8">
+                                        <input name="dd" id="dd" type="text" class="form-control m-b" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="center-block">
+                                <button type="button" class="btn btn-info" onclick="Insert()">Thêm mới</button>&nbsp;
+                                <button type="button" class="btn btn-info">Quay lại</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" charset="utf8" src="~/Areas/Admin/Scripts/plugins/bootstrap-datepicker.js"></script>
+<script src="~/Areas/Admin/Scripts/plugins/summernote/bootstrap-datetimepicker.min.js"></script>
+<script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+<script type="text/javascript">
+    var module = {};
+    var postData = {};
+    $(document).ready(function () {
+        module.ProductName = $('#ProductName');
+        module.ProductCode = $('#ProductCode');
+        module.URL = $('#URL');
+        module.MetaTitle = $('#MetaTitle');
+        module.MetaKeywords = $('#MetaKeywords');
+        module.MetaDescription = $('#MetaDescription');
+        module.Description = $('#Description');
+        module.CategoryId = $('#CategoryId');
+        module.Cost = $('#Cost');
+        module.Size = $('#Size');
+        module.TypeCode = $('#TypeCode');
+        module.Prommotion = $('#Prommotion');
+        module.Price = $('#Price');
+        module.DistributorId = $('#DistributorId');
+        module.Quantity = $('#Quantity');
+        module.Producer = $('#Producer');
+        module.ProductionDate = $('#ProductionDate');
+        InitDatepicker();
+    });
+    function InitDatepicker() {
+        $('.datepicker .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: false,
+            autoclose: true,
+            format: 'dd/mm/yyyy'
+        });
+    }
+    function readURL(input) {
+        $("#imgPreview").empty();
+        if (input.files && input.files[0]) {
+            for (var i = 0; i < input.files.length; i++) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var image = '<img src="' + e.target.result + '" alt="image" style="width:100px">&nbsp';
+                    $("#imgPreview").append(image);
+                }
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+    }
+
+    $("#flImage").change(function () {
+        readURL(this);
+    });
+
+    function uploadTempImage() {
+        var formData = new FormData();
+        for (var i = 0; i < $('#flImage')[0].files.length; i++) {
+            formData.append("files[" + i + "]", $('#flImage')[0].files[i]);
+            console.log();
+        }
+        $.ajax({
+            type: 'post',
+            url: '/Product/SaveToTemp',
+            data: formData,
+            success: function (response) {
+                if (response != null) {
+                    _fileUpload = response;
+                    var fileNames = response.split(";");
+                    for (var i = 0; i < fileNames.length; i++) {
+                        if (fileNames[i] != "") {
+                            var my_path = "/Areas/Admin/image/Temp/"+'@userLogin.UserName' + "_" + fileNames[i];
+                            var image = '<img src="' + my_path + '" alt="image" style="width:100px">&nbsp';
+                            $("#imgPreview").append(image);
+                        }
+                    }
+                }
+            },
+            processData: false,
+            contentType: false,
+            error: function () {
+                alert("Whoops something went wrong!");
+            }
+        });
+    }
+    function Upload() {
+
+        $.ajax({
+            type: 'get',
+            url: '/TestImage/SaveToMainFolder',
+            success: function (response) {
+                if (response != null) {
+                    alert(response);
+                }
+            },
+
+        });
+    }
+
+    function validateInput() {
+        var msg = "";
+        postData.ProductName = module.ProductName.val().trim();
+        if (postData.ProductName == "") {
+            msg += "Vui lòng nhập tên sản phẩm!<br/>";
+        }
+        postData.ProductCode = module.ProductCode.val().trim();
+        if (postData.ProductCode == "") {
+            msg += "Vui lòng nhập mã sản phẩm!<br/>";
+        }
+        postData.URL = module.URL.val().trim();
+        if (postData.URL == "") {
+            msg += "Vui lòng nhập đường dẫn sản phẩm!<br/>";
+        }
+
+        postData.MetaTitle = module.MetaTitle.val().trim();
+        if (postData.MetaTitle == "") {
+            msg += "Vui lòng metaTitle!<br/>";
+        }
+
+        postData.MetaKeywords = module.MetaKeywords.val().trim();
+        if (postData.MetaKeywords == "") {
+            msg += "Vui lòng MetaKeywords!<br/>";
+        }
+        postData.MetaDescription = module.MetaDescription.val().trim();
+        if (postData.MetaDescription == "") {
+            msg += "Vui lòng MetaDescription!<br/>";
+        }
+        postData.Description = module.Description.val().trim();
+        if (postData.Description == "") {
+            msg += "Vui lòng Description!<br/>";
+        }
+        postData.CategoryId = module.CategoryId.val().trim();
+        if (postData.CategoryId = "") {
+            msg += "Vui lòng chọn loại sản phẩm!<br/>";
+        }
+        postData.Cost = module.Cost.val().trim();
+        if (postData.Cost == "") {
+            msg += "Vui lòng chọn loại sản phẩm!<br/>";
+        }
+        postData.Size = module.Size.val().trim();
+        if (postData.Size == "") {
+            msg += "Vui lòng nhập size sản phẩm!<br/>";
+        }
+        module.TypeCode = $('#TypeCode');
+        postData.Prommotion = module.Prommotion.val().trim();
+        //if (postData.Prommotion == "") {
+        //    msg += "Vui lòng nhập size sản phẩm!<br/>";
+        //}
+        postData.Price = module.Price.val().trim();
+        if (postData.Price == "") {
+            msg += "Vui lòng nhập giá bán!<br/>";
+        }
+        postData.DistributorId = module.DistributorId.val().trim();
+        postData.Quantity = module.Quantity.val().trim();
+        if (postData.Quantity == "") {
+            msg += "Vui lòng nhập số lượng!<br/>";
+        }
+        //postData.Producer = module.Producer.val().trim();
+        //postData.ProductionDate = promodule.ProductionDate.val().trim();
+        return msg;
+    }
+    function Insert() {
+        var errorMsg = validateInput();
+        if (errorMsg != "") {
+            swal("Thông báo!", errorMsg , "error");
+            return;
+        }
+        var formData = new FormData();
+        formData.append("Product", JSON.stringify(postData));
+        for (var i = 0; i < $('#flImage')[0].files.length; i++) {
+            formData.append("files[" + i + "]", $('#flImage')[0].files[i]);
+            console.log();
+        }
+        $.ajax({
+            url: '/Product/InsertProduct',
+            type: 'POST',
+            data: formData,
+            success: function (response) {
+                if (response != null) {
+                    _fileUpload = response;
+                    var fileNames = response.split(";");
+                    for (var i = 0; i < fileNames.length; i++) {
+                        if (fileNames[i] != "") {
+                            var my_path = "/Areas/Admin/image/Temp/"+'@userLogin.UserName' + "_" + fileNames[i];
+                            var image = '<img src="' + my_path + '" alt="image" style="width:100px">&nbsp';
+                            $("#imgPreview").append(image);
+                        }
+                    }
+                }
+            },
+            processData: false,
+            contentType: false,
+            error: function () {
+                swal("Thông báo!", "Whoops something went wrong!", "error");
+            }
+        });
+    }
+
+    //function Insert() {
+    //    var errorMsg = validateInput();
+    //    if (errorMsg != "") {
+    //        swal("Thông báo!", errorMsg , "error");
+    //        return;
+    //    }
+    //    var formData = new FormData();
+    //    for (var i = 0; i < $('#flImage')[0].files.length; i++) {
+    //        formData.append("files[" + i + "]", $('#flImage')[0].files[i]);
+    //        console.log();
+    //    }
+    //    $.ajax({
+    //        url: '/Product/InsertProduct',
+    //        type: 'POST',
+    //        data: JSON.stringify(postData),
+    //        contentType: 'application/json; charset=utf-8',
+    //        success: function (data) {
+    //            alert(data.success);
+    //        },
+    //        error: function () {
+    //            alert("error");
+    //        }
+    //    });
+    //}
+
+</script>
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")

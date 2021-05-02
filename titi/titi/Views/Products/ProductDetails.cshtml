@@ -1,0 +1,418 @@
+﻿@using titi.Language;
+@using System;
+@using System.Web;
+@using System.Web.Mvc;
+@using titi.Models;
+@using titi.Areas.Admin.Models;
+@using EntityLibrary.ModuleImplement;
+@{
+    ViewBag.Title = "K&TShophouse | "+ @Model.ProductName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //DistributorModels dis = ViewBag.Dis;
+}
+@*@section _SliderPartial{@Html.Partial("_SliderPartial")}*@
+<div class="product-details">
+    <!--product-details-->
+    <div class="col-sm-5">
+        <div class="view-product">
+            @{
+                string[] imgs = Model.Image.Split(';');
+                string productImgURL = @"../../Images/Products/" + Model.CategoryId + "/" + imgs[0];
+            }
+            <img src="@productImgURL" alt="@Model.ProductName" />
+        </div>
+        <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                @{ 
+                    string str = ""; int next = 0;
+                    int count = imgs.Length;
+                    if (Model.Video != null) { imgs[count -1] = Model.Video;}
+                }
+                @for (var i = 0; i < count; i++)
+                {
+                    next++;
+                    if (imgs[i] != "")
+                    {
+                        string ImgURL = @"../../Images/Products/" + Model.CategoryId + "/" + imgs[i];
+                        if (next == 1)
+                        {
+                            str += "<div class=\"item active\">";
+                        }
+                        else if (i % 3 == 0)
+                        {
+                            str += "</div>";
+                            str += "<div class=\"item\">";
+                        }
+                        if(i == (count - 1) && Model.Video !=null)
+                        {
+                            str += "<a href=\"#\" onclick=\"showVideo(\'" + Model.Video + "\')\"><img src=\"../../Images/home/Video.png \" alt='' width='85px' /></a>";
+                        }
+                        else
+                        {
+                            str += "<a href=\"#\" onclick=\"ChangeThumbnails(\'" + ImgURL + "\')\"><img src=\"" + ImgURL + "\" alt='' width='85px'/></a>";
+                        }
+                        if ((i == imgs.Length - 2 && Model.Video =="") || (i == imgs.Length - 1 && Model.Video != null))
+                        {
+                            str += "</div>";
+                        }
+                    }
+                }
+                @Html.Raw(str);
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left item-control" href="#similar-product" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right item-control" href="#similar-product" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+
+    </div>
+    <div class="col-sm-7">
+        <form action="" class="form" data-cesta-feira-form>
+            <div class="product-information">
+                <!--/product-information-->
+                <img src="~/Images/product-details/new.jpg" class="newarrival" alt="" />
+                <h2>@Model.ProductName</h2>
+                <p>Mã Sản Phẩm: @Model.ProductCode</p>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <span>
+                                <span>@Model.FPrice VND</span>
+                            </span>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group" style="margin-bottom:0px !important">
+                                <div style="display:table">
+                                    <label style="width:40%; float:left">Số Lượng:</label>
+                                    <div class="cart_quantity_button" style="width:60%; display:table">
+                                        <span class="input-group-btn" style="float:left;display:table;margin-top:0px">
+                                            <button class="btn btn-default bootstrap-touchspin-down" id="touchspinDown" type="button">-</button>
+                                        </span>
+                                        <input id="qty" type="tel" value="1" style="width:40px;float:left;display:block;border-radius:0px !important" class="form-control" min="1" max="100" name="quantity" data-cesta-feira-attribute />
+                                        <span class="input-group-btn" style="float:left;margin-top:0px">
+                                            <button class="btn btn-default bootstrap-touchspin-up" id="touchspinUp" type="button">+</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-fefault cart" id="addToCart">
+                                <i class="fa fa-shopping-cart"></i>
+                                @language.addToCart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @if (ViewBag.ListSize != null)
+                    {
+                        <p>Chọn màu:</p>
+                        <div class="col-sm-12">
+                            @{ var n1 = 0;}
+                            @foreach (var item in ViewBag.ListSize)
+                            {
+                                if (n1 == 0)
+                                {
+                                    <input type="button" id="color_@item.ColorId" name="color_@item.ColorId" class="btn btn-outline btn-primary btnActive" style="border:thin solid #1ab394; margin-top:0px" value="@item.ColorValue" onclick="selectColor(@item.ColorId,this)">
+                                }
+                                else
+                                {
+                                    <input type="button" id="color_@item.ColorId" name="color_@item.ColorId" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px" value="@item.ColorValue" onclick="selectColor(@item.ColorId,this)">
+                                }
+                                n1++;
+                            }
+                            @*<input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px" value="Xám">
+        <input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394;margin-top:0px" value="Đen">
+        <input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394;margin-top:0px" value="Trắng">*@
+                        </div>
+                        <p>Chọn Size:</p>
+                        <div class="col-sm-12">
+                            @{
+                                var _n2 = 0;
+                            }
+                            @foreach (var item in ViewBag.ListSize)
+                            {
+                                var n2 = 0;
+                                if (_n2 == 0)
+                                {
+                                    foreach (var it in item.ListSize)
+                                    {
+                                        var id = "Size_" + item.ColorId + "_" + it.SizeId;
+                                        var name = "Size_" + item.ColorId + "_" + it.SizeId;
+                                        var data = item.ColorId + "_" + item.ColorValue + "_" + it.SizeId + "_" + it.SizeValue;
+                                        if (n2 == 0)
+                                        {
+                                            <input type="button" id="@id" name="@name" class="btn btn-outline btn-primary btnActive" style="border:thin solid #1ab394; margin-top:0px" data="@data" value="@it.SizeValue">
+                                        }
+                                        else
+                                        {
+                                            <input type="button" id="@id" name="@name" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px" data="@data" value="@it.SizeValue">
+                                        }
+                                        n2++;
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (var it in item.ListSize)
+                                    {
+                                        var id = "Size_" + item.ColorId + "_" + it.SizeId;
+                                        var name = "Size_" + item.ColorId + "_" + it.SizeId;
+                                        var data = item.ColorId + "_" + item.ColorValue + "_" + it.SizeId + "_" + it.SizeValue;
+                                        if (n2 == 0)
+                                        {
+                                            <input type="button" id="@id" name="@name" class="btn btn-outline btn-primary btnActive" style="border:thin solid #1ab394; margin-top:0px;display:none" data="@data" value="@it.SizeValue" onclick="selectSize('@data',this)">
+                                        }
+                                        else
+                                        {
+                                            <input type="button" id="@id" name="@name" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px;display:none" data="@data" value="@it.SizeValue" onclick="selectSize('@data',this)">
+                                        }
+                                        n2++;
+                                    }
+                                }
+                                _n2++;
+                            }
+                            @*<input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px" value="Size 39">
+        <input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px" value="Size 40">
+        <input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394; margin-top:0px" value="Size 41">
+        <input type="button" class="btn btn-outline btn-primary" style="border:thin solid #1ab394;margin-top:0px" value="Size 42">*@
+                        </div>
+                    }
+                </div>
+                <p><b>Tình Trạng:</b> Còn Hàng</p>
+                <p><b>Trạng Thái:</b> Mới</p>
+                <p><b>Nhãn Hiệu:</b> E-SHOPPER</p>
+                <a href=""><img src="~/Images/product-details/share.png" class="share img-responsive" alt="" /></a>
+            </div><!--/product-information-->
+            @{
+                var pathImg = "/Images/Products/" + Model.CategoryId + "/";
+                if (!string.IsNullOrEmpty(Model.Image))
+                {
+                    string[] imgArr = Model.Image.Split(';');
+                    pathImg += imgArr[0];
+                }
+                else
+                {
+                    pathImg = "";
+                }
+            }
+            <input type="hidden" value="@Model.ProductName" name="product_name" data-cesta-feira-attribute>
+            <input type="hidden" value="@Model.Price" name="unity_price" data-cesta-feira-attribute>
+            <input type="hidden" value="@Model.Pid" data-cesta-feira-item-id />
+            <input type="hidden" value="@Model.CategoryId" name="item_type" data-cesta-feira-attribute>
+            <input type="hidden" value="@pathImg" name="item_url" data-cesta-feira-attribute>
+            <input type="hidden" value="@Model.FPrice" name="unity_fprice" data-cesta-feira-attribute>
+            <input type="hidden" value="@Model.ProductCode" name="product_code" data-cesta-feira-attribute>
+            <input type="hidden" value="" name="property" data-cesta-feira-attribute>
+        </form>
+    </div>
+</div><!--/product-details-->
+
+<div class="category-tab shop-details-tab">
+    <!--category-tab-->
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#details" data-toggle="tab">@language.detail</a></li>
+            <li><a href="#companyprofile" data-toggle="tab">@language.boothInformation</a></li>
+            @*<li><a href="#tag" data-toggle="tab">@language.tag</a></li>*@
+            @*<li><a href="#reviews" data-toggle="tab">@language.assessment (5)</a></li>*@
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade  active in" id="details">
+            <div class="col-sm-12">
+                @Html.Raw(@Model.Description)
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="companyprofile">
+            @if (Model.Distributor != null)
+            {
+                <div class="col-md-12">
+                    <p><strong>Tên gian hàng: </strong>@Model.Distributor.Name</p>
+                    <p><strong>Địa chỉ: </strong>@Model.Distributor.Address</p>
+                    <p><strong>Số ĐT: </strong>@Model.Distributor.PhoneNumber</p>
+                </div>
+            }
+        </div>
+
+        @*<div class="tab-pane fade" id="tag">
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery1.jpg" alt="" />
+                            <h2>$56</h2>
+                            <p>Easy Polo Black Edition</p>
+                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery2.jpg" alt="" />
+                            <h2>$56</h2>
+                            <p>Easy Polo Black Edition</p>
+                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery3.jpg" alt="" />
+                            <h2>$56</h2>
+                            <p>Easy Polo Black Edition</p>
+                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/Images/home/gallery4.jpg" alt="" />
+                            <h2>$56</h2>
+                            <p>Easy Polo Black Edition</p>
+                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+        @*<div class="tab-pane fade" id="reviews">
+            <div class="col-sm-12">
+                <ul>
+                    <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+                    <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
+                    <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p><b>Write Your Review</b></p>
+
+                <form action="#">
+                    <span>
+                        <input type="text" placeholder="Your Name" />
+                        <input type="email" placeholder="Email Address" />
+                    </span>
+                    <textarea name=""></textarea>
+                    <b>Rating: </b> <img src="~/Images/product-details/rating.png" alt="" />
+                    <button type="button" class="btn btn-default pull-right">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>*@
+
+    </div>
+</div><!--/category-tab-->
+
+<script>
+
+    function showVideo(video) {
+        //$(document).find('.view-product').find('img').remove();
+        $('.view-product').empty();
+        var str = "<iframe width='329' height='306' src='https://www.youtube.com/embed/" + video + "' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'></iframe>";
+        $('.view-product').append(str);
+    }
+    function ChangeThumbnails(item) {
+        //$(document).find('.view-product').find('img').remove();
+        $('.view-product').empty();
+        $(document).find('.view-product').append('<img src="' + item + '" alt="" />');
+        //$('.view-product').empty();
+        //$('.view-product').append('<img src = "' + item + '" alt = "" />');
+    }
+
+    $(document).ready(function () {
+        $("input[name^='Size_']").each(function () {
+            if ($(this).hasClass("btnActive")) {
+                $("input[name='property']").val($(this).attr('data'));
+                return false;
+            }
+        });
+        $('#touchspinDown').click(function () {
+            if ($('#qty').val() > 1) {
+                $('#qty').val(Number($('#qty').val()) - 1);
+            }
+        });
+        $('#touchspinUp').click(function () {
+            if ($('#qty').val() < 100) {
+                $('#qty').val(Number($('#qty').val()) + 1);
+            }
+        });
+    });
+    function selectColor(colorId, e) {
+        $("input[name^='color_']").each(function () {
+            $(this).removeClass("btnActive");
+        });
+        e.classList.add('btnActive');
+        $("input[name^='Size_']").each(function () {
+            $(this).hide();
+        });
+        $("input[name^='Size_" + colorId + "']").each(function () {
+            $(this).show();
+        });
+        $("input[name^='Size_']").each(function () {
+            $(this).removeClass("btnActive");
+        });
+        $("input[name^='Size_" + colorId + "']").each(function () {
+            $(this).addClass('btnActive');
+            $("input[name='property']").val($(this).attr('data'));
+            return false;
+        });
+        //alert(colorId);
+    }
+    function selectSize(data, e) {
+        $("input[name^='Size_']").each(function () {
+            $(this).removeClass("btnActive");
+        });
+        e.classList.add('btnActive');
+        $("input[name='property']").val(data);
+    }
+</script>
+<style>
+    #details {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+        #details ul {
+            background: #FFFFFF;
+            border: 0 none;
+            list-style: none outside none;
+            margin: 0 0 20px;
+            padding: 0;
+        }
+    .btn-primary {
+        background-color: #FFFFFF !important;
+    }
+    .btn-outline {
+        background-color: transparent;
+        transition: all .5s;
+    }
+    .btn-primary.btn-outline {
+        color: #1ab394;
+    }
+    .btn.btn-primary {
+        border:none;
+        border-color: #1ab394 !important;
+        border-radius: 3px;
+    }
+    .btnActive {
+        background-color: #1ab394 !important;
+        color:white !important;
+    }
+</style>
+

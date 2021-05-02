@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "PhanQuyen";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Styles.Render("~/Content/cssjqgrid")
+<link href="~/Areas/Admin/Content/style.css" rel="stylesheet" />
+<link href="~/Areas/Admin/Content/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">Phân quyền</div>
+                <div class="ibox-content">
+                    @*<div class="row">
+                        <div class="col-md-6">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Project </th>
+                                            <th>Completed </th>
+                                            <th>Task</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                     </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" checked class="i-checks" name="input[]"></td>
+                                            <td>Project<small>This is example of project</small></td>
+                                            <td><span class="pie">0.52/1.561</span></td>
+                                            <td>20%</td>
+                                            <td>Jul 14, 2013</td>
+                                            <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        <div class="col-md-6">e</div>
+                    </div>*@
+                    <div class="row">
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_1"></table>
+                            <div id="pager_list_1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqGrid")
+    <script src="~/Areas/Admin/Scripts/plugins/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            getAllPhanQuyen();
+        });
+        function getAllPhanQuyen() {
+            $.ajax({
+                url: '@Url.Action("GetPhanQuyen", "Admin",new {area="Admin"})',
+                type: 'GET',
+                success: function (response) {
+                    if (response.Success) {
+                        $("#table_list_1").jqGrid({
+                            data: response.Data,
+                            datatype: "local",
+                            height: 250,
+                            autowidth: true,
+                            shrinkToFit: true,
+                            rowNum: 14,
+                            rowList: [10, 20, 30],
+                            colNames: ['Pid', 'UserPid', 'UserName', 'GroupPid', 'GroupName', 'RolePid', 'RoleName','Description'],
+                            colModel: [
+                                { name: 'Pid', index: 'Pid', width: 60, sorttype: "int" },
+                                { name: 'UserPid', index: 'UserPid', width: 90, sorttype: "int" },
+                                { name: 'UserName', index: 'UserName', width: 100 },
+                                { name: 'GroupPid', index: 'GroupPid', width: 80, align: "right", sorttype: "int"},
+                                { name: 'GroupName', index: 'GroupName', width: 80, align: "right"},
+                                { name: 'RolePid', index: 'RolePid', width: 80, align: "right", sorttype: "int" },
+                                { name: 'RoleName', index: 'RoleName', width: 150},
+                                { name: 'Description', index: 'Description', width: 150}
+                            ],
+                            pager: "#pager_list_1",
+                            viewrecords: true,
+                            caption: "Danh sách phân quyền",
+                            hidegrid: false
+                        });
+                        $(window).bind('resize', function () {
+                            var width = $('.jqGrid_wrapper').width();
+                            $('#table_list_1').setGridWidth(width);
+                        });
+                    }
+                    else {
+                        alert("Lấy danh sách role thất bại");
+                    }
+                },
+                error: function () {
+                    alert("Whoops something went wrong!");
+                }
+            });
+        }
+    </script>
+}
+@Styles.Render("~/Areas/Admin/Content/sweetalert.css")
+
+    <style>
+    .icheckbox_square-green,
+.iradio_square-green {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../../image/icon/green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-green {
+    background-position: 0 0;
+}
+.icheckbox_square-green.hover {
+    background-position: -24px 0;
+}
+.icheckbox_square-green.checked {
+    background-position: -48px 0;
+}
+.icheckbox_square-green.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+.icheckbox_square-green.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-green {
+    background-position: -120px 0;
+}
+.iradio_square-green.hover {
+    background-position: -144px 0;
+}
+.iradio_square-green.checked {
+    background-position: -168px 0;
+}
+.iradio_square-green.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+.iradio_square-green.checked.disabled {
+    background-position: -216px 0;
+}
+
+/* HiDPI support */
+    @@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+        .icheckbox_square-green,
+        .iradio_square-green {
+            background-image: url(green@2x.png);
+            -webkit-background-size: 240px 24px;
+            background-size: 240px 24px;
+        }
+}
+    </style>

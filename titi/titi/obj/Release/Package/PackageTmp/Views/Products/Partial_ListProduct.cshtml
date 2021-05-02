@@ -1,0 +1,175 @@
+﻿@using titi.Language;
+@using System;
+@using System.Web;
+@using System.Web.Mvc;
+@using System.Linq;
+@using titi.Models;
+@using EntityLibrary.ModuleImplement;
+@{
+    List<CategoryModel> listCategory = ViewBag.ListCategory;
+    List<CategoryModel> categoryChild = listCategory.Where(w => w.ParentPid != 0).ToList();
+    List<CategoryModel> categoryParent = listCategory.Where(w => w.ParentPid == 0).ToList();
+    //List<EntityLibrary.ModuleImplement.ProductView> listProduct = (ViewBag.ListProduct as List<EntityLibrary.ModuleImplement.ProductView>).ToList();
+    List<EntityLibrary.ModuleImplement.ProductView> listProduct = ViewBag.ListProduct;
+    string strUrl = Request.Url.Scheme + "://" + (Request.Url.Host.Contains("localhost") ? Request.Url.Host + ":" + Request.Url.Port : Request.Url.Host);
+}
+@foreach (var it in categoryParent)
+{
+    var temp = categoryChild.Where(w => w.ParentPid == it.Pid).ToList();
+    List<long> listCategoryId = categoryChild.Where(w => w.ParentPid == it.Pid).Select(y => y.Pid).ToList();
+    var listProductByCart = listProduct.Where(w => listCategoryId.Contains(w.CategoryId)).ToList();
+    if (listProductByCart.Count != 0)
+    {
+        <div class="features_items">
+            <div class="main title text-center"><i class="@it.Image"></i><a href="#" title="@it.CategoryName">@it.CategoryName</a></div>
+            @foreach (var item in listProductByCart)
+            {
+                var pathImg = "/Images/Products/" + item.CategoryId + "/";
+                if (!string.IsNullOrEmpty(item.Image))
+                {
+                    string[] imgArr = item.Image.Split(';');
+                    pathImg += imgArr[0];
+                }
+                else
+                {
+                    pathImg = "";
+                }
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper" href="#" title="@item.ProductName">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <a href='@strUrl/san-pham/@item.URL-@item.Pid'><img src="@pathImg" alt="" /></a>
+
+                                <div class="row row-price">
+                                    <span class="price-discount">@item.FPrice VND</span> @if (item.Price < item.Cost)
+                                    {<sup class="price">@item.FCost</sup>}
+                                </div>
+                                <p>@item.ProductName</p>
+                                <form action="" class="form" data-cesta-feira-form>
+                                    <div class="form-group">
+                                        <input type="hidden" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                    </div>
+                                    <input type="hidden" value="@item.ProductName" name="product_name" data-cesta-feira-attribute="">
+                                    <input type="hidden" value="@item.Price" name="unity_price" data-cesta-feira-attribute>
+                                    <input type="hidden" value="@item.Pid" data-cesta-feira-item-id />
+                                    <input type="hidden" value="@item.CategoryId" name="item_type" data-cesta-feira-attribute>
+                                    <input type="hidden" value="@pathImg" name="item_url" data-cesta-feira-attribute>
+                                    <input type="hidden" value="@item.FPrice" name="unity_fprice" data-cesta-feira-attribute>
+                                    <input type="hidden" value="@item.ProductCode" name="product_code" data-cesta-feira-attribute>
+                                    @if (item.ProductDetails.Count > 0)
+                                    {
+                                        foreach (var ite in item.ProductDetails)
+                                        {
+                                            var str = ite.Color + "_" + ite.ColorValue + "_" + ite.Size + "_" + ite.SizeValue;
+                                            <input type="hidden" value="@str" name="property" data-cesta-feira-attribute>
+                                            break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <input type="hidden" value="" name="property" data-cesta-feira-attribute>
+                                    }
+                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="choose">
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="category-tab">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    @{
+                        int next = 0;
+                    }
+                    @foreach (var te in temp)
+                    {
+                        var cl = @"#" + te.CategoryCode;
+                        if (next == 0)
+                        {
+                            <li class="active"><a href="@cl" data-toggle="tab">@te.CategoryName</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="@cl" data-toggle="tab">@te.CategoryName</a></li>
+                        }
+                        next++;
+                    }
+                </ul>
+            </div>
+            <div class="tab-content">
+                @{int j = 0;}
+                @foreach (var tem in temp)
+                {
+                    var name = tem.CategoryCode;
+                    var productChildLs = listProduct.Where(w => w.CategoryId == tem.Pid).ToList();
+                    var _cls = j == 0 ? "tab-pane fade active in" : "tab-pane fade";
+                    <div class="@_cls" id="@name">
+                        @if (productChildLs.Count > 0)
+                        {
+                            foreach (var k in productChildLs)
+                            {
+                                <div class="col-sm-3">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a href='@strUrl/san-pham/@k.URL-@k.Pid'>
+                                                    @{
+                                                        string[] imgs = k.Image.Split(';');
+                                                        var productImgURL = "/Images/Products/" + k.CategoryId + "/" + imgs[0];
+                                                        <img src="@productImgURL" alt="@k.ProductName" />
+                                                    }
+                                                </a>
+                                                <div class="row row-price">
+                                                    <span class="price-discount">@k.FPrice VND</span>
+                                                    @if (k.Price < k.Cost)
+                                                    {<sup class="price">@k.FCost</sup>}
+                                                </div>
+                                                <p>@k.ProductName</p>
+                                                <form action="" class="form" data-cesta-feira-form>
+                                                    <input type="hidden" value="@k.ProductName" name="product_name" data-cesta-feira-attribute="">
+                                                    <input type="hidden" value="@k.Price" name="unity_price" data-cesta-feira-attribute>
+                                                    <input type="hidden" value="@k.Pid" data-cesta-feira-item-id />
+                                                    <input type="hidden" value="@k.CategoryId" name="item_type" data-cesta-feira-attribute>
+                                                    <input type="hidden" value="@productImgURL" name="item_url" data-cesta-feira-attribute>
+                                                    <input type="hidden" value="@k.FPrice" name="unity_fprice" data-cesta-feira-attribute>
+                                                    <input type="hidden" value="@k.ProductCode" name="product_code" data-cesta-feira-attribute>
+                                                    @if (k.ProductDetails.Count > 0)
+                                                    {
+                                                        foreach (var ite in k.ProductDetails)
+                                                        {
+                                                            var str = ite.Color + "_" + ite.ColorValue + "_" + ite.Size + "_" + ite.SizeValue;
+                                                            <input type="hidden" value="@str" name="property" data-cesta-feira-attribute>
+                                                            break;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <input type="hidden" value="" name="property" data-cesta-feira-attribute>
+                                                    }
+                                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>@language.addToCart </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                         }
+                         else {
+                            <p class="col-lg-12">Hiện không có sản phẩm</p>
+                         }
+                    </div>
+                    j++;
+                                                    }
+            </div>
+        </div>
+    }
+}
